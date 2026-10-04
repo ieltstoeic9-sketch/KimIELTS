@@ -1,0 +1,18 @@
+ANH NGỮ MS. KIM - FULL WEBSITE
+
+CẤU TRÚC ĐÃ SẮP XẾP SẴN:
+
+index.html          = Trang chủ
+images/             = Logo trang chủ
+test1/index.html    = Listening Test 1
+test1/audio/        = Audio Part 1 & Part 2
+test1/images/       = Hình ảnh câu hỏi
+
+CÁCH UPLOAD LÊN GITHUB:
+1. Giải nén file ZIP này.
+2. Mở thư mục Anh_ngu_Ms_Kim_Full_Website.
+3. Upload toàn bộ các mục BÊN TRONG thư mục này lên root repository GitHub.
+4. Commit changes.
+5. Chờ GitHub Pages cập nhật vài phút.
+
+KHÔNG cần tự sắp xếp lại thư mục.

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listening Test 1 | Anh ngữ Ms. Kim</title>
+<style>
+:root{
+  --ink:#17222b; --green:#173f36; --green2:#2e6354; --cream:#faf8f2;
+  --line:#ddd6c6; --ok:#0d6b45; --bad:#a52b2b; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#f3f1eb;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{background:var(--green);color:white;padding:22px 20px;text-align:center}
+header h1{margin:0;font-size:28px} header p{margin:6px 0 0;opacity:.9}
+main{max-width:980px;margin:28px auto;padding:0 18px 50px}
+.panel{background:var(--card);border:1px solid #e6e1d6;border-radius:18px;padding:24px;margin-bottom:24px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+h2{margin:0 0 8px;color:var(--green)} h3{color:var(--green);margin-top:26px}
+.instructions{color:#57626a}
+.audio-box{background:#eef4f1;border:1px solid #d2e2dc;border-radius:14px;padding:16px;margin:18px 0 24px}
+audio{width:100%;margin-top:8px}
+.question{padding:20px 0;border-top:1px solid #ece7dc}
+.question:first-of-type{border-top:none}
+.prompt{font-weight:700;font-size:18px;margin-bottom:14px}
+.image-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.choice-card{border:2px solid #d9d3c7;border-radius:14px;padding:10px;background:#fff;cursor:pointer;transition:.15s}
+.choice-card:hover{border-color:#7b948b;transform:translateY(-1px)}
+.choice-card.selected{border-color:var(--green2);background:#f0f6f3}
+.choice-card input{display:none}
+.choice-card img{width:100%;height:165px;object-fit:contain;display:block;background:white;border-radius:8px}
+.choice-label{text-align:center;font-weight:700;margin-top:8px}
+.gap-grid{display:grid;grid-template-columns:220px 1fr;gap:12px 18px;align-items:center;max-width:680px}
+.gap-grid label{font-weight:600}
+input[type=text]{width:100%;padding:11px 12px;border:1px solid #bfc5c2;border-radius:9px;font-size:16px}
+.feedback{font-size:14px;margin-top:8px;font-weight:600}
+.controls{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+button{border:0;border-radius:10px;padding:12px 22px;font-size:16px;font-weight:700;cursor:pointer}
+.primary{background:var(--green);color:white}.secondary{background:#e9ecea;color:var(--ink)}
+#result{display:none;margin-top:18px;padding:18px;border-radius:12px;font-size:18px}
+.result-ok{background:#e9f7f0;color:var(--ok)} .result-mid{background:#fff5e8;color:#815500}
+.small{font-size:13px;color:#667078}
+@media(max-width:700px){
+  .image-choices{grid-template-columns:1fr}
+  .choice-card img{height:200px}
+  .gap-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Anh ngữ Ms. Kim</h1>
+  <p>Key to IELTS Mastery</p>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>LISTENING TEST 1</h2>
+    <p class="instructions">Complete Part 1 and Part 2, then press <strong>SUBMIT TEST</strong>.</p>
+  </div>
+
+  <section class="panel">
+    <h2>PART 1 — Questions 1–5</h2>
+    <p class="instructions">For each question, choose the correct picture.</p>
+    <div class="audio-box">
+      <strong>Part 1 Audio</strong>
+      <audio controls preload="metadata">
+        <source src="audio/part1.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="question" data-q="q1">
+      <div class="prompt">1. What time is the man's plane leaving?</div>
+      <div class="image-choices">
+        <label class="choice-card"><input type="radio" name="q1" value="A"><img src="images/q1_A.jpg"><div class="choice-label">A</div></label>
+        <label class="choice-card"><input type="radio" name="q1" value="B"><img src="images/q1_B.jpg"><div class="choice-label">B</div></label>
+        <label class="choice-card"><input type="radio" name="q1" value="C"><img src="images/q1_C.jpg"><div class="choice-label">C</div></label>
+      </div>
+      <div id="f1" class="feedback"></div>
+    </div>
+
+    <div class="question" data-q="q2">
+      <div class="prompt">2. How much does their meal cost?</div>
+      <div class="image-choices">
+        <label class="choice-card"><input type="radio" name="q2" value="A"><img src="images/q2_A.jpg"><div class="choice-label">A</div></label>
+        <label class="choice-card"><input type="radio" name="q2" value="B"><img src="images/q2_B.jpg"><div class="choice-label">B</div></label>
+        <label class="choice-card"><input type="radio" name="q2" value="C"><img src="images/q2_C.jpg"><div class="choice-label">C</div></label>
+      </div>
+      <div id="f2" class="feedback"></div>
+    </div>
+
+    <div class="question" data-q="q3">
+      <div class="prompt">3. What type of house is the woman looking for?</div>
+      <div class="image-choices">
+        <label class="choice-card"><input type="radio" name="q3" value="A"><img src="images/q3_A.jpg"><div class="choice-label">A</div></label>
+        <label class="choice-card"><input type="radio" name="q3" value="B"><img src="images/q3_B.jpg"><div class="choice-label">B</div></label>
+        <label class="choice-card"><input type="radio" name="q3" value="C"><img src="images/q3_C.jpg"><div class="choice-label">C</div></label>
+      </div>
+      <div id="f3" class="feedback"></div>
+    </div>
+
+    <div class="question" data-q="q4">
+      <div class="prompt">4. What does the man need to buy?</div>
+      <div class="image-choices">
+        <label class="choice-card"><input type="radio" name="q4" value="A"><img src="images/q4_A.jpg"><div class="choice-label">A</div></label>
+        <label class="choice-card"><input type="radio" name="q4" value="B"><img src="images/q4_B.jpg"><div class="choice-label">B</div></label>
+        <label class="choice-card"><input type="radio" name="q4" value="C"><img src="images/q4_C.jpg"><div class="choice-label">C</div></label>
+      </div>
+      <div id="f4" class="feedback"></div>
+    </div>
+
+    <div class="question" data-q="q5">
+      <div class="prompt">5. What was the weather like at the weekend?</div>
+      <div class="image-choices">
+        <label class="choice-card"><input type="radio" name="q5" value="A"><img src="images/q5_A.jpg"><div class="choice-label">A</div></label>
+        <label class="choice-card"><input type="radio" name="q5" value="B"><img src="images/q5_B.jpg"><div class="choice-label">B</div></label>
+        <label class="choice-card"><input type="radio" name="q5" value="C"><img src="images/q5_C.jpg"><div class="choice-label">C</div></label>
+      </div>
+      <div id="f5" class="feedback"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>PART 2 — Questions 6–10</h2>
+    <p class="instructions">Write <strong>ONE WORD</strong> or a number, a date or a time.</p>
+    <p><strong>You will hear a teacher talking to a group of students.</strong></p>
+
+    <div class="audio-box">
+      <strong>Part 2 Audio</strong>
+      <audio controls preload="metadata">
+        <source src="audio/part2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <h3>Class Trip</h3>
+    <div class="gap-grid">
+      <label>When:</label><div><strong>Tomorrow</strong></div>
+
+      <label for="q6">Where: (6) the</label>
+      <div><input id="q6" type="text" autocomplete="off" placeholder="answer"> Museum <div id="f6" class="feedback"></div></div>
+
+      <label for="q7">Time we leave: (7)</label>
+      <div><input id="q7" type="text" autocomplete="off" placeholder="answer"> a.m. <div id="f7" class="feedback"></div></div>
+
+      <label for="q8">Meet at the: (8)</label>
+      <div><input id="q8" type="text" autocomplete="off" placeholder="answer"><div id="f8" class="feedback"></div></div>
+
+      <label for="q9">Bring: (9)</label>
+      <div><input id="q9" type="text" autocomplete="off" placeholder="answer"><div id="f9" class="feedback"></div></div>
+
+      <label for="q10">Cost: (10) $</label>
+      <div><input id="q10" type="text" autocomplete="off" placeholder="answer"><div id="f10" class="feedback"></div></div>
+    </div>
+
+    <div class="controls">
+      <button class="primary" onclick="submitTest()">SUBMIT TEST</button>
+      <button class="secondary" onclick="resetTest()">RESET</button>
+    </div>
+    <div id="result"></div>
+    <p class="small">Answers are checked without regard to capital letters or extra spaces.</p>
+  </section>
+</main>
+
+<script>
+const mcAnswers = { q1:"C", q2:"A", q3:"C", q4:"A", q5:"A" };
+const textAnswers = {
+  q6:["music"],
+  q7:["8.30","8:30","0830","8 30"],
+  q8:["library"],
+  q9:["snacks","snack"],
+  q10:["6.50","6.5","$6.50","$6.5"]
+};
+
+function clean(s){
+  return (s||"").trim().toLowerCase().replace(/\s+/g," ");
+}
+
+document.querySelectorAll(".choice-card").forEach(card=>{
+  card.addEventListener("click", ()=>{
+    const input=card.querySelector("input");
+    const group=input.name;
+    document.querySelectorAll('input[name="'+group+'"]').forEach(r=>{
+      r.closest(".choice-card").classList.remove("selected");
+    });
+    card.classList.add("selected");
+  });
+});
+
+function submitTest(){
+  let score=0;
+
+  for(let i=1;i<=5;i++){
+    const id="q"+i;
+    const chosen=document.querySelector('input[name="'+id+'"]:checked');
+    const fb=document.getElementById("f"+i);
+    if(chosen && chosen.value===mcAnswers[id]){
+      score++;
+      fb.textContent="✓ Correct";
+      fb.style.color="#0d6b45";
+    } else {
+      fb.textContent="✗ Correct answer: "+mcAnswers[id];
+      fb.style.color="#a52b2b";
+    }
+  }
+
+  for(let i=6;i<=10;i++){
+    const id="q"+i;
+    const val=clean(document.getElementById(id).value);
+    const ok=textAnswers[id].some(a=>clean(a)===val);
+    const fb=document.getElementById("f"+i);
+    if(ok){
+      score++;
+      fb.textContent="✓ Correct";
+      fb.style.color="#0d6b45";
+    } else {
+      fb.textContent="✗ Correct answer: "+textAnswers[id][0];
+      fb.style.color="#a52b2b";
+    }
+  }
+
+  const r=document.getElementById("result");
+  r.style.display="block";
+  r.className = score>=8 ? "result-ok" : "result-mid";
+  r.innerHTML="<strong>Your score: "+score+"/10</strong>";
+  r.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+function resetTest(){
+  document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);
+  document.querySelectorAll('input[type="text"]').forEach(x=>x.value="");
+  document.querySelectorAll(".choice-card").forEach(x=>x.classList.remove("selected"));
+  document.querySelectorAll(".feedback").forEach(x=>x.textContent="");
+  document.getElementById("result").style.display="none";
+}
+</script>
+</body>
+</html>

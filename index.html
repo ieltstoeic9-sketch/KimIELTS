@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anh ngữ Ms. Kim</title>
+  <style>
+    :root{
+      --green:#173f36;
+      --green2:#2e6354;
+      --bg:#f4f6f5;
+      --text:#1f2937;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+    }
+    header{
+      background:#ffffff;
+      text-align:center;
+      padding:22px 20px 20px;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .brand-wrap{
+      max-width:980px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .brand-icon{
+      width:88px;
+      height:auto;
+      display:block;
+    }
+    .brand-banner{
+      max-width:560px;
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    main{
+      max-width:980px;
+      margin:36px auto;
+      padding:0 20px 50px;
+    }
+    .welcome{
+      background:var(--card);
+      border-radius:18px;
+      padding:26px;
+      box-shadow:0 8px 24px rgba(0,0,0,.07);
+      margin-bottom:24px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 8px 24px rgba(0,0,0,.07);
+      min-height:220px;
+    }
+    .card h2{
+      margin-top:0;
+      color:var(--green);
+    }
+    .button{
+      display:inline-block;
+      text-decoration:none;
+      background:var(--green);
+      color:white;
+      padding:13px 18px;
+      border-radius:10px;
+      margin-top:10px;
+      font-weight:700;
+    }
+    .button:hover{
+      background:var(--green2);
+    }
+    .coming{
+      color:#6b7280;
+      font-style:italic;
+      margin-top:16px;
+    }
+    footer{
+      text-align:center;
+      color:#6b7280;
+      padding:24px 20px 36px;
+      font-size:14px;
+    }
+    @media(max-width:800px){
+      .grid{grid-template-columns:1fr}
+      .brand-icon{width:76px}
+      .brand-banner{max-width:460px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand-wrap">
+    <img class="brand-icon" src="images/logo_icon.png" alt="Anh ngữ Ms. Kim icon">
+    <img class="brand-banner" src="images/logo_banner.png" alt="Anh ngữ Ms. Kim - Key to IELTS Mastery">
+  </div>
+</header>
+
+<main>
+  <section class="welcome">
+    <h2>Online Practice</h2>
+    <p>Choose a course or test below.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>A2 Key Listening</h2>
+      <p>Practice listening with interactive tests.</p>
+      <a class="button" href="test1/">Listening Test 1</a>
+    </div>
+
+    <div class="card">
+      <h2>PRE-IELTS</h2>
+      <p>Practice materials will be added here.</p>
+      <div class="coming">Coming soon</div>
+    </div>
+
+    <div class="card">
+      <h2>IELTS</h2>
+      <p>Listening, Reading and other practice materials will be added here.</p>
+      <div class="coming">Coming soon</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Anh ngữ Ms. Kim
+</footer>
+
+</body>
+</html>
