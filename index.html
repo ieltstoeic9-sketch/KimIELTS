@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anh ngữ Ms. Kim</title>
+<style>
+:root{
+  --green:#0B1F4D;
+  --green2:#173A7A;
+  --bg:#F5F6F8;
+  --text:#111111;
+  --card:#FFFFFF;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+header{
+  background:#FFFFFF;
+  border-bottom:1px solid #D9DEE8;
+  padding:22px 20px;
+}
+.brand-wrap{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+}
+.brand-icon{width:88px;height:auto}
+.brand-banner{width:min(560px,72vw);height:auto}
+main{
+  max-width:1180px;
+  margin:32px auto;
+  padding:0 20px 56px;
+}
+.hero,.course-card{
+  background:#FFFFFF;
+  border-radius:20px;
+  box-shadow:0 9px 28px rgba(0,0,0,.07);
+}
+.hero{
+  padding:30px 34px;
+  margin-bottom:28px;
+}
+.hero h1{margin:0 0 10px;color:var(--green);font-size:30px}
+.hero p{margin:0;font-size:18px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.course-card{
+  padding:28px;
+  min-height:235px;
+  display:flex;
+  flex-direction:column;
+}
+.course-card h2{
+  margin:0 0 14px;
+  color:var(--green);
+  font-size:25px;
+}
+.course-card p{
+  margin:0 0 18px;
+  line-height:1.45;
+  font-size:16px;
+}
+.button{
+  display:inline-block;
+  align-self:flex-start;
+  margin-top:auto;
+  padding:13px 20px;
+  background:var(--green);
+  color:#FFFFFF;
+  text-decoration:none;
+  border-radius:11px;
+  font-weight:700;
+}
+.button:hover{background:var(--green2)}
+.coming{
+  margin-top:auto;
+  color:#666666;
+  font-style:italic;
+  font-size:17px;
+}
+footer{
+  text-align:center;
+  color:#666666;
+  padding:5px 20px 32px;
+}
+@media(max-width:850px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .brand-icon{width:68px}
+  .brand-banner{width:min(430px,72vw)}
+  .hero{padding:24px}
+}
+
+/* Ms Kim red-navy-black theme */
+:root {
+  --navy:#0B1F4D;
+  --navy2:#173A7A;
+  --red:#D71920;
+  --black:#111111;
+  --bg:#F5F6F8;
+  --card:#FFFFFF;
+}
+body { color:#111111; }
+header {
+  border-bottom:3px solid #D71920 !important;
+}
+h1,h2,h3 {
+  color:#0B1F4D !important;
+}
+.button, .primary, button.primary {
+  background:#0B1F4D !important;
+  color:#fff !important;
+  border:none !important;
+}
+.button:hover, .primary:hover, button.primary:hover {
+  background:#D71920 !important;
+}
+.course-card, .card, .hero, .test-card, .test {
+  border-top:4px solid #0B1F4D;
+}
+.course-card:hover, .card:hover {
+  box-shadow:0 10px 28px rgba(11,31,77,.12);
+}
+.coming {
+  color:#666666 !important;
+}
+.result-item .num {
+  color:#0B1F4D !important;
+}
+.result-tag.good {
+  color:#173A7A !important;
+}
+.result-tag.bad {
+  color:#D71920 !important;
+}
+.evidence {
+  background:#EEF4FF !important;
+  border-left:4px solid #173A7A;
+}
+.distractor {
+  background:#FFF0F1 !important;
+  border-left:4px solid #D71920;
+}
+.script {
+  background:#FAFAFA !important;
+  border-left:4px solid #111111;
+}
+.review-head {
+  background:#F0F3F8 !important;
+  border-bottom:2px solid #0B1F4D;
+}
+.audio-wrap {
+  background:#F4F7FC !important;
+  border:1px solid #D9DEE8 !important;
+}
+.image-option.selected,
+.map-hotspot.selected {
+  border-color:#0B1F4D !important;
+  background:rgba(11,31,77,.08) !important;
+}
+a.back {
+  color:#0B1F4D !important;
+}
+footer {
+  color:#111111 !important;
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="brand-wrap">
+    <img class="brand-icon" src="images/logo_icon.png" alt="Ms. Kim logo">
+    <img class="brand-banner" src="images/logo_banner.png" alt="Anh ngữ Ms. Kim - Key to IELTS Mastery">
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Online Practice</h1>
+    <p>Choose a course below.</p>
+  </section>
+
+  <section class="grid">
+    <article class="course-card">
+      <h2>A1</h2>
+      <p>English practice materials for A1 learners.</p>
+      <div class="coming">Coming soon</div>
+    </article>
+
+    <article class="course-card">
+      <h2>A2</h2>
+      <p>A2 listening practice and Cambridge A2 Key materials.</p>
+      <a class="button" href="a2/">A2</a>
+    </article>
+
+    <article class="course-card">
+      <h2>B1</h2>
+      <p>English practice materials for B1 learners.</p>
+      <div class="coming">Coming soon</div>
+    </article>
+
+    <article class="course-card">
+      <h2>IELTS ACADEMIC</h2>
+      <p>IELTS Academic Listening, Reading, Writing and Speaking practice.</p>
+      <div class="coming">Coming soon</div>
+    </article>
+
+    <article class="course-card">
+      <h2>TOEIC</h2>
+      <p>TOEIC Listening and Reading practice materials.</p>
+      <div class="coming">Coming soon</div>
+    </article>
+
+    <article class="course-card">
+      <h2>TIẾNG ANH GIAO TIẾP</h2>
+      <p>Practical English for everyday communication.</p>
+      <div class="coming">Coming soon</div>
+    </article>
+  </section>
+</main>
+
+<footer>Anh ngữ Ms. Kim</footer>
+</body>
+</html>
