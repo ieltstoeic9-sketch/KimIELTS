@@ -42,3 +42,4 @@ GOOGLE SHEETS:
 TỪ BÂY GIỜ:
 - Không xóa images/ ở root.
 - Khi thêm bài mới, chỉ thêm vào thư mục A1/A2/B1/IELTS/TOEIC/Giao tiếp.
+
