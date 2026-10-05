@@ -1,0 +1,44 @@
+ANH NGỮ MS. KIM - MASTER SITE
+
+ĐÂY LÀ BẢN CHÍNH TỪ BÂY GIỜ.
+
+TRANG CHỦ:
+- A1: Coming soon
+- A2: có KET 1 Listening Test 1
+- B1: Coming soon
+- IELTS ACADEMIC: Coming soon
+- TOEIC: Coming soon
+- TIẾNG ANH GIAO TIẾP: Coming soon
+
+BRANDING CỐ ĐỊNH:
+images/logo_banner.png
+images/logo_icon.png
+
+TEST 1:
+a2/test1/
+- full audio
+- chọn trực tiếp trên hình
+- Student name + Class 6,7,8,9,10,11,12,IELTS
+- score + %
+- script
+- evidence
+- explanation
+- distractors
+- tracking về Google Sheets
+
+CÁCH CẬP NHẬT GITHUB:
+1. Giải nén ZIP này.
+2. Upload toàn bộ NỘI DUNG bên trong vào ROOT repository.
+3. Branch main.
+4. Settings -> Pages -> main / (root).
+5. Chờ deploy.
+6. Mở bằng Ctrl+F5.
+
+GOOGLE SHEETS:
+- Dùng Web App URL hiện tại.
+- Apps Script nên dùng file UNIVERSAL_GOOGLE_APPS_SCRIPT_Code.gs.
+- Sau khi sửa Apps Script: Deploy -> Manage deployments -> Edit -> New version -> Deploy.
+
+TỪ BÂY GIỜ:
+- Không xóa images/ ở root.
+- Khi thêm bài mới, chỉ thêm vào thư mục A1/A2/B1/IELTS/TOEIC/Giao tiếp.

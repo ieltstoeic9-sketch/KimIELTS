@@ -1,0 +1,58 @@
+ANH NGỮ MS. KIM - TRACKING DÙNG CHUNG CHO TOÀN BỘ WEBSITE
+
+Mục tiêu:
+Một Google Sheet duy nhất nhận kết quả của:
+- KET 1 Listening Test 1, Test 2...
+- PRE-IELTS
+- IELTS Listening
+- IELTS Reading
+- Các bài khác sau này
+
+BƯỚC A - CẬP NHẬT APPS SCRIPT HIỆN TẠI
+1. Mở Google Sheet KET 1 RESULTS (sau này có thể đổi tên thành ANH NGỮ MS. KIM - RESULTS).
+2. Extensions / Tiện ích mở rộng -> Apps Script.
+3. Mở Code.gs.
+4. Xóa code cũ.
+5. Copy toàn bộ code trong:
+   UNIVERSAL_GOOGLE_APPS_SCRIPT_Code.gs
+6. Paste vào Code.gs và Save.
+
+BƯỚC B - CẬP NHẬT DEPLOYMENT
+1. Trong Apps Script chọn Deploy -> Manage deployments.
+2. Chọn deployment Web app đang có.
+3. Bấm biểu tượng Edit (bút chì).
+4. Version -> New version.
+5. Bấm Deploy.
+6. Giữ nguyên:
+   Execute as: Me
+   Who has access: Anyone
+
+Nếu cập nhật deployment cũ theo cách này, Web App URL hiện tại vẫn giữ nguyên.
+
+BƯỚC C - CẬP NHẬT TEST 1 TRÊN GITHUB
+1. File đã làm sẵn:
+   index_KET1_Test1_UNIVERSAL_TRACKING.html
+2. Đổi tên file này thành:
+   index.html
+3. Trên GitHub vào:
+   ket1-listening/test1/
+4. Thay index.html cũ bằng index.html mới.
+5. Commit changes.
+
+TỪ TEST 2 TRỞ ĐI
+Mỗi bài mới chỉ cần dùng cùng RESULT_ENDPOINT và khai báo:
+
+const COURSE_NAME = "KET 1";
+const SKILL_NAME = "Listening";
+const TEST_NAME = "Test 2";
+
+Ví dụ IELTS Reading:
+const COURSE_NAME = "IELTS";
+const SKILL_NAME = "Reading";
+const TEST_NAME = "Reading Test 1";
+
+Google Sheet sẽ tự phân biệt từng bài nhờ các cột:
+Course | Skill | Test
+
+Số lượng câu KHÔNG còn cố định 25.
+Nếu sau này IELTS có 40 câu, Sheet sẽ tự thêm Q26 ... Q40.

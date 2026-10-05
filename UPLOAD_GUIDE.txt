@@ -1,0 +1,25 @@
+ANH NGỮ MS. KIM - BẢN TRANG CHỦ THEO TRÌNH ĐỘ
+
+TRANG CHỦ:
+A1 | A2 | B1 | IELTS ACADEMIC | TOEIC | TIẾNG ANH GIAO TIẾP
+
+Hiện tại:
+- A2 có KET 1 Listening Test 1.
+- Các mục còn lại: Coming soon.
+
+Cấu trúc:
+index.html
+images/
+a2/
+  index.html
+  test1/
+    index.html
+    audio/
+    images/
+
+Cách upload:
+1. Giải nén ZIP.
+2. Upload TOÀN BỘ nội dung bên trong vào root GitHub repository.
+3. Commit changes.
+4. Settings -> Pages: main / (root).
+5. Chờ deploy xong rồi Ctrl+F5.
