@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KET 1 - Listening Test 2 | Anh ngữ Ms. Kim</title>
+<style>
+:root{--navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;--card:#fff;--line:#D9DEE8;--ink:#111;--muted:#68737d;--blue:#EEF4FF;--redlight:#FFF0F1}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+header{background:#fff;border-bottom:3px solid var(--red);padding:22px;text-align:center}
+header h1{margin:0;color:var(--navy);font-size:28px}
+header p{margin:5px 0 0;color:var(--muted)}
+main{max-width:980px;margin:28px auto;padding:0 18px 80px}
+.card{background:var(--card);border-radius:18px;padding:24px;margin-bottom:24px;box-shadow:0 8px 26px rgba(0,0,0,.06);border-top:4px solid var(--navy)}
+h2{color:var(--navy);margin-top:0} h3{margin:0 0 13px}
+.instructions{color:var(--ink);font-weight:600;line-height:1.7}
+.audio-wrap{position:sticky;top:0;z-index:5;background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0 24px}
+audio{width:100%;margin-top:8px}
+.student-info{display:grid;grid-template-columns:1fr 220px;gap:14px;margin:18px 0 8px}
+.student-info label{display:block;font-weight:700;margin-bottom:6px}
+.student-info input,.student-info select,select,input[type=text]{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.question{padding:24px 0;border-top:1px solid var(--line)} .question:first-of-type{border-top:0}
+.image-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.image-option{display:block;border:3px solid transparent;border-radius:12px;padding:7px;cursor:pointer;background:#fff;transition:.15s;text-align:center}
+.image-option:hover{border-color:#8fa7d5}.image-option.selected{border-color:var(--navy);background:rgba(11,31,77,.08)}
+.image-option input{display:none}.image-option img{width:100%;display:block;border-radius:8px}.image-option span{display:block;font-weight:800;margin-top:7px;color:var(--navy)}
+.question-image{width:100%;max-width:860px;display:block;margin:14px auto;border:1px solid #e3e6ec;border-radius:12px;background:#fff}
+.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 20px;padding:12px 16px;background:#f7f9fa;border-radius:12px;margin-bottom:16px}
+.text-choices{display:grid;gap:10px}.text-choice{border:1px solid #cdd7d2;border-radius:10px;padding:11px 16px;background:#fff;cursor:pointer}
+.gap-row{padding:18px 0;border-top:1px solid var(--line)}.gap-row>label{display:block;margin-bottom:8px}
+.part-note{background:#f7f9fa;border-left:4px solid var(--navy2);padding:14px 16px;border-radius:8px}
+button{border:0;border-radius:10px;padding:13px 22px;font-size:16px;font-weight:700;cursor:pointer}
+.primary{background:var(--navy);color:#fff}.primary:hover{background:var(--red)}.secondary{background:#e8ecea;color:#111}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+#scoreBox{display:none;padding:20px;border-radius:14px;background:var(--blue);color:var(--navy);font-size:20px;margin-bottom:22px}
+.result-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.result-item{background:#fff;border:1px solid #cfd8ea;border-radius:12px;padding:14px 12px;text-align:center}
+.result-item .num{display:block;font-size:24px;font-weight:800;color:var(--navy);margin-bottom:3px}.result-item .label{font-size:13px;color:#5f6a65}
+.review{display:none;margin-top:16px;border:1px solid #dce4e0;border-radius:14px;overflow:hidden;background:#fbfcfb}
+.review-head{display:flex;justify-content:space-between;gap:10px;padding:13px 15px;background:#F0F3F8;border-bottom:2px solid var(--navy)}
+.answer-line{padding:8px 15px;border-top:1px solid #edf0ee}.explain-block{padding:12px 15px;border-top:1px solid #edf0ee}.explain-block p{margin:6px 0 0}
+.script{background:#FAFAFA;border-left:4px solid #111}.evidence{background:var(--blue);border-left:4px solid var(--navy2)}.distractor{background:var(--redlight);border-left:4px solid var(--red)}
+.result-tag.good{color:var(--navy2)}.result-tag.bad{color:var(--red)}
+.submit-status{margin-top:12px;padding:12px 14px;border-radius:10px;display:none;font-size:14px;font-weight:700}.submit-status.ok{display:block;background:var(--blue);color:var(--navy)}.submit-status.err{display:block;background:var(--redlight);color:var(--red)}
+.script p{display:none}.script-dialogue{margin-top:8px}.script-line{display:grid;grid-template-columns:110px 1fr;gap:10px;padding:4px 0}.script-speaker{font-weight:700}
+@media(max-width:680px){.student-info{grid-template-columns:1fr}.image-options{grid-template-columns:1fr}.jobs{grid-template-columns:1fr}.result-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.script-line{grid-template-columns:85px 1fr}}
+</style>
+</head>
+<body>
+<header><h1>KET 1 - Listening Test 2</h1><p>25 questions · 5 parts</p></header>
+<main>
+
+<div class="card">
+<h2>Listening Test 2</h2>
+<p class="instructions">Complete all 25 questions. Explanations remain hidden until you submit the test.</p>
+<div class="student-info">
+<div><label for="studentName">Student name</label><input id="studentName" type="text" placeholder="Enter full name"></div>
+<div><label for="studentClass">Class</label><select id="studentClass">
+<option value="">Select class</option><option value="6">Class 6</option><option value="7">Class 7</option><option value="8">Class 8</option><option value="9">Class 9</option><option value="10">Class 10</option><option value="11">Class 11</option><option value="12">Class 12</option><option value="IELTS">IELTS</option>
+</select></div>
+</div>
+<div id="submitStatus" class="submit-status"></div>
+<div class="audio-wrap"><b>Full Test Audio</b><audio controls preload="metadata"><source src="audio/ket1_test2.mp3" type="audio/mpeg"></audio></div>
+</div>
+<section class="card">
+<h2>Part 1 — Questions 1–5</h2>
+<div class="part-note instructions">
+You will hear five short conversations.<br>
+You will hear each conversation twice.<br>
+There is one question for each conversation.<br>
+For questions 1–5, put a tick ✓ under the right answer.
+</div>
+<div class="question"><h3>1. What is John going to do tonight?</h3><div class="image-options"><label class="image-option"><input type="radio" name="q1" value="A"><img src="images/q1A.png" alt="Option A"><span>A</span></label><label class="image-option"><input type="radio" name="q1" value="B"><img src="images/q1B.png" alt="Option B"><span>B</span></label><label class="image-option"><input type="radio" name="q1" value="C"><img src="images/q1C.png" alt="Option C"><span>C</span></label></div>
+    <div class="review" id="review1">
+      <div class="review-head"><strong>Question 1</strong><span class="result-tag" id="tag1"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your1"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct1"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Paul: Hello Mrs Brown. Is John there? Mrs Brown: No, he&#x27;s out on his bicycle at the moment. Paul: Oh. Can he go swimming tonight? Mrs Brown: Sorry, Paul, he&#x27;s got a football match tonight.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“he&#x27;s got a football match tonight.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>John is going to play football tonight, so the correct answer is C.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>A (swimming) is only Paul&#x27;s suggestion. B (bicycle) describes what John is doing at the moment, not what he is going to do tonight.</p></div>
+    </div></div><div class="question"><h3>2. Which is Ben&#x27;s family?</h3><div class="image-options"><label class="image-option"><input type="radio" name="q2" value="A"><img src="images/q2A.png" alt="Option A"><span>A</span></label><label class="image-option"><input type="radio" name="q2" value="B"><img src="images/q2B.png" alt="Option B"><span>B</span></label><label class="image-option"><input type="radio" name="q2" value="C"><img src="images/q2C.png" alt="Option C"><span>C</span></label></div>
+    <div class="review" id="review2">
+      <div class="review-head"><strong>Question 2</strong><span class="result-tag" id="tag2"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your2"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct2"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: Are you as tall as your sister, Ben? Ben: No, she&#x27;s still taller than me. Female: And what about your brother? Ben: Oh, I&#x27;m much taller than him!</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>Ben&#x27;s sister is taller than Ben, and Ben is taller than his brother.</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Picture A matches the height order: sister tallest, Ben in the middle, brother shortest.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>B does not match the required height order. C shows an extra family member and does not match the three-person description.</p></div>
+    </div></div><div class="question"><h3>3. Which bag does the woman buy?</h3><div class="image-options"><label class="image-option"><input type="radio" name="q3" value="A"><img src="images/q3A.png" alt="Option A"><span>A</span></label><label class="image-option"><input type="radio" name="q3" value="B"><img src="images/q3B.png" alt="Option B"><span>B</span></label><label class="image-option"><input type="radio" name="q3" value="C"><img src="images/q3C.png" alt="Option C"><span>C</span></label></div>
+    <div class="review" id="review3">
+      <div class="review-head"><strong>Question 3</strong><span class="result-tag" id="tag3"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your3"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct3"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: I want to buy a present for Diana. Male: What about a bag? Female: Yes, this one&#x27;s nice. It&#x27;s small and round ... Male: I think she&#x27;d prefer a square bag. Female: No, this is better. I&#x27;ll get the round one.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“I&#x27;ll get the round one.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The woman finally chooses the round bag, so C is correct.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>A is the square/rectangular bag. B is another bag style, but it is not the final choice.</p></div>
+    </div></div><div class="question"><h3>4. How much did the woman pay for the apples?</h3><div class="image-options"><label class="image-option"><input type="radio" name="q4" value="A"><img src="images/q4A.png" alt="Option A"><span>A</span></label><label class="image-option"><input type="radio" name="q4" value="B"><img src="images/q4B.png" alt="Option B"><span>B</span></label><label class="image-option"><input type="radio" name="q4" value="C"><img src="images/q4C.png" alt="Option C"><span>C</span></label></div>
+    <div class="review" id="review4">
+      <div class="review-head"><strong>Question 4</strong><span class="result-tag" id="tag4"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your4"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct4"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Male: Can I help you? Female: Yes, I&#x27;d like a pound of apples, please. Male: Do you want the ones at thirty pence, thirty-five pence or forty pence? Female: The ones at thirty pence please.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“The ones at thirty pence please.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The woman chooses the 30p apples, so A is correct.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>35p and 40p are mentioned only as alternatives.</p></div>
+    </div></div><div class="question"><h3>5. What time does the film start?</h3><div class="image-options"><label class="image-option"><input type="radio" name="q5" value="A"><img src="images/q5A.png" alt="Option A"><span>A</span></label><label class="image-option"><input type="radio" name="q5" value="B"><img src="images/q5B.png" alt="Option B"><span>B</span></label><label class="image-option"><input type="radio" name="q5" value="C"><img src="images/q5C.png" alt="Option C"><span>C</span></label></div>
+    <div class="review" id="review5">
+      <div class="review-head"><strong>Question 5</strong><span class="result-tag" id="tag5"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your5"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct5"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Ray: Hello? Helen: Hello, Ray? It&#x27;s Helen. About tonight ... Ray: Ah, yes. The film begins at quarter past eight. Helen: OK. So, I&#x27;ll meet you outside the cinema at ... erm ... about five to eight. Ray: All right, see you then.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“The film begins at quarter past eight.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Quarter past eight is 8:15, so A is correct.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Five to eight is the meeting time, not the film start time. The other clock is therefore a distractor.</p></div>
+    </div></div></section><section class="card">
+<h2>Part 2 — Questions 6–10</h2>
+<div class="part-note instructions">
+Listen to Liz and Michael talking about rooms in a hotel.<br>
+They are going to paint the rooms.<br>
+What colour are they going to paint each room?<br>
+For questions 6–10, write a letter A–H next to each room.<br>
+You will hear the conversation twice.
+</div>
+<img class="question-image" src="images/part2_questions.png" alt="Part 2 questions">
+<div class="question"><h3>6. television room</h3><select id="q6"><option value="">Choose A–H</option><option value="A">A — dark blue</option><option value="B">B — light blue</option><option value="C">C — dark green</option><option value="D">D — light green</option><option value="E">E — grey</option><option value="F">F — red</option><option value="G">G — white</option><option value="H">H — light yellow</option></select>
+    <div class="review" id="review6">
+      <div class="review-head"><strong>Question 6</strong><span class="result-tag" id="tag6"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your6"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct6"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Michael: I&#x27;d like something brighter in the television room. What about red? Liz: Hm. I think it should be white, too. Michael: No, let&#x27;s have something more interesting in the television room. Do you like yellow? Liz: Yes, a light yellow is all right.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“a light yellow is all right.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The television room will be light yellow → H.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Red and white are suggested first but not chosen.</p></div>
+    </div></div><div class="question"><h3>7. first floor bedrooms</h3><select id="q7"><option value="">Choose A–H</option><option value="A">A — dark blue</option><option value="B">B — light blue</option><option value="C">C — dark green</option><option value="D">D — light green</option><option value="E">E — grey</option><option value="F">F — red</option><option value="G">G — white</option><option value="H">H — light yellow</option></select>
+    <div class="review" id="review7">
+      <div class="review-head"><strong>Question 7</strong><span class="result-tag" id="tag7"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your7"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct7"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Liz: Now, what about the bedrooms on the first floor? Michael: Well, the curtains are dark green, so I think the walls should be light green.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“the walls should be light green.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>First-floor bedrooms → light green → D.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Dark green describes the curtains, not the wall colour.</p></div>
+    </div></div><div class="question"><h3>8. second floor bedrooms</h3><select id="q8"><option value="">Choose A–H</option><option value="A">A — dark blue</option><option value="B">B — light blue</option><option value="C">C — dark green</option><option value="D">D — light green</option><option value="E">E — grey</option><option value="F">F — red</option><option value="G">G — white</option><option value="H">H — light yellow</option></select>
+    <div class="review" id="review8">
+      <div class="review-head"><strong>Question 8</strong><span class="result-tag" id="tag8"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your8"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct8"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Liz: Shall we have the same colour in the second floor bedrooms, too? Michael: No, something different. Perhaps grey ... Or is blue prettier? Liz: All right. A nice light blue on the second floor.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“A nice light blue on the second floor.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Second-floor bedrooms → light blue → B.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Grey is considered but not selected. Dark blue is not chosen.</p></div>
+    </div></div><div class="question"><h3>9. office</h3><select id="q9"><option value="">Choose A–H</option><option value="A">A — dark blue</option><option value="B">B — light blue</option><option value="C">C — dark green</option><option value="D">D — light green</option><option value="E">E — grey</option><option value="F">F — red</option><option value="G">G — white</option><option value="H">H — light yellow</option></select>
+    <div class="review" id="review9">
+      <div class="review-head"><strong>Question 9</strong><span class="result-tag" id="tag9"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your9"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct9"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Michael: And for the office? How about red? Liz: Oh, no! That must be grey.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“That must be grey.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The office will be grey → E.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Red is suggested but immediately rejected.</p></div>
+    </div></div><div class="question"><h3>10. kitchen</h3><select id="q10"><option value="">Choose A–H</option><option value="A">A — dark blue</option><option value="B">B — light blue</option><option value="C">C — dark green</option><option value="D">D — light green</option><option value="E">E — grey</option><option value="F">F — red</option><option value="G">G — white</option><option value="H">H — light yellow</option></select>
+    <div class="review" id="review10">
+      <div class="review-head"><strong>Question 10</strong><span class="result-tag" id="tag10"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your10"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct10"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Liz: You can have red in the kitchen. Michael: Fine! At least one room will be my favourite colour!</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“You can have red in the kitchen.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The kitchen will be red → F.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Other colours belong to other rooms.</p></div>
+    </div></div></section><section class="card">
+<h2>Part 3 — Questions 11–15</h2>
+<div class="part-note instructions">
+Listen to Sarah talking to her friend, Jane, about a new job.<br>
+For questions 11–15, tick ✓ A, B or C.<br>
+You will hear the conversation twice.
+</div>
+<div class="question"><img class="question-image" src="images/q11.png" alt="Question 11"><div class="text-choices"><label class="text-choice"><input type="radio" name="q11" value="A"> <b>A</b> 6.00.</label><label class="text-choice"><input type="radio" name="q11" value="B"> <b>B</b> 8.30.</label><label class="text-choice"><input type="radio" name="q11" value="C"> <b>C</b> 9.00.</label></div>
+    <div class="review" id="review11">
+      <div class="review-head"><strong>Question 11</strong><span class="result-tag" id="tag11"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your11"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct11"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Jane: What time do you start in the morning? Sarah: At nine o&#x27;clock. You can catch the eight thirty train with me.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“At nine o&#x27;clock.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Sarah usually starts work at 9:00 → C.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>8:30 is the train time, not the work starting time. 6:00 is not stated.</p></div>
+    </div></div><div class="question"><img class="question-image" src="images/q12.png" alt="Question 12"><div class="text-choices"><label class="text-choice"><input type="radio" name="q12" value="A"> <b>A</b> £160 a week.</label><label class="text-choice"><input type="radio" name="q12" value="B"> <b>B</b> £180 a week.</label><label class="text-choice"><input type="radio" name="q12" value="C"> <b>C</b> £210 a week.</label></div>
+    <div class="review" id="review12">
+      <div class="review-head"><strong>Question 12</strong><span class="result-tag" id="tag12"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your12"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct12"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Jane: OK, and what&#x27;s the pay like? I got a hundred and eighty pounds a week in my last job. Sarah: Oh, you can earn more here. It&#x27;s six pounds an hour, so that&#x27;s about two hundred and ten pounds a week.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“about two hundred and ten pounds a week.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The new job pays about £210 per week → C.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>£180 was Jane&#x27;s previous salary. £160 is not supported.</p></div>
+    </div></div><div class="question"><img class="question-image" src="images/q13.png" alt="Question 13"><div class="text-choices"><label class="text-choice"><input type="radio" name="q13" value="A"> <b>A</b> in a café.</label><label class="text-choice"><input type="radio" name="q13" value="B"> <b>B</b> in a park.</label><label class="text-choice"><input type="radio" name="q13" value="C"> <b>C</b> at home.</label></div>
+    <div class="review" id="review13">
+      <div class="review-head"><strong>Question 13</strong><span class="result-tag" id="tag13"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your13"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct13"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Jane: What do you do for lunch, Sarah? Do you take sandwiches? Sarah: No, we go to a little café near the park.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“we go to a little café near the park.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Sarah has lunch in a café → A.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>The park is only a location reference; she does not say they eat in the park or at home.</p></div>
+    </div></div><div class="question"><img class="question-image" src="images/q14.png" alt="Question 14"><div class="text-choices"><label class="text-choice"><input type="radio" name="q14" value="A"> <b>A</b> 3 weeks&#x27; holiday.</label><label class="text-choice"><input type="radio" name="q14" value="B"> <b>B</b> 4 weeks&#x27; holiday.</label><label class="text-choice"><input type="radio" name="q14" value="C"> <b>C</b> 5 weeks&#x27; holiday.</label></div>
+    <div class="review" id="review14">
+      <div class="review-head"><strong>Question 14</strong><span class="result-tag" id="tag14"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your14"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct14"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Jane: And how many weeks&#x27; holiday do you have? Sarah: Well, I have four weeks, some people have five, but when you start, Jane, you only have three.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“when you start, Jane, you only have three.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Jane can have 3 weeks&#x27; holiday when she starts → A.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Four weeks is Sarah&#x27;s allowance. Five weeks applies to some other employees.</p></div>
+    </div></div><div class="question"><img class="question-image" src="images/q15.png" alt="Question 15"><div class="text-choices"><label class="text-choice"><input type="radio" name="q15" value="A"> <b>A</b> Fawset.</label><label class="text-choice"><input type="radio" name="q15" value="B"> <b>B</b> Fawcett.</label><label class="text-choice"><input type="radio" name="q15" value="C"> <b>C</b> Fausett.</label></div>
+    <div class="review" id="review15">
+      <div class="review-head"><strong>Question 15</strong><span class="result-tag" id="tag15"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your15"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct15"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Sarah: Yes, why not? His name&#x27;s Mr Fawcett. Jane: What? Sarah: Fawcett. F-A-W-C-E-T-T.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“F-A-W-C-E-T-T.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The spelling confirms Fawcett → B.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Fawset and Fausett are spelling distractors.</p></div>
+    </div></div></section><section class="card">
+<h2>Part 4 — Questions 16–20</h2>
+<div class="part-note instructions">
+You will hear a student telephoning a school.<br>
+Listen and complete questions 16–20.<br>
+You will hear the conversation twice.
+</div>
+<img class="question-image" src="images/part4_form.png" alt="Part 4 form">
+<div class="gap-row"><label for="q16"><b>16. Day:</b></label><input id="q16" type="text" autocomplete="off">
+    <div class="review" id="review16">
+      <div class="review-head"><strong>Question 16</strong><span class="result-tag" id="tag16"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your16"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct16"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: Well, first, what day does the next course begin? Male: Well, our courses always begin on the first Monday of every month. Let me see, the next course begins on the third of January.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“our courses always begin on the first Monday of every month.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The missing day is Monday.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>January is the month for Question 17, not the day.</p></div>
+    </div></div><div class="gap-row"><label for="q17"><b>17. Date: 3rd ______</b></label><input id="q17" type="text" autocomplete="off">
+    <div class="review" id="review17">
+      <div class="review-head"><strong>Question 17</strong><span class="result-tag" id="tag17"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your17"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct17"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Male: The next course begins on the third of January.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“the third of January.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The date already gives 3rd, so the missing word is January.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Monday belongs to Question 16.</p></div>
+    </div></div><div class="gap-row"><label for="q18"><b>18. Classes begin at:</b></label><input id="q18" type="text" autocomplete="off">
+    <div class="review" id="review18">
+      <div class="review-head"><strong>Question 18</strong><span class="result-tag" id="tag18"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your18"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct18"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: And what time do classes start? Male: Well, they begin at a quarter past nine so you should be here a little earlier, at about nine o&#x27;clock.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“they begin at a quarter past nine.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Classes start at 9:15.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>9:00 is the recommended arrival time, not the class starting time.</p></div>
+    </div></div><div class="gap-row"><label for="q19"><b>19. Address: ______ London Road</b></label><input id="q19" type="text" autocomplete="off">
+    <div class="review" id="review19">
+      <div class="review-head"><strong>Question 19</strong><span class="result-tag" id="tag19"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your19"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct19"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: And I don&#x27;t have the address. Could you give it to me, please? Male: Yes, the school is at 57 London Road.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“the school is at 57 London Road.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The missing house number is 57.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>London Road is already printed on the form.</p></div>
+    </div></div><div class="gap-row"><label for="q20"><b>20. Near:</b></label><input id="q20" type="text" autocomplete="off">
+    <div class="review" id="review20">
+      <div class="review-head"><strong>Question 20</strong><span class="result-tag" id="tag20"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your20"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct20"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Female: Could you tell me where London Road is, please? Male: Yes, it&#x27;s a long road and we&#x27;re quite near the station.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“we&#x27;re quite near the station.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The school is near the station.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>London Road is the address itself; the blank asks for a nearby landmark.</p></div>
+    </div></div></section><section class="card">
+<h2>Part 5 — Questions 21–25</h2>
+<div class="part-note instructions">
+You will hear a tour guide talking about a town in Scotland.<br>
+Listen and complete questions 21–25.<br>
+You will hear the information twice.
+</div>
+<img class="question-image" src="images/part5_form.png" alt="Part 5 form">
+<div class="gap-row"><label for="q21"><b>21. Banks open from:</b></label><input id="q21" type="text" autocomplete="off">
+    <div class="review" id="review21">
+      <div class="review-head"><strong>Question 21</strong><span class="result-tag" id="tag21"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your21"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct21"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Guide: Firstly, the banks. They&#x27;re open from nine thirty in the morning until four o&#x27;clock in the afternoon.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“open from nine thirty”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Banks open at 9:30.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>4:00 is the closing time, used in Question 22.</p></div>
+    </div></div><div class="gap-row"><label for="q22"><b>22. to:</b></label><input id="q22" type="text" autocomplete="off">
+    <div class="review" id="review22">
+      <div class="review-head"><strong>Question 22</strong><span class="result-tag" id="tag22"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your22"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct22"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Guide: They&#x27;re open from nine thirty in the morning until four o&#x27;clock in the afternoon.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“until four o&#x27;clock in the afternoon.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Banks close at 4:00.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>9:30 is the opening time, used in Question 21.</p></div>
+    </div></div><div class="gap-row"><label for="q23"><b>23. closed on:</b></label><input id="q23" type="text" autocomplete="off">
+    <div class="review" id="review23">
+      <div class="review-head"><strong>Question 23</strong><span class="result-tag" id="tag23"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your23"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct23"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Guide: They&#x27;re open every day except Sunday. But on Sunday you can change money in the hotel.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“every day except Sunday.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>Banks are closed on Sunday.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>The hotel can change money on Sunday, but the question is about the banks.</p></div>
+    </div></div><div class="gap-row"><label for="q24"><b>24. Bus to city centre — number:</b></label><input id="q24" type="text" autocomplete="off">
+    <div class="review" id="review24">
+      <div class="review-head"><strong>Question 24</strong><span class="result-tag" id="tag24"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your24"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct24"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Guide: You can take a bus from the hotel to the city centre. It&#x27;s the number twenty-one.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“It&#x27;s the number twenty-one.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The bus number is 21.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Fifteen refers to how often the buses run, not the bus number.</p></div>
+    </div></div><div class="gap-row"><label for="q25"><b>25. Bus to city centre — cost:</b></label><input id="q25" type="text" autocomplete="off">
+    <div class="review" id="review25">
+      <div class="review-head"><strong>Question 25</strong><span class="result-tag" id="tag25"></span></div>
+      <div class="answer-line"><b>Your answer:</b> <span id="your25"></span></div>
+      <div class="answer-line"><b>Correct answer:</b> <span id="correct25"></span></div>
+      <div class="explain-block script"><b>Full script / script segment</b><p>Guide: A ticket to the city centre costs sixty pence.</p></div>
+      <div class="explain-block evidence"><b>Evidence</b><p>“costs sixty pence.”</p></div>
+      <div class="explain-block"><b>Explanation</b><p>The bus fare is 60p.</p></div>
+      <div class="explain-block distractor"><b>Distractors / Why the others are wrong</b><p>Other numbers in the talk refer to times, frequency, or the bus number.</p></div>
+    </div></div></section>
+<div class="card">
+<div class="actions">
+<button class="primary" onclick="submitTest()">SUBMIT TEST</button>
+<button class="secondary" onclick="resetTest()">RESET</button>
+</div>
+<div id="scoreBox"></div>
+</div>
+</main>
+
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const COURSE_NAME="A2";
+const SKILL_NAME="Listening";
+const TEST_NAME="KET 1 - Listening Test 2";
+const answers={1:'C',2:'A',3:'C',4:'A',5:'A',6:'H',7:'D',8:'B',9:'E',10:'F',11:'C',12:'C',13:'A',14:'A',15:'B',16:'Monday',17:'January',18:'9.15',19:'57',20:'station',21:'9.30',22:'4.00',23:'Sunday',24:'21',25:'60p'};
+
+function norm(s){return String(s??"").trim().toLowerCase().replace(/\s+/g," ");}
+function compact(s){return String(s??"").toLowerCase().replace(/[^a-z0-9]/g,"");}
+
+function textCorrect(q,value){
+ const v=norm(value), c=compact(value);
+ if(q===16) return v==="monday";
+ if(q===17) return ["january","jan"].includes(v);
+ if(q===18) return ["9.15","9:15","9 15","quarter past nine","09:15"].includes(v);
+ if(q===19) return c==="57";
+ if(q===20) return ["station","the station"].includes(v);
+ if(q===21) return ["9.30","9:30","9 30","nine thirty","09:30"].includes(v);
+ if(q===22) return ["4.00","4:00","4","four","four o'clock","four oclock","16.00","16:00"].includes(v);
+ if(q===23) return v==="sunday";
+ if(q===24) return c==="21" || ["twenty one","twenty-one"].includes(v);
+ if(q===25) return ["60p","60 p","60 pence","sixty pence","0.60"].includes(v);
+ return false;
+}
+
+function getAnswer(q){
+ if(q<=5 || (q>=11&&q<=15)){
+   const el=document.querySelector('input[name="q'+q+'"]:checked');
+   return el?el.value:"";
+ }
+ return document.getElementById("q"+q).value;
+}
+
+function isCorrect(q,val){
+ if(q<=15) return norm(val)===norm(answers[q]);
+ return textCorrect(q,val);
+}
+
+function setupDirectImageChoices(){
+ document.querySelectorAll('.image-option').forEach(label=>{
+  label.addEventListener('click',()=>{
+   const radio=label.querySelector('input');
+   document.querySelectorAll('input[name="'+radio.name+'"]').forEach(r=>r.closest('.image-option')?.classList.remove('selected'));
+   label.classList.add('selected');
+  });
+ });
+}
+
+function buildSubmissionPayload(score,percent){
+ const detail=[];
+ for(let q=1;q<=25;q++){
+  const val=getAnswer(q);
+  detail.push({question:q,answer:val||"",correctAnswer:answers[q],isCorrect:isCorrect(q,val)});
+ }
+ return {
+  timestamp:new Date().toISOString(),
+  studentName:document.getElementById("studentName").value.trim(),
+  className:document.getElementById("studentClass").value,
+  courseName:COURSE_NAME,
+  skillName:SKILL_NAME,
+  testName:TEST_NAME,
+  score:score,total:25,correct:score,incorrect:25-score,correctRate:percent,answers:detail
+ };
+}
+
+function sendResultToTeacher(payload){
+ const status=document.getElementById("submitStatus");
+ try{
+  document.getElementById("resultSenderForm")?.remove();
+  let iframe=document.getElementById("resultSenderFrame");
+  if(!iframe){
+   iframe=document.createElement("iframe");
+   iframe.id="resultSenderFrame";
+   iframe.name="resultSenderFrame";
+   iframe.style.display="none";
+   document.body.appendChild(iframe);
+  }
+  const form=document.createElement("form");
+  form.id="resultSenderForm";
+  form.method="POST";
+  form.action=RESULT_ENDPOINT;
+  form.target="resultSenderFrame";
+  form.style.display="none";
+  const input=document.createElement("input");
+  input.type="hidden";
+  input.name="payload";
+  input.value=JSON.stringify(payload);
+  form.appendChild(input);
+  document.body.appendChild(form);
+  form.submit();
+  status.className="submit-status ok";
+  status.textContent="✓ Result submitted to teacher";
+  setTimeout(()=>form.remove(),3000);
+ }catch(err){
+  status.className="submit-status err";
+  status.textContent="Could not submit result to teacher.";
+ }
+}
+
+function submitTest(){
+ const studentName=document.getElementById("studentName").value.trim();
+ const studentClass=document.getElementById("studentClass").value;
+ const status=document.getElementById("submitStatus");
+ if(!studentName||!studentClass){
+  status.className="submit-status err";
+  status.textContent="Please enter Student name and select Class before submitting.";
+  status.scrollIntoView({behavior:"smooth",block:"center"});
+  return;
+ }
+ let score=0;
+ for(let q=1;q<=25;q++){
+  const val=getAnswer(q),ok=isCorrect(q,val);
+  if(ok) score++;
+  document.getElementById("your"+q).textContent=val||"—";
+  document.getElementById("correct"+q).textContent=answers[q];
+  const tag=document.getElementById("tag"+q);
+  tag.textContent=ok?"✓ Correct":"✗ Incorrect";
+  tag.className="result-tag "+(ok?"good":"bad");
+  document.getElementById("review"+q).style.display="block";
+ }
+ const percent=Math.round(score/25*100),incorrect=25-score,box=document.getElementById("scoreBox");
+ box.style.display="block";
+ box.innerHTML="<div style='margin-bottom:12px'><b>Student:</b> "+studentName+" &nbsp; | &nbsp; <b>Class:</b> "+studentClass+"</div>"+
+ "<b style='font-size:22px'>YOUR RESULT</b><div class='result-summary'>"+
+ "<div class='result-item'><span class='num'>"+score+"/25</span><span class='label'>Your score</span></div>"+
+ "<div class='result-item'><span class='num'>"+score+"</span><span class='label'>Correct answers</span></div>"+
+ "<div class='result-item'><span class='num'>"+incorrect+"</span><span class='label'>Incorrect answers</span></div>"+
+ "<div class='result-item'><span class='num'>"+percent+"%</span><span class='label'>Correct rate</span></div></div>";
+ sendResultToTeacher(buildSubmissionPayload(score,percent));
+ box.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+function resetTest(){
+ document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);
+ document.querySelectorAll('input[type="text"]').forEach(x=>x.value="");
+ document.querySelectorAll('select').forEach(x=>x.value="");
+ document.querySelectorAll('.review').forEach(x=>x.style.display="none");
+ document.querySelectorAll('.image-option').forEach(x=>x.classList.remove('selected'));
+ document.getElementById("scoreBox").style.display="none";
+ const st=document.getElementById("submitStatus");
+ st.className="submit-status";
+ st.textContent="";
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function formatScripts(){
+ const re=/(Paul|Mrs Brown|Female|Male|Liz|Michael|Jane|Sarah|Guide):/g;
+ document.querySelectorAll('.script').forEach(block=>{
+  const p=block.querySelector('p');
+  if(!p)return;
+  const text=p.textContent.trim(),matches=[...text.matchAll(re)];
+  if(!matches.length)return;
+  const wrap=document.createElement('div');
+  wrap.className='script-dialogue';
+  matches.forEach((m,i)=>{
+   const row=document.createElement('div');row.className='script-line';
+   const sp=document.createElement('div');sp.className='script-speaker';sp.textContent=m[1]+':';
+   const tx=document.createElement('div');
+   tx.textContent=text.slice(m.index+m[0].length,i+1<matches.length?matches[i+1].index:text.length).trim();
+   row.append(sp,tx);wrap.appendChild(row);
+  });
+  block.appendChild(wrap);
+ });
+}
+
+setupDirectImageChoices();
+formatScripts();
+</script>
+</body>
+</html>
