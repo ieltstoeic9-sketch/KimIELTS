@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRE-IELTS Listening - Exercise 3</title><style>
+:root{--navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1050px;margin:30px auto;padding:0 20px 70px}
+.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input[type=text],select{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.input-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.qbox{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:10px}
+.qbox label{font-weight:800;color:var(--navy)}
+.qbox input.correct{border:2px solid var(--navy2);background:var(--blue)}
+.qbox input.wrong{border:2px solid var(--red);background:var(--redlight)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button.action{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.check:hover{background:var(--red)}
+.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45;cursor:not-allowed}
+.result{display:none;margin-top:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.result.show{display:block}
+.result-head{background:#F0F3F8;padding:12px 14px;font-weight:800;color:var(--navy)}
+.result-row{padding:11px 14px;border-top:1px solid #edf0ee}
+.good{color:var(--navy2);font-weight:800}.bad{color:var(--red);font-weight:800}
+.info{margin-top:7px;background:var(--blue);border-left:4px solid var(--navy2);padding:9px 10px}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
+.status.ok{display:block;background:var(--blue);color:var(--navy)}
+.status.err{display:block;background:var(--redlight);color:var(--red)}
+@media(max-width:800px){.input-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.student-info{grid-template-columns:1fr}.input-grid{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body>
+<header><div class="brand"><img src="../../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main>
+<a class="back" href="../">← Back to Part 1</a>
+<section class="hero"><h1>Exercise 3</h1><p>Place names in Britain</p></section>
+
+<section class="card">
+  <h2>Student information</h2>
+  <div class="student-info">
+    <div>
+      <label for="studentName">Student name</label>
+      <input id="studentName" type="text" placeholder="Enter full name">
+    </div>
+    <div>
+      <label for="studentClass">Class</label>
+      <select id="studentClass">
+        <option value="">Select class</option>
+        <option>Class 6</option><option>Class 7</option><option>Class 8</option>
+        <option>Class 9</option><option>Class 10</option><option>Class 11</option>
+        <option>Class 12</option><option>PRE-IELTS</option><option>Other</option>
+      </select>
+    </div>
+  </div>
+  <div id="submitStatus" class="status"></div>
+</section>
+
+<section class="card">
+<h2>Audio</h2>
+<div class="audio-wrap"><b>Exercise 3 — Full audio</b><audio controls preload="metadata"><source src="audio/03.mp3" type="audio/mpeg"></audio></div>
+</section>
+
+<section class="card">
+<h2>Listen and write</h2>
+<p><b>Listen to the names of the places and write them down. Do you know where these places are in Britain?</b></p>
+<div class="input-grid"><div class="qbox"><label>1.</label><input id="q1" type="text" autocomplete="off"></div><div class="qbox"><label>2.</label><input id="q2" type="text" autocomplete="off"></div><div class="qbox"><label>3.</label><input id="q3" type="text" autocomplete="off"></div><div class="qbox"><label>4.</label><input id="q4" type="text" autocomplete="off"></div><div class="qbox"><label>5.</label><input id="q5" type="text" autocomplete="off"></div><div class="qbox"><label>6.</label><input id="q6" type="text" autocomplete="off"></div><div class="qbox"><label>7.</label><input id="q7" type="text" autocomplete="off"></div><div class="qbox"><label>8.</label><input id="q8" type="text" autocomplete="off"></div><div class="qbox"><label>9.</label><input id="q9" type="text" autocomplete="off"></div><div class="qbox"><label>10.</label><input id="q10" type="text" autocomplete="off"></div><div class="qbox"><label>11.</label><input id="q11" type="text" autocomplete="off"></div><div class="qbox"><label>12.</label><input id="q12" type="text" autocomplete="off"></div><div class="qbox"><label>13.</label><input id="q13" type="text" autocomplete="off"></div><div class="qbox"><label>14.</label><input id="q14" type="text" autocomplete="off"></div><div class="qbox"><label>15.</label><input id="q15" type="text" autocomplete="off"></div><div class="qbox"><label>16.</label><input id="q16" type="text" autocomplete="off"></div><div class="qbox"><label>17.</label><input id="q17" type="text" autocomplete="off"></div><div class="qbox"><label>18.</label><input id="q18" type="text" autocomplete="off"></div><div class="qbox"><label>19.</label><input id="q19" type="text" autocomplete="off"></div><div class="qbox"><label>20.</label><input id="q20" type="text" autocomplete="off"></div></div>
+<div class="actions">
+<button class="action check" onclick="checkAnswers()">CHECK ANSWERS</button>
+</div>
+<div id="result" class="result"></div>
+</section>
+
+<section class="card">
+<h2>Submit result</h2>
+<button id="submitBtn" class="action submit" onclick="submitResult()" disabled>SUBMIT RESULT</button>
+</section>
+</main>
+
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const data=[{"key": "Edinburgh", "vi": "Edinburgh, thủ đô của Scotland."}, {"key": "Glasgow", "vi": "Glasgow, một thành phố lớn ở Scotland."}, {"key": "Aberdeen", "vi": "Aberdeen, một thành phố ở đông bắc Scotland."}, {"key": "Dundee", "vi": "Dundee, một thành phố ở Scotland."}, {"key": "Cardiff", "vi": "Cardiff, thủ đô của Wales."}, {"key": "Swansea", "vi": "Swansea, một thành phố ở Wales."}, {"key": "Newport", "vi": "Newport, một thành phố ở Wales."}, {"key": "Belfast", "vi": "Belfast, thủ đô của Bắc Ireland."}, {"key": "Manchester", "vi": "Manchester, một thành phố lớn ở Anh."}, {"key": "Leeds", "vi": "Leeds, một thành phố ở phía bắc nước Anh."}, {"key": "Sheffield", "vi": "Sheffield, một thành phố ở Anh."}, {"key": "Leicester", "vi": "Leicester, một thành phố ở vùng Midlands của Anh."}, {"key": "Liverpool", "vi": "Liverpool, một thành phố cảng lớn ở Anh."}, {"key": "Birmingham", "vi": "Birmingham, một thành phố lớn ở vùng Midlands của Anh."}, {"key": "Nottingham", "vi": "Nottingham, một thành phố ở Anh."}, {"key": "Coventry", "vi": "Coventry, một thành phố ở vùng Midlands của Anh."}, {"key": "Bristol", "vi": "Bristol, một thành phố ở tây nam nước Anh."}, {"key": "Bradford", "vi": "Bradford, một thành phố ở phía bắc nước Anh."}, {"key": "London", "vi": "London, thủ đô của Anh và Vương quốc Anh."}, {"key": "Brighton", "vi": "Brighton, một thành phố ven biển ở miền nam nước Anh."}];
+let checked=false, score=0;
+
+function norm(s){return String(s||'').trim().toLowerCase().replace(/\s+/g,' ');}
+function validateStudent(){
+ const name=document.getElementById('studentName').value.trim();
+ const cls=document.getElementById('studentClass').value;
+ if(!name||!cls){
+   alert('Please enter Student name and select Class first. — Hãy nhập tên học sinh và chọn lớp trước.');
+   return false;
+ }
+ return true;
+}
+
+function checkAnswers(){
+ if(!validateStudent()) return;
+ score=0; let rows='';
+ data.forEach((item,idx)=>{
+   const input=document.getElementById('q'+(idx+1));
+   const raw=input.value.trim();
+   const ok=norm(raw)===norm(item.key);
+   input.classList.remove('correct','wrong');
+   input.classList.add(ok?'correct':'wrong');
+   if(ok) score++;
+   rows += `<div class="result-row"><b>${idx+1}. ${item.key}</b> — <span class="${ok?'good':'bad'}">${ok?'✓ Correct':'✗ Incorrect'}</span>
+   <br><b>Your answer:</b> ${raw||'—'}
+   <br><b>Correct answer:</b> ${item.key}
+   <div class="info"><b>Giải thích tiếng Việt:</b> ${item.vi}</div></div>`;
+ });
+ const box=document.getElementById('result');
+ box.innerHTML=`<div class="result-head">Score: ${score}/20 — ${Math.round(score*5)}%</div>`+rows;
+ box.classList.add('show');
+ checked=true;
+ document.getElementById('submitBtn').disabled=false;
+}
+
+function submitResult(){
+ if(!validateStudent()||!checked) return;
+ const answers=data.map((item,idx)=>{
+   const raw=document.getElementById('q'+(idx+1)).value.trim();
+   return {question:idx+1,answer:raw,correctAnswer:item.key,isCorrect:norm(raw)===norm(item.key)};
+ });
+ const payload={
+   activityType:'listening',
+   studentName:document.getElementById('studentName').value.trim(),
+   className:document.getElementById('studentClass').value,
+   courseName:'PRE-IELTS',
+   skillName:'Listening',
+   testName:'Names and Places - Part 1 - Exercise 3',
+   score:score,total:20,correct:score,incorrect:20-score,correctRate:Math.round(score*500)/100,
+   answers:answers
+ };
+ send(payload);
+}
+
+function send(payload){
+ try{
+   document.getElementById('resultSenderForm')?.remove();
+   let iframe=document.getElementById('resultSenderFrame');
+   if(!iframe){
+     iframe=document.createElement('iframe');iframe.id='resultSenderFrame';iframe.name='resultSenderFrame';iframe.style.display='none';document.body.appendChild(iframe);
+   }
+   const form=document.createElement('form');form.id='resultSenderForm';form.method='POST';form.action=RESULT_ENDPOINT;form.target='resultSenderFrame';form.style.display='none';
+   const input=document.createElement('input');input.type='hidden';input.name='payload';input.value=JSON.stringify(payload);
+   form.appendChild(input);document.body.appendChild(form);form.submit();
+   const st=document.getElementById('submitStatus');st.className='status ok';st.textContent='✓ Result submitted to Listening Results — Kết quả đã được gửi cho giáo viên.';
+   st.scrollIntoView({behavior:'smooth',block:'center'});
+   setTimeout(()=>form.remove(),3000);
+ }catch(err){
+   const st=document.getElementById('submitStatus');st.className='status err';st.textContent='Could not submit result. — Không thể gửi kết quả.';
+ }
+}
+</script>
+</body></html>

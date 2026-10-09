@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRE-IELTS Listening - Names and Places - Exercise 1</title>
+<style>
+:root{
+  --navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;
+  --line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--muted:#666;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1050px;margin:30px auto;padding:0 20px 70px}
+.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input[type=text],select{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.note{color:var(--muted);font-size:14px}
+.practice-box{background:#fafafa;border:1px solid var(--line);padding:16px;border-radius:12px}
+.letters{font-size:20px;line-height:1.9;word-spacing:7px}
+.cap-label{font-weight:800;color:var(--navy);display:inline-block;min-width:140px}
+.input-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.qbox{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:10px}
+.qbox label{font-weight:800;color:var(--navy)}
+.qbox input.correct{border:2px solid var(--navy2);background:var(--blue)}
+.qbox input.wrong{border:2px solid var(--red);background:var(--redlight)}
+.letter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:700px}
+.letter-btn{border:2px solid var(--navy);background:#fff;color:var(--navy);padding:13px 8px;border-radius:10px;font-size:20px;font-weight:800;cursor:pointer}
+.letter-btn.selected{background:var(--navy);color:#fff}
+.letter-btn.correct-choice{outline:3px solid var(--navy2)}
+.letter-btn.wrong-choice{outline:3px solid var(--red)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button.action{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.check:hover{background:var(--red)}
+.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45;cursor:not-allowed}
+.result{display:none;margin-top:16px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.result.show{display:block}
+.result-head{background:#F0F3F8;padding:12px 14px;font-weight:800;color:var(--navy)}
+.result-row{padding:11px 14px;border-top:1px solid #edf0ee}
+.good{color:var(--navy2);font-weight:800}.bad{color:var(--red);font-weight:800}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
+.status.ok{display:block;background:var(--blue);color:var(--navy)}
+.status.err{display:block;background:var(--redlight);color:var(--red)}
+@media(max-width:800px){.input-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.student-info{grid-template-columns:1fr}.input-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><img src="../../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div>
+</header>
+
+<main>
+<a class="back" href="../">← Back to Part 1</a>
+
+<section class="hero">
+  <h1>Exercise 1</h1>
+  <p>Part 1: The letters of the alphabet</p>
+</section>
+
+<section class="card">
+  <h2>Student information</h2>
+  <div class="student-info">
+    <div>
+      <label for="studentName">Student name</label>
+      <input id="studentName" type="text" placeholder="Enter full name">
+    </div>
+    <div>
+      <label for="studentClass">Class</label>
+      <select id="studentClass">
+        <option value="">Select class</option>
+        <option>Class 6</option><option>Class 7</option><option>Class 8</option>
+        <option>Class 9</option><option>Class 10</option><option>Class 11</option>
+        <option>Class 12</option><option>PRE-IELTS</option><option>Other</option>
+      </select>
+    </div>
+  </div>
+  <div id="submitStatus" class="status"></div>
+</section>
+
+<section class="card">
+  <h2>Audio</h2>
+  <div class="audio-wrap">
+    <b>Exercise 1 — Full audio</b>
+    <audio controls preload="metadata"><source src="audio/01.mp3" type="audio/mpeg"></audio>
+  </div>
+</section>
+
+<section class="card">
+  <h2>A. Listen and repeat</h2>
+  <p><b>Listen to the recording and repeat these letters after the speaker.</b></p>
+  <div class="practice-box">
+    <p><span class="cap-label">Capital letters:</span> <span class="letters">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span></p>
+    <p><span class="cap-label">Small letters:</span> <span class="letters">a b c d e f g h i j k l m n o p q r s t u v w x y z</span></p>
+  </div>
+  <p class="note">Part A is listening and repeating practice only. — Part A chỉ luyện nghe và nhắc lại, không chấm điểm.</p>
+</section>
+
+<section class="card">
+  <h2>B. Listen and write down the letters</h2>
+  <p><b>Listen to the recording and write down the letters.</b></p>
+  <div class="input-grid"><div class="qbox"><label>1.</label><input id="b1" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>2.</label><input id="b2" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>3.</label><input id="b3" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>4.</label><input id="b4" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>5.</label><input id="b5" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>6.</label><input id="b6" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>7.</label><input id="b7" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>8.</label><input id="b8" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>9.</label><input id="b9" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>10.</label><input id="b10" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>11.</label><input id="b11" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>12.</label><input id="b12" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>13.</label><input id="b13" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>14.</label><input id="b14" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>15.</label><input id="b15" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>16.</label><input id="b16" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>17.</label><input id="b17" type="text" maxlength="2" autocomplete="off"></div><div class="qbox"><label>18.</label><input id="b18" type="text" maxlength="2" autocomplete="off"></div></div>
+  <div class="actions">
+    <button class="action check" onclick="checkPartB()">CHECK ANSWERS — PART B</button>
+  </div>
+  <div id="resultB" class="result"></div>
+</section>
+
+<section class="card">
+  <h2>C. Circle the letters you hear</h2>
+  <p><b>Click the 13 letters you hear.</b></p>
+  <div class="letter-grid"><button type="button" class="letter-btn" data-letter="B" onclick="toggleLetter(this)">B</button><button type="button" class="letter-btn" data-letter="P" onclick="toggleLetter(this)">P</button><button type="button" class="letter-btn" data-letter="E" onclick="toggleLetter(this)">E</button><button type="button" class="letter-btn" data-letter="D" onclick="toggleLetter(this)">D</button><button type="button" class="letter-btn" data-letter="G" onclick="toggleLetter(this)">G</button><button type="button" class="letter-btn" data-letter="K" onclick="toggleLetter(this)">K</button><button type="button" class="letter-btn" data-letter="F" onclick="toggleLetter(this)">F</button><button type="button" class="letter-btn" data-letter="M" onclick="toggleLetter(this)">M</button><button type="button" class="letter-btn" data-letter="X" onclick="toggleLetter(this)">X</button><button type="button" class="letter-btn" data-letter="I" onclick="toggleLetter(this)">I</button><button type="button" class="letter-btn" data-letter="A" onclick="toggleLetter(this)">A</button><button type="button" class="letter-btn" data-letter="H" onclick="toggleLetter(this)">H</button><button type="button" class="letter-btn" data-letter="N" onclick="toggleLetter(this)">N</button><button type="button" class="letter-btn" data-letter="Z" onclick="toggleLetter(this)">Z</button><button type="button" class="letter-btn" data-letter="V" onclick="toggleLetter(this)">V</button><button type="button" class="letter-btn" data-letter="C" onclick="toggleLetter(this)">C</button><button type="button" class="letter-btn" data-letter="J" onclick="toggleLetter(this)">J</button><button type="button" class="letter-btn" data-letter="L" onclick="toggleLetter(this)">L</button><button type="button" class="letter-btn" data-letter="O" onclick="toggleLetter(this)">O</button><button type="button" class="letter-btn" data-letter="W" onclick="toggleLetter(this)">W</button><button type="button" class="letter-btn" data-letter="R" onclick="toggleLetter(this)">R</button><button type="button" class="letter-btn" data-letter="T" onclick="toggleLetter(this)">T</button><button type="button" class="letter-btn" data-letter="U" onclick="toggleLetter(this)">U</button><button type="button" class="letter-btn" data-letter="Y" onclick="toggleLetter(this)">Y</button><button type="button" class="letter-btn" data-letter="S" onclick="toggleLetter(this)">S</button></div>
+  <p class="note">Select exactly 13 letters. Click again to remove a selection.</p>
+  <div class="actions">
+    <button class="action check" onclick="checkPartC()">CHECK ANSWERS — PART C</button>
+  </div>
+  <div id="resultC" class="result"></div>
+</section>
+
+<section class="card">
+  <h2>Submit result</h2>
+  <p>Check both Part B and Part C first, then submit your result to the teacher.</p>
+  <button id="submitBtn" class="action submit" onclick="submitResult()" disabled>SUBMIT RESULT</button>
+</section>
+</main>
+
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const KEY_B=["P", "I", "F", "H", "J", "K", "O", "M", "R", "L", "W", "T", "U", "X", "S", "A", "B", "E"];
+const KEY_C=["F", "G", "P", "H", "V", "J", "W", "N", "U", "R", "A", "B", "Y"];
+
+let checkedB=false, checkedC=false;
+let scoreB=0, scoreC=0;
+
+function normLetter(v){
+  return String(v||'').trim().toUpperCase();
+}
+
+function validateStudent(){
+  const name=document.getElementById('studentName').value.trim();
+  const cls=document.getElementById('studentClass').value;
+  if(!name || !cls){
+    alert('Please enter Student name and select Class first. — Hãy nhập tên học sinh và chọn lớp trước.');
+    return false;
+  }
+  return true;
+}
+
+function checkPartB(){
+  if(!validateStudent()) return;
+  scoreB=0;
+  let rows='';
+  KEY_B.forEach((key,idx)=>{
+    const input=document.getElementById('b'+(idx+1));
+    const val=normLetter(input.value);
+    const ok=val===key;
+    input.classList.remove('correct','wrong');
+    input.classList.add(ok?'correct':'wrong');
+    if(ok) scoreB++;
+    rows += `<div class="result-row"><b>${idx+1}.</b> Your answer: <b>${val||'—'}</b> — Correct answer: <b>${key}</b> — <span class="${ok?'good':'bad'}">${ok?'✓ Correct':'✗ Incorrect'}</span></div>`;
+  });
+  const box=document.getElementById('resultB');
+  box.innerHTML=`<div class="result-head">Part B: ${scoreB}/18 — ${Math.round(scoreB/18*100)}%</div>`+rows;
+  box.classList.add('show');
+  checkedB=true;
+  updateSubmitState();
+}
+
+function toggleLetter(btn){
+  btn.classList.toggle('selected');
+}
+
+function getSelectedLetters(){
+  return [...document.querySelectorAll('.letter-btn.selected')].map(x=>x.dataset.letter);
+}
+
+function checkPartC(){
+  if(!validateStudent()) return;
+  const selected=getSelectedLetters();
+  if(selected.length!==13){
+    alert(`Please select exactly 13 letters. You selected ${selected.length}. — Hãy chọn đúng 13 chữ cái.`);
+    return;
+  }
+  const keySet=new Set(KEY_C);
+  scoreC=selected.filter(x=>keySet.has(x)).length;
+
+  document.querySelectorAll('.letter-btn').forEach(btn=>{
+    btn.classList.remove('correct-choice','wrong-choice');
+    if(btn.classList.contains('selected')){
+      btn.classList.add(keySet.has(btn.dataset.letter)?'correct-choice':'wrong-choice');
+    }
+  });
+
+  const missing=KEY_C.filter(x=>!selected.includes(x));
+  const wrong=selected.filter(x=>!keySet.has(x));
+  const box=document.getElementById('resultC');
+  box.innerHTML=`<div class="result-head">Part C: ${scoreC}/13 — ${Math.round(scoreC/13*100)}%</div>
+    <div class="result-row"><b>Your selected letters:</b> ${selected.join(' – ')}</div>
+    <div class="result-row"><b>Correct letters:</b> ${KEY_C.join(' – ')}</div>
+    <div class="result-row"><b>Missing:</b> ${missing.length?missing.join(' – '):'None'}<br><b>Wrong selections:</b> ${wrong.length?wrong.join(' – '):'None'}</div>`;
+  box.classList.add('show');
+  checkedC=true;
+  updateSubmitState();
+}
+
+function updateSubmitState(){
+  document.getElementById('submitBtn').disabled=!(checkedB&&checkedC);
+}
+
+function submitResult(){
+  if(!validateStudent()) return;
+  if(!(checkedB&&checkedC)){
+    alert('Please check Part B and Part C first.');
+    return;
+  }
+
+  const selected=getSelectedLetters();
+  const answers=[];
+
+  KEY_B.forEach((key,idx)=>{
+    const val=normLetter(document.getElementById('b'+(idx+1)).value);
+    answers.push({
+      question:idx+1,
+      answer:val,
+      correctAnswer:key,
+      isCorrect:val===key
+    });
+  });
+
+  KEY_C.forEach((key,idx)=>{
+    answers.push({
+      question:19+idx,
+      answer:selected.includes(key)?key:'',
+      correctAnswer:key,
+      isCorrect:selected.includes(key)
+    });
+  });
+
+  const total=31;
+  const correct=scoreB+scoreC;
+  const incorrect=total-correct;
+  const rate=Math.round(correct*10000/total)/100;
+
+  const payload={
+    activityType:'listening',
+    studentName:document.getElementById('studentName').value.trim(),
+    className:document.getElementById('studentClass').value,
+    courseName:'PRE-IELTS',
+    skillName:'Listening',
+    testName:'Names and Places - Part 1 - Exercise 1',
+    score:correct,
+    total:total,
+    correct:correct,
+    incorrect:incorrect,
+    correctRate:rate,
+    answers:answers
+  };
+
+  try{
+    document.getElementById('resultSenderForm')?.remove();
+    let iframe=document.getElementById('resultSenderFrame');
+    if(!iframe){
+      iframe=document.createElement('iframe');
+      iframe.id='resultSenderFrame';
+      iframe.name='resultSenderFrame';
+      iframe.style.display='none';
+      document.body.appendChild(iframe);
+    }
+
+    const form=document.createElement('form');
+    form.id='resultSenderForm';
+    form.method='POST';
+    form.action=RESULT_ENDPOINT;
+    form.target='resultSenderFrame';
+    form.style.display='none';
+
+    const input=document.createElement('input');
+    input.type='hidden';
+    input.name='payload';
+    input.value=JSON.stringify(payload);
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+
+    const status=document.getElementById('submitStatus');
+    status.className='status ok';
+    status.textContent='✓ Result submitted to Listening Results — Kết quả đã được gửi cho giáo viên.';
+    status.scrollIntoView({behavior:'smooth',block:'center'});
+    setTimeout(()=>form.remove(),3000);
+  }catch(err){
+    const status=document.getElementById('submitStatus');
+    status.className='status err';
+    status.textContent='Could not submit result. — Không thể gửi kết quả.';
+  }
+}
+</script>
+</body>
+</html>
