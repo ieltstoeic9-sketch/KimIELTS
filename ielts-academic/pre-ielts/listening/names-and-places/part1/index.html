@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part 1 - The letters of the alphabet</title><style>
+:root{--navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;--card:#fff;--text:#111;--muted:#666;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1050px;margin:30px auto;padding:0 20px 60px}
+.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%}
+.note{color:var(--muted);font-size:14px}
+.letters{font-size:21px;line-height:1.9;word-spacing:8px}
+.cap-label{font-weight:800;color:var(--navy);display:inline-block;min-width:140px}
+.input-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.qbox{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:10px}
+.qbox label{font-weight:800;color:var(--navy);display:block;margin-bottom:6px}
+input[type=text]{width:100%;padding:10px 11px;border:1px solid #bcc8c3;border-radius:8px;font-size:16px}
+.letter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.letter-btn{border:2px solid var(--navy);background:#fff;color:var(--navy);padding:13px 8px;border-radius:10px;font-size:20px;font-weight:800;cursor:pointer}
+.letter-btn.selected{background:var(--navy);color:#fff}
+.submit{border:0;background:var(--navy);color:#fff;padding:13px 20px;border-radius:10px;font-weight:800;cursor:pointer;margin-top:16px}
+.submit:hover{background:var(--red)}
+.result{display:none;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.result.show{display:block}
+.result-head{padding:12px 14px;background:#F0F3F8;font-weight:800;color:var(--navy)}
+.result-row{padding:12px 14px;border-top:1px solid #edf0ee}
+.good{color:var(--navy2);font-weight:800}.bad{color:var(--red);font-weight:800}
+.info{margin-top:6px;background:var(--blue);border-left:4px solid var(--navy2);padding:9px 10px}
+.practice-box{background:#fafafa;border:1px solid var(--line);padding:16px;border-radius:12px;margin-top:12px}
+.exercise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.exercise-btn{display:block;text-align:center;background:#fff;border:2px solid var(--navy);color:var(--navy);padding:16px;border-radius:12px;font-weight:800;text-decoration:none}
+.exercise-btn:hover{background:var(--navy);color:#fff}
+@media(max-width:750px){.input-grid{grid-template-columns:repeat(2,1fr)}.exercise-grid{grid-template-columns:1fr}.letter-grid{grid-template-columns:repeat(5,1fr)}}
+</style></head>
+<body>
+<header><div class="brand"><img src="../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main>
+<a class="back" href="../">← Back to Names and Places</a>
+<section class="hero"><h1>Part 1: The letters of the alphabet</h1><p>Choose an exercise below.</p></section>
+<section class="exercise-grid">
+<a class="exercise-btn" href="exercise1/">Exercise 1</a>
+<a class="exercise-btn" href="exercise2/">Exercise 2</a>
+<a class="exercise-btn" href="exercise3/">Exercise 3</a>
+</section>
+</main></body></html>

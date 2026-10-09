@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exercise 2 | Common abbreviations</title><style>
+:root{--navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;--card:#fff;--text:#111;--muted:#666;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1050px;margin:30px auto;padding:0 20px 60px}
+.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%}
+.note{color:var(--muted);font-size:14px}
+.letters{font-size:21px;line-height:1.9;word-spacing:8px}
+.cap-label{font-weight:800;color:var(--navy);display:inline-block;min-width:140px}
+.input-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.qbox{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:10px}
+.qbox label{font-weight:800;color:var(--navy);display:block;margin-bottom:6px}
+input[type=text]{width:100%;padding:10px 11px;border:1px solid #bcc8c3;border-radius:8px;font-size:16px}
+.letter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.letter-btn{border:2px solid var(--navy);background:#fff;color:var(--navy);padding:13px 8px;border-radius:10px;font-size:20px;font-weight:800;cursor:pointer}
+.letter-btn.selected{background:var(--navy);color:#fff}
+.submit{border:0;background:var(--navy);color:#fff;padding:13px 20px;border-radius:10px;font-weight:800;cursor:pointer;margin-top:16px}
+.submit:hover{background:var(--red)}
+.result{display:none;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.result.show{display:block}
+.result-head{padding:12px 14px;background:#F0F3F8;font-weight:800;color:var(--navy)}
+.result-row{padding:12px 14px;border-top:1px solid #edf0ee}
+.good{color:var(--navy2);font-weight:800}.bad{color:var(--red);font-weight:800}
+.info{margin-top:6px;background:var(--blue);border-left:4px solid var(--navy2);padding:9px 10px}
+.practice-box{background:#fafafa;border:1px solid var(--line);padding:16px;border-radius:12px;margin-top:12px}
+.exercise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.exercise-btn{display:block;text-align:center;background:#fff;border:2px solid var(--navy);color:var(--navy);padding:16px;border-radius:12px;font-weight:800;text-decoration:none}
+.exercise-btn:hover{background:var(--navy);color:#fff}
+@media(max-width:750px){.input-grid{grid-template-columns:repeat(2,1fr)}.exercise-grid{grid-template-columns:1fr}.letter-grid{grid-template-columns:repeat(5,1fr)}}
+</style></head>
+<body>
+<header><div class="brand"><img src="../../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main>
+<a class="back" href="../">← Back to Part 1</a>
+<section class="hero">
+<h1>Exercise 2</h1>
+<p>Common abbreviations</p>
+<div class="audio-wrap"><b>Audio</b><audio controls preload="metadata"><source src="audio/02.mp3" type="audio/mpeg"></audio></div>
+</section>
+
+<section class="card">
+<h2>Listen and write</h2>
+<p><b>Listen to some common abbreviations and write them down in the spaces provided. Do you know what each one stands for?</b></p>
+<div class="input-grid"><div class="qbox"><label>1.</label><input id="q1" type="text" autocomplete="off"></div><div class="qbox"><label>2.</label><input id="q2" type="text" autocomplete="off"></div><div class="qbox"><label>3.</label><input id="q3" type="text" autocomplete="off"></div><div class="qbox"><label>4.</label><input id="q4" type="text" autocomplete="off"></div><div class="qbox"><label>5.</label><input id="q5" type="text" autocomplete="off"></div><div class="qbox"><label>6.</label><input id="q6" type="text" autocomplete="off"></div><div class="qbox"><label>7.</label><input id="q7" type="text" autocomplete="off"></div><div class="qbox"><label>8.</label><input id="q8" type="text" autocomplete="off"></div><div class="qbox"><label>9.</label><input id="q9" type="text" autocomplete="off"></div><div class="qbox"><label>10.</label><input id="q10" type="text" autocomplete="off"></div></div>
+<button class="submit" onclick="checkAnswers()">CHECK ANSWERS</button>
+<div id="result" class="result"></div>
+</section>
+</main>
+
+<script>
+const data=[{"key": "BBC", "full": "British Broadcasting Corporation", "vi": "Tập đoàn Phát thanh Truyền hình Anh"}, {"key": "SOS", "full": "Save Our Soul – help", "vi": "Tín hiệu cầu cứu / kêu cứu"}, {"key": "WHO", "full": "World Health Organisation", "vi": "Tổ chức Y tế Thế giới"}, {"key": "TUC", "full": "Trades Union Congress", "vi": "Đại hội Công đoàn"}, {"key": "ECM", "full": "European Common Market", "vi": "Thị trường Chung châu Âu"}, {"key": "SDP", "full": "Social Democratic Party", "vi": "Đảng Dân chủ Xã hội"}, {"key": "ECE", "full": "Economic Commission for Europe", "vi": "Ủy ban Kinh tế châu Âu"}, {"key": "EEC", "full": "European Economic Community", "vi": "Cộng đồng Kinh tế châu Âu"}, {"key": "IBA", "full": "Independent Broadcasting Authority", "vi": "Cơ quan Phát thanh Truyền hình Độc lập"}, {"key": "LEA", "full": "Local Education Authority", "vi": "Cơ quan Giáo dục Địa phương"}];
+function norm(s){return String(s||'').trim().toUpperCase().replace(/\s+/g,'');}
+function checkAnswers(){
+ let correct=0, html='<div class="result-head">Results</div>';
+ data.forEach((item,idx)=>{
+   const val=document.getElementById('q'+(idx+1)).value;
+   const ok=norm(val)===item.key;
+   if(ok) correct++;
+   html += `<div class="result-row"><b>${idx+1}. ${item.key}</b> — <span class="${ok?'good':'bad'}">${ok?'✓ Correct':'✗ Check again'}</span>
+   <br><b>Your answer:</b> ${val||'—'}
+   <br><b>Correct answer:</b> ${item.key}
+   <div class="info"><b>Full form:</b> ${item.full}<br><b>Nghĩa tiếng Việt:</b> ${item.vi}</div></div>`;
+ });
+ html = `<div class="result-head">Score: ${correct}/10 — ${Math.round(correct*10)}%</div>` + html.replace('<div class="result-head">Results</div>','');
+ const box=document.getElementById('result'); box.innerHTML=html; box.classList.add('show');
+ box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body></html>
