@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRE-IELTS Listening - Getting to know each other</title>
+<style>
+:root{
+ --navy:#0B1F4D;--navy2:#173A7A;--red:#D71920;--bg:#F5F6F8;
+ --line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--muted:#666;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1120px;margin:30px auto;padding:0 20px 70px}
+.hero,.card,.person-card{
+ background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);
+ border-top:4px solid var(--navy);margin-bottom:22px
+}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input[type=text],select{
+ width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff
+}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.people-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.person-card{margin:0}
+.person-head{display:flex;align-items:center;gap:15px;margin-bottom:18px}
+.avatar{
+ width:74px;height:74px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+ background:var(--blue);border:2px solid var(--navy);color:var(--navy);font-size:31px;font-weight:800;flex:0 0 auto
+}
+.question-row{margin-bottom:14px}
+.question-row .qtext{font-weight:700;margin-bottom:6px}
+.question-row input.correct{border:2px solid var(--navy2);background:var(--blue)}
+.question-row input.wrong{border:2px solid var(--red);background:var(--redlight)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button.action{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.check:hover{background:var(--red)}
+.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45;cursor:not-allowed}
+.result{display:none;margin-top:18px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.result.show{display:block}
+.result-head{background:#F0F3F8;padding:12px 14px;font-weight:800;color:var(--navy)}
+.result-row{padding:11px 14px;border-top:1px solid #edf0ee}
+.good{color:var(--navy2);font-weight:800}.bad{color:var(--red);font-weight:800}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
+.status.ok{display:block;background:var(--blue);color:var(--navy)}
+.status.err{display:block;background:var(--redlight);color:var(--red)}
+.note{color:var(--muted);font-size:14px}
+@media(max-width:780px){.people-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.student-info{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><img src="../../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+
+<main>
+<a class="back" href="../">← Back to Part 2</a>
+
+<section class="hero">
+<h1>Exercise 1: Getting to know each other</h1>
+<p><b>Listen to some self-introductions and complete the information about each person.</b></p>
+</section>
+
+<section class="card">
+<h2>Student information</h2>
+<div class="student-info">
+  <div>
+    <label for="studentName">Student name</label>
+    <input id="studentName" type="text" placeholder="Enter full name">
+  </div>
+  <div>
+    <label for="studentClass">Class</label>
+    <select id="studentClass">
+      <option value="">Select class</option>
+      <option>Class 6</option><option>Class 7</option><option>Class 8</option>
+      <option>Class 9</option><option>Class 10</option><option>Class 11</option>
+      <option>Class 12</option><option>PRE-IELTS</option><option>Other</option>
+    </select>
+  </div>
+</div>
+<div id="submitStatus" class="status"></div>
+</section>
+
+<section class="card">
+<h2>Audio</h2>
+<div class="audio-wrap">
+  <b>Part 2 — Shared audio for all 8 people</b>
+  <audio controls preload="metadata"><source src="audio/07.mp3" type="audio/mpeg"></audio>
+</div>
+<p class="note">You can replay the audio while completing all eight profiles.</p>
+</section>
+
+<section class="people-grid">
+
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">1</div>
+        <div>
+          <h3>Person 1</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q1" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she do?</div>
+          <input id="q2" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is she from?</div>
+          <input id="q3" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What sport does she like?</div>
+          <input id="q4" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">How often?</div>
+          <input id="q5" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">2</div>
+        <div>
+          <h3>Person 2</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q6" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he do?</div>
+          <input id="q7" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is he from?</div>
+          <input id="q8" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he like?</div>
+          <input id="q9" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does he work?</div>
+          <input id="q10" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does he go at weekends?</div>
+          <input id="q11" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">3</div>
+        <div>
+          <h3>Person 3</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q12" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he do?</div>
+          <input id="q13" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">How often does he work?</div>
+          <input id="q14" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does he plan to go?</div>
+          <input id="q15" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">When does he plan to go?</div>
+          <input id="q16" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">4</div>
+        <div>
+          <h3>Person 4</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q17" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she do?</div>
+          <input id="q18" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does she work?</div>
+          <input id="q19" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does she plan to go?</div>
+          <input id="q20" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">How long does she work on Sundays?</div>
+          <input id="q21" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">5</div>
+        <div>
+          <h3>Person 5</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q22" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she do?</div>
+          <input id="q23" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is she from?</div>
+          <input id="q24" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she like to do after work?</div>
+          <input id="q25" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">6</div>
+        <div>
+          <h3>Person 6</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q26" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he do?</div>
+          <input id="q27" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is he from?</div>
+          <input id="q28" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he like?</div>
+          <input id="q29" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">How many children does he have?</div>
+          <input id="q30" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">7</div>
+        <div>
+          <h3>Person 7</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q31" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she do?</div>
+          <input id="q32" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is she from?</div>
+          <input id="q33" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does she work?</div>
+          <input id="q34" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does she like?</div>
+          <input id="q35" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What&#x27;s her favourite one?</div>
+          <input id="q36" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+    <section class="person-card">
+      <div class="person-head">
+        <div class="avatar">8</div>
+        <div>
+          <h3>Person 8</h3>
+          <div class="note">Listen and complete the information.</div>
+        </div>
+      </div>
+      
+        <div class="question-row">
+          <div class="qtext">Name</div>
+          <input id="q37" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where is he from?</div>
+          <input id="q38" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he do?</div>
+          <input id="q39" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">Where does he work?</div>
+          <input id="q40" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What does he like?</div>
+          <input id="q41" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">What kind of sport does he like?</div>
+          <input id="q42" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+        <div class="question-row">
+          <div class="qtext">How often?</div>
+          <input id="q43" type="text" autocomplete="off" placeholder="Type your answer">
+        </div>
+        
+    </section>
+    
+</section>
+
+<section class="card">
+<h2>Check your answers</h2>
+<div class="actions">
+  <button class="action check" onclick="checkAnswers()">CHECK ANSWERS</button>
+</div>
+<div id="result" class="result"></div>
+</section>
+
+<section class="card">
+<h2>Submit result</h2>
+<p>Check your answers first, then submit the result to the teacher.</p>
+<button id="submitBtn" class="action submit" onclick="submitResult()" disabled>SUBMIT RESULT</button>
+</section>
+</main>
+
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const items=[{"question": 1, "person": 1, "label": "Name", "accepted": ["Erica"], "display": "Erica"}, {"question": 2, "person": 1, "label": "What does she do?", "accepted": ["Freshman", "College student", "Freshman college student"], "display": "Freshman"}, {"question": 3, "person": 1, "label": "Where is she from?", "accepted": ["Leeds"], "display": "Leeds"}, {"question": 4, "person": 1, "label": "What sport does she like?", "accepted": ["Swimming"], "display": "Swimming"}, {"question": 5, "person": 1, "label": "How often?", "accepted": ["Once or twice a week", "Once or twice per week"], "display": "Once or twice a week"}, {"question": 6, "person": 2, "label": "Name", "accepted": ["Marti Cheen"], "display": "Marti Cheen"}, {"question": 7, "person": 2, "label": "What does he do?", "accepted": ["Salesman"], "display": "Salesman"}, {"question": 8, "person": 2, "label": "Where is he from?", "accepted": ["York"], "display": "York"}, {"question": 9, "person": 2, "label": "What does he like?", "accepted": ["Music"], "display": "Music"}, {"question": 10, "person": 2, "label": "Where does he work?", "accepted": ["Department store", "Store", "A department store", "A store"], "display": "Department store"}, {"question": 11, "person": 2, "label": "Where does he go at weekends?", "accepted": ["Concert", "Concerts"], "display": "Concert"}, {"question": 12, "person": 3, "label": "Name", "accepted": ["Tim Russell"], "display": "Tim Russell"}, {"question": 13, "person": 3, "label": "What does he do?", "accepted": ["College student", "A college student"], "display": "College student"}, {"question": 14, "person": 3, "label": "How often does he work?", "accepted": ["At weekends", "Weekends", "At the weekends"], "display": "At weekends"}, {"question": 15, "person": 3, "label": "Where does he plan to go?", "accepted": ["Europe"], "display": "Europe"}, {"question": 16, "person": 3, "label": "When does he plan to go?", "accepted": ["This summer"], "display": "This summer"}, {"question": 17, "person": 4, "label": "Name", "accepted": ["Linda"], "display": "Linda"}, {"question": 18, "person": 4, "label": "What does she do?", "accepted": ["High school student", "A high school student"], "display": "High school student"}, {"question": 19, "person": 4, "label": "Where does she work?", "accepted": ["Fast-food restaurant", "Fast food restaurant", "A fast-food restaurant", "A fast food restaurant"], "display": "Fast-food restaurant"}, {"question": 20, "person": 4, "label": "Where does she plan to go?", "accepted": ["University", "A university"], "display": "University"}, {"question": 21, "person": 4, "label": "How long does she work on Sundays?", "accepted": ["3 hours", "Three hours"], "display": "3 hours"}, {"question": 22, "person": 5, "label": "Name", "accepted": ["Rita"], "display": "Rita"}, {"question": 23, "person": 5, "label": "What does she do?", "accepted": ["Receptionist", "A receptionist"], "display": "Receptionist"}, {"question": 24, "person": 5, "label": "Where is she from?", "accepted": ["Bristol"], "display": "Bristol"}, {"question": 25, "person": 5, "label": "What does she like to do after work?", "accepted": ["Shopping", "Go shopping", "Going shopping"], "display": "Shopping"}, {"question": 26, "person": 6, "label": "Name", "accepted": ["Chris"], "display": "Chris"}, {"question": 27, "person": 6, "label": "What does he do?", "accepted": ["Bank manager", "A bank manager"], "display": "Bank manager"}, {"question": 28, "person": 6, "label": "Where is he from?", "accepted": ["Leeds"], "display": "Leeds"}, {"question": 29, "person": 6, "label": "What does he like?", "accepted": ["Rock music"], "display": "Rock music"}, {"question": 30, "person": 6, "label": "How many children does he have?", "accepted": ["Two", "2", "Two children", "2 children"], "display": "Two"}, {"question": 31, "person": 7, "label": "Name", "accepted": ["Sue"], "display": "Sue"}, {"question": 32, "person": 7, "label": "What does she do?", "accepted": ["EFL teacher", "An EFL teacher", "A teacher"], "display": "EFL teacher"}, {"question": 33, "person": 7, "label": "Where is she from?", "accepted": ["Manchester"], "display": "Manchester"}, {"question": 34, "person": 7, "label": "Where does she work?", "accepted": ["London International School", "The London International School"], "display": "London International School"}, {"question": 35, "person": 7, "label": "What does she like?", "accepted": ["Drama", "Dramas"], "display": "Drama"}, {"question": 36, "person": 7, "label": "What's her favourite one?", "accepted": ["Hamlet"], "display": "Hamlet"}, {"question": 37, "person": 8, "label": "Name", "accepted": ["Richard Lee"], "display": "Richard Lee"}, {"question": 38, "person": 8, "label": "Where is he from?", "accepted": ["Birmingham"], "display": "Birmingham"}, {"question": 39, "person": 8, "label": "What does he do?", "accepted": ["Doctor", "A doctor"], "display": "Doctor"}, {"question": 40, "person": 8, "label": "Where does he work?", "accepted": ["General Hospital", "The General Hospital"], "display": "General Hospital"}, {"question": 41, "person": 8, "label": "What does he like?", "accepted": ["Sports", "Sport"], "display": "Sports"}, {"question": 42, "person": 8, "label": "What kind of sport does he like?", "accepted": ["Swimming, football", "Swimming and football", "Swimming football"], "display": "Swimming, football"}, {"question": 43, "person": 8, "label": "How often?", "accepted": ["Twice a week"], "display": "Twice a week"}];
+
+let checked=false;
+let score=0;
+
+function normalize(s){
+  return String(s||'')
+    .trim()
+    .toLowerCase()
+    .replace(/[.,!?'"’]/g,'')
+    .replace(/[-–—]/g,' ')
+    .replace(/\s+/g,' ');
+}
+
+function equivalent(user, accepted){
+  const u=normalize(user);
+  return accepted.some(a => normalize(a)===u);
+}
+
+function validateStudent(){
+  const name=document.getElementById('studentName').value.trim();
+  const cls=document.getElementById('studentClass').value;
+  if(!name || !cls){
+    alert('Please enter Student name and select Class first. — Hãy nhập tên học sinh và chọn lớp trước.');
+    return false;
+  }
+  return true;
+}
+
+function checkAnswers(){
+  if(!validateStudent()) return;
+
+  score=0;
+  let rows='';
+
+  items.forEach((item,idx)=>{
+    const input=document.getElementById('q'+(idx+1));
+    const raw=input.value.trim();
+    const ok=equivalent(raw,item.accepted);
+
+    input.classList.remove('correct','wrong');
+    input.classList.add(ok?'correct':'wrong');
+
+    if(ok) score++;
+
+    rows += `<div class="result-row">
+      <b>Q${idx+1} — Person ${item.person}: ${item.label}</b><br>
+      Your answer: <b>${raw||'—'}</b><br>
+      Correct answer: <b>${item.display}</b><br>
+      <span class="${ok?'good':'bad'}">${ok?'✓ Correct':'✗ Incorrect'}</span>
+    </div>`;
+  });
+
+  const total=items.length;
+  const box=document.getElementById('result');
+  box.innerHTML=`<div class="result-head">Score: ${score}/${total} — ${Math.round(score*10000/total)/100}%</div>`+rows;
+  box.classList.add('show');
+  checked=true;
+  document.getElementById('submitBtn').disabled=false;
+  box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function submitResult(){
+  if(!validateStudent() || !checked) return;
+
+  const answers=items.map((item,idx)=>{
+    const raw=document.getElementById('q'+(idx+1)).value.trim();
+    return {
+      question:idx+1,
+      answer:raw,
+      correctAnswer:item.display,
+      isCorrect:equivalent(raw,item.accepted)
+    };
+  });
+
+  const total=items.length;
+  const correct=score;
+  const incorrect=total-correct;
+  const rate=Math.round(correct*10000/total)/100;
+
+  const payload={
+    activityType:'listening',
+    studentName:document.getElementById('studentName').value.trim(),
+    className:document.getElementById('studentClass').value,
+    courseName:'PRE-IELTS',
+    skillName:'Listening',
+    testName:'Names and Places - Part 2 - Getting to know each other',
+    score:correct,
+    total:total,
+    correct:correct,
+    incorrect:incorrect,
+    correctRate:rate,
+    answers:answers
+  };
+
+  try{
+    document.getElementById('resultSenderForm')?.remove();
+
+    let iframe=document.getElementById('resultSenderFrame');
+    if(!iframe){
+      iframe=document.createElement('iframe');
+      iframe.id='resultSenderFrame';
+      iframe.name='resultSenderFrame';
+      iframe.style.display='none';
+      document.body.appendChild(iframe);
+    }
+
+    const form=document.createElement('form');
+    form.id='resultSenderForm';
+    form.method='POST';
+    form.action=RESULT_ENDPOINT;
+    form.target='resultSenderFrame';
+    form.style.display='none';
+
+    const input=document.createElement('input');
+    input.type='hidden';
+    input.name='payload';
+    input.value=JSON.stringify(payload);
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+
+    const st=document.getElementById('submitStatus');
+    st.className='status ok';
+    st.textContent='✓ Result submitted to Listening Results — Kết quả đã được gửi cho giáo viên.';
+    st.scrollIntoView({behavior:'smooth',block:'center'});
+    setTimeout(()=>form.remove(),3000);
+
+  }catch(err){
+    const st=document.getElementById('submitStatus');
+    st.className='status err';
+    st.textContent='Could not submit result. — Không thể gửi kết quả.';
+  }
+}
+</script>
+</body>
+</html>
