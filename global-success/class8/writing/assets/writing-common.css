@@ -1,0 +1,32 @@
+
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--muted:#666}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw)}
+main{max-width:1100px;margin:30px auto;padding:0 20px 70px}
+.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}
+label{display:block;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+textarea{min-height:92px;resize:vertical}
+.item{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fafafa;margin-bottom:14px}
+.term{font-weight:800;color:var(--navy);font-size:18px}
+.meaning{color:var(--muted);margin-bottom:10px}
+.feedback{display:none;margin-top:10px;border-radius:10px;padding:12px;background:#fff;border:1px solid var(--line)}
+.feedback.show{display:block}
+.good{color:#173A7A;font-weight:800}.bad{color:var(--red);font-weight:800}
+.explain{margin-top:8px;background:var(--blue);border-left:4px solid var(--navy);padding:9px 10px}
+.samples{margin-top:8px;background:#FFFBEF;border-left:4px solid #C78C00;padding:9px 10px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.submit{background:var(--red);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}
+.submit:disabled{opacity:.45;cursor:not-allowed}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}
+.status.ok{display:block;background:var(--blue);color:var(--navy)}
+.summary{display:none;margin-top:16px;padding:12px 14px;border-radius:10px;background:#F0F3F8;color:var(--navy);font-weight:800}
+.summary.show{display:block}
+.placeholder{padding:18px;border:1px dashed #aaa;border-radius:12px;color:#666;background:#fafafa}
+@media(max-width:600px){.student-info{grid-template-columns:1fr}}

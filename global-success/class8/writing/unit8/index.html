@@ -2,28 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Class 8 Writing - Unit 8</title>
-<style>
-:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--text:#111}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
-.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
-main{max-width:900px;margin:30px auto;padding:0 20px 60px}
-.hero{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy)}
-h1{color:var(--navy)}
-.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
-.coming{margin-top:18px;color:#666;font-style:italic}
-</style>
+<title>Class 8 Writing</title>
+<link rel="stylesheet" href="../assets/writing-common.css">
 </head>
 <body>
 <header><div class="brand"><img src="../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
 <main>
 <a class="back" href="../">← Back to Writing</a>
+
 <section class="hero">
-<h1>Class 8 – Writing – Unit 8</h1>
-<p class="coming">Content coming soon.</p>
+<h1 id="unitTitle">Class 8 – Writing</h1>
+<p>Practice writing complete sentences using topic noun phrases.</p>
+</section>
+
+<section class="card">
+<h2>Student information</h2>
+<div class="student-info">
+<div><label>Student name</label><input id="studentName" type="text" placeholder="Enter full name"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>Class 8</option><option>Other</option></select></div>
+</div>
+<div id="submitStatus" class="status"></div>
+</section>
+
+<section class="card">
+<h2>Part A – Use the noun phrases as subjects</h2>
+<p><b>Use each noun phrase as the subject of a complete sentence.</b><br>
+Sử dụng mỗi cụm danh từ làm <b>chủ ngữ</b> của một câu hoàn chỉnh.</p>
+<div id="partA"></div>
+<div class="actions"><button class="check" onclick="checkPart('A')">CHECK PART A</button></div>
+</section>
+
+<section class="card">
+<h2>Part B – Use the noun phrases as objects</h2>
+<p><b>Use each noun phrase as the object of a complete sentence.</b><br>
+Sử dụng mỗi cụm danh từ làm <b>tân ngữ</b> của một câu hoàn chỉnh.</p>
+<div id="partB"></div>
+<div class="actions"><button class="check" onclick="checkPart('B')">CHECK PART B</button></div>
+</section>
+
+<section class="card">
+<h2>Submit result</h2>
+<div id="summary" class="summary"></div>
+<div class="actions">
+<button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button>
+<button class="reset" onclick="resetExercise()">RESET</button>
+</div>
 </section>
 </main>
+
+<script src="../assets/writing-common.js"></script>
+<script>
+window.UNIT_CONFIG = {"unitName": "Unit 8", "phrases": []};
+renderWriting();
+</script>
 </body>
 </html>
