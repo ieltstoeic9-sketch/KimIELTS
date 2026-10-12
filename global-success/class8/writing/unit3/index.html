@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Success 8 - Writing Unit 3</title>
+<style>
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--muted:#666}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}.brand{text-align:center}.brand img{width:min(560px,82vw)}
+main{max-width:1100px;margin:30px auto;padding:0 20px 70px}.hero,.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2{color:var(--navy);margin-top:0}.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}label{display:block;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}textarea{min-height:92px;resize:vertical}
+.item{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fafafa;margin-bottom:14px}.term{font-weight:800;color:var(--navy);font-size:18px}.meaning{color:var(--muted);margin-bottom:10px}
+.feedback{display:none;margin-top:10px;border-radius:10px;padding:12px;background:#fff;border:1px solid var(--line)}.feedback.show{display:block}
+.good{color:#173A7A;font-weight:800}.bad{color:var(--red);font-weight:800}.explain{margin-top:8px;background:var(--blue);border-left:4px solid var(--navy);padding:9px 10px}
+.samples{margin-top:8px;background:#FFFBEF;border-left:4px solid #C78C00;padding:9px 10px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}.check{background:var(--navy);color:#fff}.submit{background:var(--red);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}.submit:disabled{opacity:.45;cursor:not-allowed}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}.status.ok{display:block;background:var(--blue);color:var(--navy)}.summary{display:none;margin-top:16px;padding:12px 14px;border-radius:10px;background:#F0F3F8;color:var(--navy);font-weight:800}.summary.show{display:block}
+@media(max-width:600px){.student-info{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><img src="../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main>
+<a class="back" href="../">← Back to Writing</a>
+<section class="hero"><h1>Class 8 – Writing – Unit 3</h1><p>Practice writing complete sentences using topic noun phrases.</p></section>
+
+<section class="card">
+<h2>Student information</h2>
+<div class="student-info">
+<div><label>Student name</label><input id="studentName" type="text" placeholder="Enter full name"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>Class 8</option><option>Other</option></select></div>
+</div>
+<div id="submitStatus" class="status"></div>
+</section>
+
+<section class="card">
+<h2>Part A – Use the noun phrases as subjects</h2>
+<p><b>Use each noun phrase as the subject of a complete sentence.</b><br>Sử dụng mỗi cụm danh từ làm <b>chủ ngữ</b> của một câu hoàn chỉnh.</p>
+<div id="partA"></div><div class="actions"><button class="check" onclick="checkPart('A')">CHECK PART A</button></div>
+</section>
+
+<section class="card">
+<h2>Part B – Use the noun phrases as objects</h2>
+<p><b>Use each noun phrase as the object of a complete sentence.</b><br>Sử dụng mỗi cụm danh từ làm <b>tân ngữ</b> của một câu hoàn chỉnh.</p>
+<div id="partB"></div><div class="actions"><button class="check" onclick="checkPart('B')">CHECK PART B</button></div>
+</section>
+
+<section class="card">
+<h2>Submit result</h2><div id="summary" class="summary"></div>
+<div class="actions"><button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button><button class="reset" onclick="resetExercise()">RESET</button></div>
+</section>
+</main>
+
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const phrases=[{"phrase": "peer pressure", "vi": "áp lực từ bạn bè đồng trang lứa", "subjectExamples": ["Peer pressure can affect teenagers' decisions.", "Peer pressure sometimes makes students feel stressed."], "objectExamples": ["Teenagers often face peer pressure at school.", "Parents should help teenagers deal with peer pressure."]}, {"phrase": "social media addiction", "vi": "sự nghiện mạng xã hội", "subjectExamples": ["Social media addiction can reduce students' concentration.", "Social media addiction may affect teenagers' sleep."], "objectExamples": ["Many parents worry about social media addiction.", "Schools should teach students how to avoid social media addiction."]}, {"phrase": "healthy lifestyle", "vi": "lối sống lành mạnh", "subjectExamples": ["A healthy lifestyle helps teenagers stay energetic.", "A healthy lifestyle can improve both physical and mental health."], "objectExamples": ["Teenagers should maintain a healthy lifestyle.", "Regular exercise helps students build a healthy lifestyle."]}, {"phrase": "academic pressure", "vi": "áp lực học tập", "subjectExamples": ["Academic pressure can make students feel anxious.", "Academic pressure sometimes affects students' motivation."], "objectExamples": ["Many students experience academic pressure before exams.", "Teachers can help students manage academic pressure."]}, {"phrase": "family relationships", "vi": "các mối quan hệ gia đình", "subjectExamples": ["Family relationships play an important role in teenagers' lives.", "Good family relationships can help teenagers feel supported."], "objectExamples": ["Teenagers should value family relationships.", "Good communication can improve family relationships."]}];
+let checkedA=false,checkedB=false,submissionLocked=false;
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){
+ ['A','B'].forEach(part=>{
+  document.getElementById('part'+part).innerHTML=phrases.map((x,i)=>`
+   <div class="item"><div class="term">${i+1}. ${x.phrase}</div><div class="meaning">${x.vi}</div>
+   <textarea id="${part.toLowerCase()}${i+1}" placeholder="Write one complete sentence..."></textarea>
+   <div id="fb${part}${i+1}" class="feedback"></div></div>`).join('');
+ });
+}
+function norm(s){return String(s||'').trim().replace(/\s+/g,' ');}
+function hasPhrase(s,p){return norm(s).toLowerCase().includes(p.toLowerCase());}
+function startsPhrase(s,p){const a=norm(s).toLowerCase(),b=p.toLowerCase();return a===b||a.startsWith(b+' ')||a.startsWith(b+',');}
+function rules(s,p,part){
+ const issues=[];s=norm(s);if(!s)return ['Please write a sentence. — Hãy viết một câu.'];
+ if(s[0]!==s[0].toUpperCase())issues.push('Start with a capital letter. — Viết hoa chữ cái đầu câu.');
+ if(!/[.!?]$/.test(s))issues.push('Add final punctuation. — Thêm dấu câu ở cuối câu.');
+ if(!hasPhrase(s,p))issues.push(`Use the exact phrase “${p}”. — Hãy sử dụng đúng cụm “${p}”.`);
+ if(part==='A'&&!startsPhrase(s,p))issues.push('Place the noun phrase at the beginning as the subject. — Đặt cụm danh từ ở đầu câu để làm chủ ngữ.');
+ if(part==='B'&&startsPhrase(s,p))issues.push('The noun phrase should be the object, not the subject. — Cụm danh từ cần làm tân ngữ, không phải chủ ngữ.');
+ return issues;
+}
+function explain(part){return part==='A'?'The noun phrase should act as the subject. — Cụm danh từ cần đóng vai trò chủ ngữ.':'The noun phrase should act as the object. — Cụm danh từ cần đóng vai trò tân ngữ.';}
+function checkPart(part){
+ if(!validateStudent())return;
+ phrases.forEach((x,i)=>{
+  const val=document.getElementById(part.toLowerCase()+(i+1)).value;
+  const issues=rules(val,x.phrase,part),fb=document.getElementById('fb'+part+(i+1)),ex=part==='A'?x.subjectExamples:x.objectExamples;
+  fb.classList.add('show');
+  fb.innerHTML=(issues.length?`<div class="bad">Please check / Hãy kiểm tra:</div>${issues.map(v=>'• '+esc(v)).join('<br>')}`:`<div class="good">✓ Basic checks passed. — Câu đã vượt qua kiểm tra cơ bản.</div>`)
+   +`<div class="explain">${explain(part)}</div><div class="samples"><b>Sample sentences / Câu mẫu:</b><br>1. ${ex[0]}<br>2. ${ex[1]}</div>`;
+ });
+ if(part==='A')checkedA=true;else checkedB=true;updateSummary();
+}
+function validateStudent(){if(!document.getElementById('studentName').value.trim()||!document.getElementById('studentClass').value){alert('Please enter Student name and Class first. — Hãy nhập tên học sinh và lớp trước.');return false;}return true;}
+function updateSummary(){if(checkedA&&checkedB){const s=document.getElementById('summary');s.classList.add('show');s.textContent='Both parts have been checked. You can submit now. — Cả hai phần đã được kiểm tra. Bạn có thể nộp bài.';if(!submissionLocked)document.getElementById('submitBtn').disabled=false;}}
+function submitResult(){
+ if(submissionLocked||!validateStudent()||!(checkedA&&checkedB))return;
+ const answers=[];
+ phrases.forEach((x,i)=>answers.push({question:i+1,answer:document.getElementById('a'+(i+1)).value,correctAnswer:'Subject sentence using '+x.phrase,isCorrect:true}));
+ phrases.forEach((x,i)=>answers.push({question:i+6,answer:document.getElementById('b'+(i+1)).value,correctAnswer:'Object sentence using '+x.phrase,isCorrect:true}));
+ const payload={activityType:'writing',studentName:document.getElementById('studentName').value.trim(),className:document.getElementById('studentClass').value,courseName:'Global Success 8',skillName:'Writing',testName:'Unit 3',score:10,total:10,correct:10,incorrect:0,correctRate:100,answers};
+ let iframe=document.getElementById('resultSenderFrame');if(!iframe){iframe=document.createElement('iframe');iframe.id='resultSenderFrame';iframe.name='resultSenderFrame';iframe.style.display='none';document.body.appendChild(iframe);}
+ const form=document.createElement('form');form.method='POST';form.action=RESULT_ENDPOINT;form.target='resultSenderFrame';form.style.display='none';
+ const input=document.createElement('input');input.type='hidden';input.name='payload';input.value=JSON.stringify(payload);form.appendChild(input);document.body.appendChild(form);form.submit();
+ submissionLocked=true;const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='Submitted ✓';
+ const st=document.getElementById('submitStatus');st.className='status ok';st.textContent='✓ Writing result submitted — Kết quả Writing đã được gửi.';
+ setTimeout(()=>form.remove(),3000);
+}
+function resetExercise(){
+ document.getElementById('studentName').value='';document.getElementById('studentClass').value='';document.querySelectorAll('textarea').forEach(x=>x.value='');
+ document.querySelectorAll('.feedback').forEach(x=>{x.classList.remove('show');x.innerHTML='';});
+ checkedA=false;checkedB=false;submissionLocked=false;const s=document.getElementById('summary');s.classList.remove('show');s.textContent='';
+ const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='SUBMIT RESULT';const st=document.getElementById('submitStatus');st.className='status';st.textContent='';window.scrollTo({top:0,behavior:'smooth'});
+}
+render();
+</script>
+</body></html>
