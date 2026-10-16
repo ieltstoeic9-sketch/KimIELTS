@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B1 Listening Test 2 | Anh ngữ Ms. Kim</title><style>
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}.brand{text-align:center}.brand img{width:min(560px,82vw)}
+main{max-width:1120px;margin:30px auto;padding:0 20px 70px}
+.hero,.card,.question-card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.student-info{display:grid;grid-template-columns:1fr 240px;gap:14px}label{font-weight:600}
+input[type=text],select{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}audio{width:100%;margin-top:8px}
+.part-instructions p{margin:6px 0}.prompt-img{max-width:100%;height:auto;display:block;margin-bottom:14px}
+.image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.img-option{position:relative;display:block;border:2px solid transparent;border-radius:12px;padding:8px;cursor:pointer;background:#fff}
+.img-option input{position:absolute;opacity:0}.img-option img{display:block;width:100%;height:auto}
+.img-option.selected{border-color:var(--navy);background:var(--blue)}.img-option.correctChoice{border-color:#173A7A;background:var(--blue)}
+.img-option.wrongChoice{border-color:var(--red);background:var(--redlight)}
+.qtitle{font-size:18px;font-weight:800;margin-bottom:12px;color:var(--navy)}.choices,.yesno{display:grid;gap:10px}
+.choice{display:block;border:1px solid var(--line);border-radius:10px;padding:12px;cursor:pointer;background:#fff}.choice:has(input:checked){border:2px solid var(--navy);background:var(--blue)}
+.feedback{display:none;margin-top:12px;padding:10px 12px;border-radius:10px;font-weight:700}.feedback.show{display:block}
+.feedback.good{background:var(--blue);color:#173A7A}.feedback.bad{background:var(--redlight);color:var(--red)}
+.script-box,.review-script{display:none;margin-top:12px;background:#FFFBEF;border-left:4px solid #C78C00;padding:12px;border-radius:8px;font-weight:400}
+.script-box.show,.review-script.show{display:block}
+.evidence-mark{font-weight:800;background:#EEF4FF;border-bottom:2px solid #173A7A;padding:0 2px}
+.evidence-label{font-weight:800;color:#173A7A;white-space:nowrap}
+.gap-row{display:grid;grid-template-columns:minmax(240px,1fr) minmax(160px,280px) auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee}.gap-row .feedback{grid-column:1/-1}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.submit{background:var(--red);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}.submit:disabled{opacity:.45;cursor:not-allowed}
+.summary{display:none;margin-top:16px;padding:12px 14px;border-radius:10px;background:#F0F3F8;color:var(--navy);font-weight:800}.summary.show{display:block}
+.status{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-weight:700}.status.ok{display:block;background:var(--blue);color:var(--navy)}
+@media(max-width:760px){.image-grid{grid-template-columns:1fr}.gap-row{grid-template-columns:1fr}.student-info{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="brand"><img src="../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main>
+<a class="back" href="../">← Back to B1</a>
+<section class="hero"><h1>B1 – Listening Test 2</h1><p>Complete all four parts, check your answers, then submit your result.</p></section>
+
+<section class="card"><h2>Student information</h2>
+<div class="student-info"><div><label>Student name</label><input id="studentName" type="text" placeholder="Enter full name"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>B1</option><option>Other</option></select></div></div>
+<div id="submitStatus" class="status"></div></section>
+
+<section class="card"><h2>Part 1 – Questions 1–7</h2>
+<div class="part-instructions"><p><b>There are seven questions in this part.</b></p><p>For each question there are three pictures and a short recording.</p><p>For each question, choose the correct answer <b>A, B or C</b>.</p></div>
+<div class="audio-wrap"><b>Part 1 audio</b><audio controls preload="metadata"><source src="audio/part1.mp3" type="audio/mpeg"></audio></div></section>
+<section class="question-card">
+<img class="prompt-img" src="images/q1_prompt.png" alt="Question 1">
+<div class="image-grid"><label class="img-option" data-q="1" data-val="A">
+<input type="radio" name="q1" value="A">
+<img src="images/q1_A.png" alt="Question 1 option A">
+</label><label class="img-option" data-q="1" data-val="B">
+<input type="radio" name="q1" value="B">
+<img src="images/q1_B.png" alt="Question 1 option B">
+</label><label class="img-option" data-q="1" data-val="C">
+<input type="radio" name="q1" value="C">
+<img src="images/q1_C.png" alt="Question 1 option C">
+</label></div>
+<div id="fb1" class="feedback"></div>
+<div id="script1" class="script-box"><b>Script</b><br>Mum: I’m going to mend and paint the cupboard in your bedroom today.<br>Daughter: Great, Mum. Anything I can do to help?<br>Mum: Yes, can you go to the shop and get me a new hammer – this one’s broken. But before you do that, <span class="evidence-mark">ask your dad what he’s done with the paintbrush – I’ve looked everywhere for it</span> <span class="evidence-label">(Question 1)</span>. There weren’t any in the garage; all I could find was this knife which I lost months ago!</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q2_prompt.png" alt="Question 2">
+<div class="image-grid"><label class="img-option" data-q="2" data-val="A">
+<input type="radio" name="q2" value="A">
+<img src="images/q2_A.png" alt="Question 2 option A">
+</label><label class="img-option" data-q="2" data-val="B">
+<input type="radio" name="q2" value="B">
+<img src="images/q2_B.png" alt="Question 2 option B">
+</label><label class="img-option" data-q="2" data-val="C">
+<input type="radio" name="q2" value="C">
+<img src="images/q2_C.png" alt="Question 2 option C">
+</label></div>
+<div id="fb2" class="feedback"></div>
+<div id="script2" class="script-box"><b>Script</b><br>Man: And now for those of you planning to go to the rock festival tomorrow, you’ll want to know what the weather’s going to be like. As we go through today, the heavy rain will gradually disappear by the end of the afternoon. <span class="evidence-mark">Tomorrow we can expect some sunshine with just a few light showers</span> <span class="evidence-label">(Question 2)</span>, and then some very hot and dry weather is likely by the weekend.</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q3_prompt.png" alt="Question 3">
+<div class="image-grid"><label class="img-option" data-q="3" data-val="A">
+<input type="radio" name="q3" value="A">
+<img src="images/q3_A.png" alt="Question 3 option A">
+</label><label class="img-option" data-q="3" data-val="B">
+<input type="radio" name="q3" value="B">
+<img src="images/q3_B.png" alt="Question 3 option B">
+</label><label class="img-option" data-q="3" data-val="C">
+<input type="radio" name="q3" value="C">
+<img src="images/q3_C.png" alt="Question 3 option C">
+</label></div>
+<div id="fb3" class="feedback"></div>
+<div id="script3" class="script-box"><b>Script</b><br>Son: I got most of the shopping you asked for, Mum. <span class="evidence-mark">I got the last of the bread and some orange juice</span> <span class="evidence-label">(Question 3)</span> but sorry, there weren’t any newspapers left.<br>Mum: Oh, never mind, I need to remember to go in the morning. But what about the tomatoes for the salad?<br>Son: Ah... I forgot. I’ll go back for them.<br>Mum: Oh, don’t worry, I’ll stop and pick some up when I go out to collect your sister.</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q4_prompt.png" alt="Question 4">
+<div class="image-grid"><label class="img-option" data-q="4" data-val="A">
+<input type="radio" name="q4" value="A">
+<img src="images/q4_A.png" alt="Question 4 option A">
+</label><label class="img-option" data-q="4" data-val="B">
+<input type="radio" name="q4" value="B">
+<img src="images/q4_B.png" alt="Question 4 option B">
+</label><label class="img-option" data-q="4" data-val="C">
+<input type="radio" name="q4" value="C">
+<img src="images/q4_C.png" alt="Question 4 option C">
+</label></div>
+<div id="fb4" class="feedback"></div>
+<div id="script4" class="script-box"><b>Script</b><br>Jane: Hi... it’s me, Jane... I’ve got Mum’s birthday present. I think she’ll like it... Yes, that’s right, <span class="evidence-mark">a gold-coloured one. She’s always writing letters, so she’ll find it useful</span> <span class="evidence-label">(Question 4)</span>... Mmm. I thought about a CD but I’m never really sure what music she likes, and Dad’s bought her a new pair of earrings for her birthday anyway. I’m sure she’ll like what I’ve got her.</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q5_prompt.png" alt="Question 5">
+<div class="image-grid"><label class="img-option" data-q="5" data-val="A">
+<input type="radio" name="q5" value="A">
+<img src="images/q5_A.png" alt="Question 5 option A">
+</label><label class="img-option" data-q="5" data-val="B">
+<input type="radio" name="q5" value="B">
+<img src="images/q5_B.png" alt="Question 5 option B">
+</label><label class="img-option" data-q="5" data-val="C">
+<input type="radio" name="q5" value="C">
+<img src="images/q5_C.png" alt="Question 5 option C">
+</label></div>
+<div id="fb5" class="feedback"></div>
+<div id="script5" class="script-box"><b>Script</b><br>Girl: Hasn’t that basketball match finished yet? You know I want to watch the wildlife programme at nine o’clock.<br>Boy: It’s cancelled, and everything’s running late because the rock concert finished later than expected. <span class="evidence-mark">Sit down and watch this match with me</span> <span class="evidence-label">(Question 5)</span>. It’s really exciting, and more interesting than looking at animals.<br>Girl: Oh, OK then.</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q6_prompt.png" alt="Question 6">
+<div class="image-grid"><label class="img-option" data-q="6" data-val="A">
+<input type="radio" name="q6" value="A">
+<img src="images/q6_A.png" alt="Question 6 option A">
+</label><label class="img-option" data-q="6" data-val="B">
+<input type="radio" name="q6" value="B">
+<img src="images/q6_B.png" alt="Question 6 option B">
+</label><label class="img-option" data-q="6" data-val="C">
+<input type="radio" name="q6" value="C">
+<img src="images/q6_C.png" alt="Question 6 option C">
+</label></div>
+<div id="fb6" class="feedback"></div>
+<div id="script6" class="script-box"><b>Script</b><br>Girl: Hi Judy – do you want to play tennis after school – say about 4.30?<br>Judy: Mmm – that would be fun but I’ve got a swimming lesson. It’s usually at a quarter past five but <span class="evidence-mark">it’s half an hour earlier this evening, at a quarter to five</span> <span class="evidence-label">(Question 6)</span>. It takes me ages to cycle to the swimming pool, so I really don’t think I’ll have time today – let’s try tomorrow.<br>Girl: OK!</div>
+</section><section class="question-card">
+<img class="prompt-img" src="images/q7_prompt.png" alt="Question 7">
+<div class="image-grid"><label class="img-option" data-q="7" data-val="A">
+<input type="radio" name="q7" value="A">
+<img src="images/q7_A.png" alt="Question 7 option A">
+</label><label class="img-option" data-q="7" data-val="B">
+<input type="radio" name="q7" value="B">
+<img src="images/q7_B.png" alt="Question 7 option B">
+</label><label class="img-option" data-q="7" data-val="C">
+<input type="radio" name="q7" value="C">
+<img src="images/q7_C.png" alt="Question 7 option C">
+</label></div>
+<div id="fb7" class="feedback"></div>
+<div id="script7" class="script-box"><b>Script</b><br>Boy: I really like the new IT teacher – our project for this term is to design a new website. I’ve always wanted to know how to do that. <span class="evidence-mark">The sports teacher is much more serious but that’s still my favourite subject</span> <span class="evidence-label">(Question 7)</span>. Last year I used to really like geography, but the teacher we have now gives us so much homework.</div>
+</section>
+
+<section class="card"><h2>Part 2 – Questions 8–13</h2>
+<p>You will hear an interview with a teenager called Simon about going to an indoor climbing centre that has a climbing wall.</p><p><b>For each question, choose the correct answer A, B or C.</b></p>
+<div class="audio-wrap"><b>Part 2 audio</b><audio controls preload="metadata"><source src="audio/part2.mp3" type="audio/mpeg"></audio></div></section>
+<section class="question-card">
+<div class="qtitle">8. Simon’s mum decided to take him to the climbing centre because</div>
+<div class="choices"><label class="choice"><input type="radio" name="q8" value="A"><b>A.</b> she had enjoyed going there.</label><label class="choice"><input type="radio" name="q8" value="B"><b>B.</b> her friend had recommended it.</label><label class="choice"><input type="radio" name="q8" value="C"><b>C.</b> Simon had been there with his school.</label></div>
+<div id="fb8" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">9. Before he went to the centre, Simon was</div>
+<div class="choices"><label class="choice"><input type="radio" name="q9" value="A"><b>A.</b> worried about going climbing there.</label><label class="choice"><input type="radio" name="q9" value="B"><b>B.</b> interested in seeing the climbing wall.</label><label class="choice"><input type="radio" name="q9" value="C"><b>C.</b> disappointed to hear it was all indoors.</label></div>
+<div id="fb9" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">10. Simon says that at the centre there were</div>
+<div class="choices"><label class="choice"><input type="radio" name="q10" value="A"><b>A.</b> lots of people when it opened.</label><label class="choice"><input type="radio" name="q10" value="B"><b>B.</b> many different types of people.</label><label class="choice"><input type="radio" name="q10" value="C"><b>C.</b> no other people his age.</label></div>
+<div id="fb10" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">11. What did Simon think about the climbing wall?</div>
+<div class="choices"><label class="choice"><input type="radio" name="q11" value="A"><b>A.</b> He thought it looked very high.</label><label class="choice"><input type="radio" name="q11" value="B"><b>B.</b> He was afraid he might fall.</label><label class="choice"><input type="radio" name="q11" value="C"><b>C.</b> He found the foot holes helpful.</label></div>
+<div id="fb11" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">12. Why was Simon unhappy with his first climb?</div>
+<div class="choices"><label class="choice"><input type="radio" name="q12" value="A"><b>A.</b> He was slower than everyone else.</label><label class="choice"><input type="radio" name="q12" value="B"><b>B.</b> He found it hurt his arms.</label><label class="choice"><input type="radio" name="q12" value="C"><b>C.</b> He didn’t get to the top.</label></div>
+<div id="fb12" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">13. What does Simon feel he learnt from climbing at the centre?</div>
+<div class="choices"><label class="choice"><input type="radio" name="q13" value="A"><b>A.</b> how to improve his fitness</label><label class="choice"><input type="radio" name="q13" value="B"><b>B.</b> to think before he does something</label><label class="choice"><input type="radio" name="q13" value="C"><b>C.</b> the best way to work with other people</label></div>
+<div id="fb13" class="feedback"></div>
+</section>
+<div id="part2Script" class="review-script"><b>Script – Part 2</b><br><br>Woman: Hello, everyone! Today we’re discussing adventure activities, and I’m talking to Simon Benito, who recently went with his mum to an indoor climbing centre. Simon, what gave your mum the idea to take you there?<br><br>Simon: Well, last year my school had a trip to the centre, but I missed it because I was sick. Then recently <span class="evidence-mark">she went with a friend and tried it herself – and she loved it</span> <span class="evidence-label">(Question 8)</span>! So after that she wanted to take me, too.<br><br>Woman: And what did you think when your mum suggested going to the centre?<br><br>Simon: Well, I knew I was OK at climbing – we’ve been climbing on holidays – and I thought we’d do something similar at the centre. I was really looking forward to it. But then my mum explained that the wall was inside. <span class="evidence-mark">I wasn’t so interested when I heard that – I prefer being outside</span> <span class="evidence-label">(Question 9)</span>.<br><br>Woman: But did you meet lots of people there?<br><br>Simon: Well, yes – that was great! It was early morning when we arrived and the centre had just opened, so it was quiet, but lots of people came later in the morning – and for once I wasn’t the youngest! I’d expected it’d be mainly young people there, but <span class="evidence-mark">there were people of all ages – serious climbers, mums with five-year-olds... and teenagers like me</span> <span class="evidence-label">(Question 10)</span>!<br><br>Woman: So what was the climbing wall like?<br><br>Simon: Well, luckily it had rocks of different sizes to help you climb. So there was little chance of falling off. And I’d imagined it would look high before you started to climb, but actually it didn’t seem that far to the top. <span class="evidence-mark">There were lots of really useful holes all over it, too, to put your feet in</span> <span class="evidence-label">(Question 11)</span> – green ones for an easy climb, red for more difficult.<br><br>Woman: So what was your first climb like? Was it easy?<br><br>Simon: No! The instructor showed us what to do and I thought I’d soon get to the top, but <span class="evidence-mark">I was the last to get there, so I was annoyed with myself</span> <span class="evidence-label">(Question 12)</span>. The instructor warned us it can be painful for your arms, too, but I didn’t notice. And I did improve.<br><br>Woman: So what did you learn from your visit?<br><br>Simon: Well, it was great to be with other people who all like doing the same thing! And when I was climbing I had to think carefully where to put my feet before I moved – so <span class="evidence-mark">that’s helped me to think first before I do things</span> <span class="evidence-label">(Question 13)</span>. It’s shown me that I am fitter than my friends who spend too much time on their computers.<br><br>Woman: Well, thanks, Simon!</div>
+
+<section class="card"><h2>Part 3 – Questions 14–19</h2>
+<p>You will hear a girl called Hannah talking about her family’s champion horse called Griffon.</p><p><b>For each question, fill in the missing information in the numbered space.</b></p>
+<div class="audio-wrap"><b>Part 3 audio</b><audio controls preload="metadata"><source src="audio/part3.mp3" type="audio/mpeg"></audio></div>
+<h3>Griffon the Horse</h3><div class="gap-row">
+<label for="q14">The international horse show will be held in the month of <b>(14)</b></label>
+<input id="q14" type="text" autocomplete="off">
+<span>, just after Hannah’s birthday.</span>
+<div id="fb14" class="feedback"></div>
+</div><div class="gap-row">
+<label for="q15">The family will travel from Poland to the horse show in <b>(15)</b></label>
+<input id="q15" type="text" autocomplete="off">
+<span>.</span>
+<div id="fb15" class="feedback"></div>
+</div><div class="gap-row">
+<label for="q16">The person who will ride Griffon round the ring in the international show is Hannah’s <b>(16)</b></label>
+<input id="q16" type="text" autocomplete="off">
+<span>.</span>
+<div id="fb16" class="feedback"></div>
+</div><div class="gap-row">
+<label for="q17">Two weeks ago Griffon won some <b>(17)</b></label>
+<input id="q17" type="text" autocomplete="off">
+<span> as a prize.</span>
+<div id="fb17" class="feedback"></div>
+</div><div class="gap-row">
+<label for="q18">Hannah’s ambition is to work as a <b>(18)</b></label>
+<input id="q18" type="text" autocomplete="off">
+<span>.</span>
+<div id="fb18" class="feedback"></div>
+</div><div class="gap-row">
+<label for="q19">When Griffon wins a competition, he is given some <b>(19)</b></label>
+<input id="q19" type="text" autocomplete="off">
+<span> by the family.</span>
+<div id="fb19" class="feedback"></div>
+</div>
+<div id="part3Script" class="review-script"><b>Script – Part 3</b><br><br>Hannah: Hi. My name’s Hannah. I come from a family that trains horses, and we have a champion horse called Griffon. He is black with an incredibly shiny coat. He was born two years ago, in December, and we’re taking him to compete in his first international show <span class="evidence-mark">in March next year, just after my fifteenth birthday</span> <span class="evidence-label">(Question 14)</span>.<br><br>The whole family is going – me, my sister and our parents. We live in Poland and we’re going to drive through Germany and the Netherlands <span class="evidence-mark">to the show in England</span> <span class="evidence-label">(Question 15)</span>, so it’ll be a long journey for us. The event lasts for three days, and we’ll be staying with friends who also have horses.<br><br>My sister wanted to ride Griffon in front of the judges, but she’s too young. The rules are that the person riding the horse has to be over 18, <span class="evidence-mark">so my father will do it</span> <span class="evidence-label">(Question 16)</span>. Griffon has been to other shows in several European countries. He’s got dozens of cups, but at an event a couple of weeks ago, <span class="evidence-mark">he got some money as a prize</span> <span class="evidence-label">(Question 17)</span>, which was a change. It suited us because it’s expensive taking part in horse shows.<br><br>Horses have to learn what to do in front of the judges – how to walk and jump. I watch my parents working with Griffon, and <span class="evidence-mark">my dream is to be a trainer too</span> <span class="evidence-label">(Question 18)</span>, getting horses ready for shows. My parents want me to study to be a doctor, but I’m not sure about that.<br><br>When Griffon comes first in a competition he’s as pleased as we are. Lots of people give their horses sweets when they win, but <span class="evidence-mark">we give Griffon apples</span> <span class="evidence-label">(Question 19)</span>. I also think he likes to be the centre of attention.</div></section>
+
+<section class="card"><h2>Part 4 – Questions 20–25</h2>
+<p>Look at the six sentences for this part. You will hear a conversation between a boy called Jamie and a girl called Miranda about sharing a bedroom with a brother or sister.</p>
+<p>Decide if each sentence is correct or incorrect. If it is correct, choose <b>A for YES</b>. If it is not correct, choose <b>B for NO</b>.</p>
+<div class="audio-wrap"><b>Part 4 audio</b><audio controls preload="metadata"><source src="audio/part4.mp3" type="audio/mpeg"></audio></div></section>
+<section class="question-card">
+<div class="qtitle">20. Miranda accepts what her sister’s side of the room looks like.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q20" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q20" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb20" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">21. Jamie complains that his brother refuses to share his electronic equipment.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q21" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q21" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb21" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">22. Miranda is annoyed about some things that her sister tells their mother.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q22" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q22" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb22" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">23. Miranda was surprised that she felt lonely when her sister was away.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q23" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q23" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb23" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">24. Despite sharing a bedroom, Jamie finds he can still easily do his homework.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q24" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q24" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb24" class="feedback"></div>
+</section><section class="question-card">
+<div class="qtitle">25. Jamie and Miranda can both share problems with their brother or sister.</div>
+<div class="yesno">
+<label class="choice"><input type="radio" name="q25" value="A"><b>A. YES</b></label>
+<label class="choice"><input type="radio" name="q25" value="B"><b>B. NO</b></label>
+</div>
+<div id="fb25" class="feedback"></div>
+</section>
+<div id="part4Script" class="review-script"><b>Script – Part 4</b><br><br>Jamie: Hi, Miranda. How are you?<br><br>Miranda: Hi, Jamie. I’m fine! I’m helping Mum paint my bedroom at home – the one I share with my younger sister.<br><br>Jamie: Oh, how’s it going?<br><br>Miranda: Not well – we can’t agree! My sister and I both have got our own side of the room, and they’re completely different! I mean, my side’s blue, with pop posters all over the wall. But her side’s pink, with dolls and stuff. <span class="evidence-mark">Not my thing at all really, but as I said, she is younger than me – and it looks OK, I guess</span> <span class="evidence-label">(Question 20)</span>.<br><br>Jamie: Mmm – well, I share with my brother Max, but as he’s older than me, I get to use lots of things that my parents don’t really want me to have, because they say I’m not old enough. <span class="evidence-mark">But he lets me use his laptop, music player... everything</span> <span class="evidence-label">(Question 21)</span>!<br><br>Miranda: Wow! Now, if that was my little sister, <span class="evidence-mark">she’d probably go and report it to our mum, and I’d get into trouble! That happens sometimes. Then my sister and I have an argument</span> <span class="evidence-label">(Question 22)</span>!<br><br>Jamie: Oh? That doesn’t happen with Max and me...<br><br>Miranda: No? Well, apart from that, I get on OK with my sister, really. To be honest, she went camping with her school last week, and <span class="evidence-mark">I really missed her. I found it wasn’t so nice being in our room on my own. I hadn’t expected that</span> <span class="evidence-label">(Question 23)</span>.<br><br>Jamie: I know what you mean. My brother’s going to university soon, and the room will seem really empty. Still, at least I’ll be able to get on with my homework in peace – <span class="evidence-mark">it’s hard at the moment, as he’s often in the room, too</span> <span class="evidence-label">(Question 24)</span>.<br><br>Miranda: Well, my sister likes playing outside, so it’s OK. But then when she’s not there, there’s no-one to talk to about my problems. She’s really good at listening if she knows I’m worried about something, even though she can’t help.<br><br>Jamie: Mmm, my brother’s the same. We wouldn’t do that if we didn’t share rooms.<br><br>Miranda: No... so sharing does have good points...</div>
+
+<section class="card"><h2>Check answers</h2><p>After checking, correct answers, scripts and evidence will appear for review.</p>
+<div class="actions"><button class="check" onclick="checkAnswers()">CHECK ANSWERS</button><button class="reset" onclick="resetTest()">RESET</button></div>
+<div id="summary" class="summary"></div></section>
+
+<section class="card"><h2>Submit result</h2><p>Check your answers first, then submit your result to the teacher.</p>
+<button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button></section>
+</main>
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";
+const simpleKeys={"1": "B", "2": "C", "3": "A", "4": "C", "5": "B", "6": "B", "7": "C", "8": "A", "9": "C", "10": "B", "11": "C", "12": "A", "13": "B", "20": "A", "21": "B", "22": "A", "23": "A", "24": "B", "25": "A"};
+const gapKeys={"14": ["March"], "15": ["England"], "16": ["father"], "17": ["money"], "18": ["trainer"], "19": ["apples"]};
+let checked=false,score=0,submissionLocked=false;
+
+document.querySelectorAll('.img-option').forEach(label=>label.addEventListener('click',()=>{
+ const q=label.dataset.q; document.querySelectorAll(`.img-option[data-q="${q}"]`).forEach(x=>x.classList.remove('selected')); label.classList.add('selected');
+}));
+function normalize(s){return String(s||'').trim().toLowerCase().replace(/[.,!?'"’]/g,'').replace(/[-–—]/g,' ').replace(/\s+/g,' ');}
+function validateStudent(){if(!document.getElementById('studentName').value.trim()||!document.getElementById('studentClass').value){alert('Please enter Student name and select Class first. — Hãy nhập tên học sinh và chọn lớp trước.');return false;}return true;}
+function selectedRadio(q){const el=document.querySelector(`input[name="q${q}"]:checked`);return el?el.value:'';}
+function gapCorrect(q,raw){return (gapKeys[String(q)]||[]).some(v=>normalize(v)===normalize(raw));}
+function setFeedback(q,ok,correct){const fb=document.getElementById('fb'+q);fb.className='feedback show '+(ok?'good':'bad');fb.innerHTML=ok?'✓ Correct':`✗ Incorrect — Correct answer: <b>${correct}</b>`;}
+function checkAnswers(){
+ if(!validateStudent())return; score=0;
+ for(let q=1;q<=7;q++){const ans=selectedRadio(q),key=simpleKeys[String(q)],ok=ans===key;if(ok)score++;setFeedback(q,ok,key);
+ document.querySelectorAll(`.img-option[data-q="${q}"]`).forEach(x=>{x.classList.remove('correctChoice','wrongChoice');if(x.dataset.val===key)x.classList.add('correctChoice');if(ans&&x.dataset.val===ans&&ans!==key)x.classList.add('wrongChoice');});
+ document.getElementById('script'+q).classList.add('show');}
+ for(let q=8;q<=13;q++){const ans=selectedRadio(q),key=simpleKeys[String(q)],ok=ans===key;if(ok)score++;setFeedback(q,ok,key);}
+ for(let q=14;q<=19;q++){const raw=document.getElementById('q'+q).value,ok=gapCorrect(q,raw);if(ok)score++;setFeedback(q,ok,(gapKeys[String(q)]||[]).join(' / '));}
+ for(let q=20;q<=25;q++){const ans=selectedRadio(q),key=simpleKeys[String(q)],ok=ans===key;if(ok)score++;setFeedback(q,ok,key==='A'?'A (YES)':'B (NO)');}
+ document.getElementById('part2Script').classList.add('show');document.getElementById('part3Script').classList.add('show');document.getElementById('part4Script').classList.add('show');
+ const s=document.getElementById('summary');s.classList.add('show');s.textContent=`Total score: ${score}/25 — ${Math.round(score*4)}%`;
+ checked=true;if(!submissionLocked)document.getElementById('submitBtn').disabled=false;
+}
+function submitResult(){
+ if(submissionLocked||!checked||!validateStudent())return;
+ const answers=[];
+ for(let q=1;q<=13;q++){const ans=selectedRadio(q);answers.push({question:q,answer:ans,correctAnswer:simpleKeys[String(q)]||'',isCorrect:ans===(simpleKeys[String(q)]||'')});}
+ for(let q=14;q<=19;q++){const ans=document.getElementById('q'+q).value.trim();answers.push({question:q,answer:ans,correctAnswer:(gapKeys[String(q)]||[]).join(' / '),isCorrect:gapCorrect(q,ans)});}
+ for(let q=20;q<=25;q++){const ans=selectedRadio(q);answers.push({question:q,answer:ans,correctAnswer:simpleKeys[String(q)]||'',isCorrect:ans===(simpleKeys[String(q)]||'')});}
+ const payload={activityType:'listening',studentName:document.getElementById('studentName').value.trim(),className:document.getElementById('studentClass').value,courseName:'B1',skillName:'Listening',testName:'B1 Test 2',score:score,total:25,correct:score,incorrect:25-score,correctRate:Math.round(score*400)/100,answers};
+ let iframe=document.getElementById('resultSenderFrame');if(!iframe){iframe=document.createElement('iframe');iframe.id='resultSenderFrame';iframe.name='resultSenderFrame';iframe.style.display='none';document.body.appendChild(iframe);}
+ const form=document.createElement('form');form.method='POST';form.action=RESULT_ENDPOINT;form.target='resultSenderFrame';form.style.display='none';
+ const input=document.createElement('input');input.type='hidden';input.name='payload';input.value=JSON.stringify(payload);form.appendChild(input);document.body.appendChild(form);form.submit();
+ submissionLocked=true;const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='Submitted ✓';
+ const st=document.getElementById('submitStatus');st.className='status ok';st.textContent='✓ Result submitted to Listening Results — Kết quả đã được gửi.';
+ setTimeout(()=>form.remove(),3000);
+}
+function resetTest(){
+ document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);document.querySelectorAll('input[type="text"]').forEach(x=>x.value='');
+ document.querySelectorAll('.img-option').forEach(x=>x.classList.remove('selected','correctChoice','wrongChoice'));document.querySelectorAll('.feedback').forEach(x=>{x.className='feedback';x.innerHTML='';});
+ document.querySelectorAll('.script-box,.review-script').forEach(x=>x.classList.remove('show'));const s=document.getElementById('summary');s.classList.remove('show');s.textContent='';
+ document.getElementById('studentClass').value='';const st=document.getElementById('submitStatus');st.className='status';st.textContent='';checked=false;score=0;submissionLocked=false;
+ const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='SUBMIT RESULT';window.scrollTo({top:0,behavior:'smooth'});
+}
+</script></body></html>
