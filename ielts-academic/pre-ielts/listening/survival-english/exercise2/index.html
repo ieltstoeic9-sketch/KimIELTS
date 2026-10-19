@@ -1,0 +1,237 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Survival English – Exercise 2</title><style>
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--vocab:#FFF1B8;--evidence:#DCEBFF}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.55}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1120px;margin:30px auto;padding:0 20px 70px}
+.hero,.card,.qcard{background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.student-info{display:grid;grid-template-columns:1fr 220px;gap:14px}
+.student-info input,.student-info select,input[type=text]{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.row{display:grid;grid-template-columns:minmax(260px,1fr) minmax(160px,280px);gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+.row .feedback{grid-column:1/-1}
+.choice{display:block;border:1px solid var(--line);border-radius:10px;padding:11px;cursor:pointer;background:#fff;margin:7px 0}
+.choice:has(input:checked){border:2px solid var(--navy);background:var(--blue)}
+.feedback{display:none;margin-top:8px;padding:9px 11px;border-radius:9px;font-weight:700}
+.feedback.show{display:block}.feedback.good{background:var(--blue);color:#173A7A}.feedback.bad{background:var(--redlight);color:var(--red)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45}
+.summary,.status{display:none;margin-top:14px;padding:11px 13px;border-radius:9px;font-weight:700}
+.summary.show,.status.show{display:block}.summary{background:#F0F3F8;color:var(--navy)}.status{background:var(--blue);color:var(--navy)}
+.script-review{display:none;margin-top:20px}.script-review.show{display:block}
+.script-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.script-cell{padding:12px 14px;border-bottom:1px solid var(--line)}
+.script-cell:nth-child(odd){border-right:1px solid var(--line)}
+.vocab{background:var(--vocab);font-weight:700;padding:0 2px}
+.ev{background:var(--evidence);font-weight:800;padding:0 2px;border-bottom:2px solid #173A7A}
+.qtag{color:#173A7A;font-weight:800;white-space:nowrap}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:var(--navy);color:#fff}
+.center{text-align:center}
+.money-field{display:flex;align-items:center;gap:6px}.money-symbol{font-weight:800;color:var(--navy)}
+@media(max-width:760px){.student-info,.row,.script-grid{grid-template-columns:1fr}.script-cell:nth-child(odd){border-right:0}.script-cell{border-bottom:1px solid var(--line)}}
+
+.inline-gap{
+  display:inline-block;
+  vertical-align:middle;
+  margin:0 6px;
+}
+.inline-gap input{
+  width:180px;
+  max-width:100%;
+  padding:9px 10px;
+  border:1px solid #bcc8c3;
+  border-radius:8px;
+  font-size:16px;
+}
+.inline-fb{
+  display:none;
+  margin:6px 0 10px;
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:700;
+}
+.inline-fb.show{display:block}
+.inline-fb.good{background:#EEF4FF;color:#173A7A}
+.inline-fb.bad{background:#FFF0F1;color:#D71920}
+.paragraph-question{
+  font-size:18px;
+  line-height:2.15;
+}
+.form-box{
+  border:2px solid #0B1F4D;
+  border-radius:12px;
+  padding:20px;
+  background:#fff;
+}
+.form-line{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:11px 0;
+  border-bottom:1px solid #e5e8ef;
+}
+.form-line:last-child{border-bottom:0}
+.form-line input{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #bcc8c3;
+  border-radius:8px;
+  font-size:16px;
+}
+.question-block{
+  font-size:17px;
+  line-height:2.05;
+}
+@media(max-width:760px){
+  .form-line{grid-template-columns:1fr}
+  .inline-gap{display:block;margin:6px 0}
+  .inline-gap input{width:100%}
+}
+
+</style></head><body>
+<header><div class="brand"><img src="../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main><a class="back" href="../">← Back to Survival English</a>
+<section class="hero"><h1>Survival English – Exercise 2</h1></section>
+<section class="card"><h2>Student information</h2><div class="student-info">
+<div><label>Student name</label><input id="studentName" type="text"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>PRE-IELTS</option><option>Class 8</option><option>Class 9</option><option>Other</option></select></div>
+</div><div id="submitStatus" class="status"></div></section>
+<section class="card"><div class="audio-wrap"><b>Audio</b><audio controls preload="metadata"><source src="audio/audio.mp3" type="audio/mpeg"></audio></div>
+<p><b>Listen to the conversation and fill in the missing information in the notes below.</b></p>
+<div class="qcard paragraph-question">
+  The customer wants to buy a kind of camera which would be
+  <span class="inline-gap"><input id="q1" type="text" aria-label="Question 1"></span>
+  and
+  <span class="inline-gap"><input id="q2" type="text" aria-label="Question 2"></span>
+  to handle.
+  <div id="fb1" class="inline-fb"></div>
+  <div id="fb2" class="inline-fb"></div>
+
+  The shop assistant recommended one which is
+  <span class="inline-gap"><input id="q3" type="text" aria-label="Question 3"></span>
+  and has a good
+  <span class="inline-gap"><input id="q4" type="text" aria-label="Question 4"></span>.
+  <div id="fb3" class="inline-fb"></div>
+  <div id="fb4" class="inline-fb"></div>
+
+  The price is only
+  <span class="inline-gap money-field"><span class="money-symbol">£</span><input id="q5" type="text" aria-label="Question 5"></span>.
+  <div id="fb5" class="inline-fb"></div>
+
+  The customer liked the one the shop assistant recommended but she disliked the
+  <span class="inline-gap"><input id="q6" type="text" aria-label="Question 6"></span>.
+  <div id="fb6" class="inline-fb"></div>
+
+  Finally, the customer bought a
+  <span class="inline-gap"><input id="q7" type="text" aria-label="Question 7"></span>
+  camera.
+  <div id="fb7" class="inline-fb"></div>
+</div>
+<div id="scriptReview" class="script-review"><div class="script-grid"><div class="script-cell">Shop assistant: Good morning. Can I help you?</div><div class="script-cell">Nhân viên: Chào buổi sáng. Tôi có thể giúp gì cho bạn?</div><div class="script-cell">Customer: Yes, I want to buy a camera. What kind do you <span class='vocab'>recommend</span>?</div><div class="script-cell">Khách hàng: Vâng, tôi muốn mua một chiếc máy ảnh. Bạn <span class='vocab'>đề xuất</span> loại nào?</div><div class="script-cell">Shop assistant: Well, it all <span class='vocab'>depends</span>. We have many kinds of cameras here. How much money do you want to <span class='vocab'>spend</span>?</div><div class="script-cell">Nhân viên: Còn <span class='vocab'>tùy</span>. Ở đây chúng tôi có nhiều loại máy ảnh. Bạn muốn <span class='vocab'>chi</span> bao nhiêu tiền?</div><div class="script-cell">Customer: I want something <span class='ev vocab'>cheap</span> <span class='qtag'>(Question 1)</span> and <span class='ev vocab'>easy</span> <span class='qtag'>(Question 2)</span> to handle.</div><div class="script-cell">Khách hàng: Tôi muốn loại nào đó <span class='vocab'>rẻ</span> và <span class='vocab'>dễ</span> sử dụng.</div><div class="script-cell">Shop assistant: Are you an <span class='vocab'>experienced photographer</span>?</div><div class="script-cell">Nhân viên: Bạn có phải là một <span class='vocab'>nhiếp ảnh gia có kinh nghiệm</span> không?</div><div class="script-cell">Customer: No, I’ve had <span class='vocab'>no experience at all</span>.</div><div class="script-cell">Khách hàng: Không, tôi <span class='vocab'>hoàn toàn chưa có kinh nghiệm</span>.</div><div class="script-cell">Shop assistant: Here’s a camera that would <span class='vocab'>suit you very well</span>. It’s got a very good <span class='ev vocab'>lens</span> <span class='qtag'>(Question 4)</span> and it’s all <span class='ev vocab'>automatic</span> <span class='qtag'>(Question 3)</span>, so it’s very easy to use. Just press one button, and it’s done.</div><div class="script-cell">Nhân viên: Đây là chiếc máy ảnh sẽ <span class='vocab'>rất phù hợp với bạn</span>. Nó có <span class='vocab'>ống kính</span> rất tốt và hoàn toàn <span class='vocab'>tự động</span>, nên rất dễ sử dụng. Chỉ cần nhấn một nút là xong.</div><div class="script-cell">Customer: How much does it cost?</div><div class="script-cell">Khách hàng: Nó giá bao nhiêu?</div><div class="script-cell">Shop assistant: It’s only <span class='ev vocab'>45 pounds</span> <span class='qtag'>(Question 5)</span>.</div><div class="script-cell">Nhân viên: Nó chỉ có giá <span class='vocab'>45 bảng</span>.</div><div class="script-cell">Customer: Can I try?</div><div class="script-cell">Khách hàng: Tôi có thể thử không?</div><div class="script-cell">Shop assistant: Of course. Here you are.</div><div class="script-cell">Nhân viên: Tất nhiên. Đây ạ.</div><div class="script-cell">Customer: Well, I think the price is <span class='vocab'>reasonable</span> and I like that it is automatic, but I don’t like the <span class='ev vocab'>colour</span> <span class='qtag'>(Question 6)</span>. Do you have any other colour?</div><div class="script-cell">Khách hàng: Tôi nghĩ giá khá <span class='vocab'>hợp lý</span> và tôi thích việc nó tự động, nhưng tôi không thích <span class='vocab'>màu sắc</span>. Bạn có màu khác không?</div><div class="script-cell">Shop assistant: Yes. How about this <span class='ev vocab'>yellow</span> one? <span class='qtag'>(Question 7)</span></div><div class="script-cell">Nhân viên: Có. Chiếc <span class='vocab'>màu vàng</span> này thì sao?</div><div class="script-cell">Customer: It looks better. Is it the same price?</div><div class="script-cell">Khách hàng: Trông đẹp hơn. Giá có giống vậy không?</div><div class="script-cell">Shop assistant: Yes.</div><div class="script-cell">Nhân viên: Vâng.</div><div class="script-cell">Customer: All right. I will take this yellow one. Here is 50 pounds.</div><div class="script-cell">Khách hàng: Được rồi. Tôi sẽ lấy chiếc màu vàng này. Đây là 50 bảng.</div><div class="script-cell">Shop assistant: Here is your <span class='vocab'>change</span>.</div><div class="script-cell">Nhân viên: Đây là <span class='vocab'>tiền thừa</span> của bạn.</div></div></div></section>
+<section class="card"><div class="actions"><button class="check" onclick="checkAnswers()">CHECK ANSWERS</button><button class="reset" onclick="resetExercise()">RESET</button></div><div id="summary" class="summary"></div></section>
+<section class="card"><button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button></section>
+<iframe name="sink" style="display:none"></iframe>
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";let checked=false,score=0,submissionLocked=false;
+function norm(s){return String(s||'').trim().toLowerCase().replace(/[.,!?'"’]/g,'').replace(/\s+/g,' ').replace(/[–—]/g,'-');}
+function validateStudent(){if(!document.getElementById('studentName').value.trim()||!document.getElementById('studentClass').value){alert('Please enter Student name and select Class first.');return false;}return true;}
+function fb(i,ok,c){const e=document.getElementById('fb'+i);if(!e)return;e.className='feedback show '+(ok?'good':'bad');e.innerHTML=ok?'✓ Correct':`✗ Incorrect — Correct answer: <b>${c}</b>`;}
+function finish(){const sr=document.getElementById('scriptReview');if(sr)sr.classList.add('show');checked=true;const s=document.getElementById('summary');s.className='summary show';s.textContent=`Score: ${score}/7`;submissionLocked=false;submitResult();}
+
+const trackingKeys=["cheap", "easy", "automatic", "lens", "45", "colour", "yellow"];
+function buildTrackingAnswers(){
+  const out=[];
+  for(let i=1;i<=7;i++) {
+    const raw=(document.getElementById('q'+i)?.value||'').trim();
+    const key=trackingKeys[i-1];
+    const ok=norm(raw)===norm(key);
+    out.push({question:i,answer:raw,correctAnswer:key,isCorrect:ok});
+  }
+  return out;
+}
+
+
+
+function sendResultToTeacher(payload){
+  const status=document.getElementById("submitStatus");
+
+  try{
+    const oldForm=document.getElementById("resultSenderForm");
+    if(oldForm) oldForm.remove();
+
+    let iframe=document.getElementById("resultSenderFrame");
+    if(!iframe){
+      iframe=document.createElement("iframe");
+      iframe.id="resultSenderFrame";
+      iframe.name="resultSenderFrame";
+      iframe.style.display="none";
+      document.body.appendChild(iframe);
+    }
+
+    const form=document.createElement("form");
+    form.id="resultSenderForm";
+    form.method="POST";
+    form.action=RESULT_ENDPOINT;
+    form.target="resultSenderFrame";
+    form.style.display="none";
+
+    const input=document.createElement("input");
+    input.type="hidden";
+    input.name="payload";
+    input.value=JSON.stringify(payload);
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+
+    status.className="status show";
+    status.textContent="✓ Result submitted to WEB RESULTS";
+
+    setTimeout(()=>{
+      if(form.parentNode) form.remove();
+    },3000);
+
+  }catch(err){
+    status.className="status show";
+    status.textContent="Could not submit result to WEB RESULTS.";
+    console.error("Result submission error:",err);
+  }
+}
+
+function submitResult(){
+  if(!checked || submissionLocked || !validateStudent()) return;
+  const detail = buildTrackingAnswers();
+  const payload = {
+    timestamp:new Date().toISOString(),
+    studentName:document.getElementById("studentName").value.trim(),
+    className:document.getElementById("studentClass").value,
+    courseName:"PRE-IELTS",
+    skillName:"Listening",
+    testName:"Survival English Exercise 2",
+    score:score,
+    total:7,
+    correct:score,
+    incorrect:7-score,
+    correctRate:7 ? Math.round(score*10000/7)/100 : 0,
+    answers:detail
+  };
+  sendResultToTeacher(payload);
+  submissionLocked=true;
+  const b=document.getElementById("submitBtn");
+  if(b){
+    b.disabled=true;
+    b.textContent="Submitted ✓";
+  }
+}
+
+const keys=["cheap", "easy", "automatic", "lens", "45", "colour", "yellow"];function checkAnswers(){if(!validateStudent())return;score=0;keys.forEach((k,i)=>{const ok=norm(document.getElementById('q'+(i+1)).value)===norm(k);if(ok)score++;fb(i+1,ok,i===4?'£45':k);});finish();}function resetExercise(){document.querySelectorAll('input[type=text]').forEach(x=>x.value='');document.querySelectorAll('input[type=checkbox],input[type=radio]').forEach(x=>x.checked=false);document.querySelectorAll('.feedback').forEach(x=>x.className='feedback');document.getElementById('summary').className='summary';const sr=document.getElementById('scriptReview');if(sr)sr.classList.remove('show');checked=false;score=0;submissionLocked=false;document.getElementById('submitBtn').disabled=true;document.getElementById('submitBtn').textContent='SUBMIT RESULT';}
+</script></main></body></html>

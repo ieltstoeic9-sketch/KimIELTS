@@ -1,0 +1,253 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Survival English – Exercise 5</title><style>
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--vocab:#FFF1B8;--evidence:#DCEBFF}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.55}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1120px;margin:30px auto;padding:0 20px 70px}
+.hero,.card,.qcard{background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.student-info{display:grid;grid-template-columns:1fr 220px;gap:14px}
+.student-info input,.student-info select,input[type=text]{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.row{display:grid;grid-template-columns:minmax(260px,1fr) minmax(160px,280px);gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+.row .feedback{grid-column:1/-1}
+.choice{display:block;border:1px solid var(--line);border-radius:10px;padding:11px;cursor:pointer;background:#fff;margin:7px 0}
+.choice:has(input:checked){border:2px solid var(--navy);background:var(--blue)}
+.feedback{display:none;margin-top:8px;padding:9px 11px;border-radius:9px;font-weight:700}
+.feedback.show{display:block}.feedback.good{background:var(--blue);color:#173A7A}.feedback.bad{background:var(--redlight);color:var(--red)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45}
+.summary,.status{display:none;margin-top:14px;padding:11px 13px;border-radius:9px;font-weight:700}
+.summary.show,.status.show{display:block}.summary{background:#F0F3F8;color:var(--navy)}.status{background:var(--blue);color:var(--navy)}
+.script-review{display:none;margin-top:20px}.script-review.show{display:block}
+.script-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.script-cell{padding:12px 14px;border-bottom:1px solid var(--line)}
+.script-cell:nth-child(odd){border-right:1px solid var(--line)}
+.vocab{background:var(--vocab);font-weight:700;padding:0 2px}
+.ev{background:var(--evidence);font-weight:800;padding:0 2px;border-bottom:2px solid #173A7A}
+.qtag{color:#173A7A;font-weight:800;white-space:nowrap}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:var(--navy);color:#fff}
+.center{text-align:center}
+.money-field{display:flex;align-items:center;gap:6px}.money-symbol{font-weight:800;color:var(--navy)}
+@media(max-width:760px){.student-info,.row,.script-grid{grid-template-columns:1fr}.script-cell:nth-child(odd){border-right:0}.script-cell{border-bottom:1px solid var(--line)}}
+
+.inline-gap{
+  display:inline-block;
+  vertical-align:middle;
+  margin:0 6px;
+}
+.inline-gap input{
+  width:180px;
+  max-width:100%;
+  padding:9px 10px;
+  border:1px solid #bcc8c3;
+  border-radius:8px;
+  font-size:16px;
+}
+.inline-fb{
+  display:none;
+  margin:6px 0 10px;
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:700;
+}
+.inline-fb.show{display:block}
+.inline-fb.good{background:#EEF4FF;color:#173A7A}
+.inline-fb.bad{background:#FFF0F1;color:#D71920}
+.paragraph-question{
+  font-size:18px;
+  line-height:2.15;
+}
+.form-box{
+  border:2px solid #0B1F4D;
+  border-radius:12px;
+  padding:20px;
+  background:#fff;
+}
+.form-line{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:16px;
+  align-items:center;
+  padding:11px 0;
+  border-bottom:1px solid #e5e8ef;
+}
+.form-line:last-child{border-bottom:0}
+.form-line input{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #bcc8c3;
+  border-radius:8px;
+  font-size:16px;
+}
+.question-block{
+  font-size:17px;
+  line-height:2.05;
+}
+@media(max-width:760px){
+  .form-line{grid-template-columns:1fr}
+  .inline-gap{display:block;margin:6px 0}
+  .inline-gap input{width:100%}
+}
+
+</style></head><body>
+<header><div class="brand"><img src="../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main><a class="back" href="../">← Back to Survival English</a>
+<section class="hero"><h1>Survival English – Exercise 5</h1></section>
+<section class="card"><h2>Student information</h2><div class="student-info">
+<div><label>Student name</label><input id="studentName" type="text"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>PRE-IELTS</option><option>Class 8</option><option>Class 9</option><option>Other</option></select></div>
+</div><div id="submitStatus" class="status"></div></section>
+<section class="card"><div class="audio-wrap"><b>Audio</b><audio controls preload="metadata"><source src="audio/audio.mp3" type="audio/mpeg"></audio></div>
+<p><b>Listen to the talk and complete the notes. Write NO MORE THAN THREE WORDS for each answer.</b></p>
+<div class="qcard question-block">
+
+  <p>1. In Britain, people start to decorate their houses a
+  <span class="inline-gap"><input id="q1" type="text" aria-label="Question 1"></span>
+  before 25th December.</p>
+  <div id="fb1" class="inline-fb"></div>
+
+  <p>2. In Christmas time, the most important activity is the
+  <span class="inline-gap"><input id="q2" type="text" aria-label="Question 2"></span>.</p>
+  <div id="fb2" class="inline-fb"></div>
+
+  <p>3. The British people put their gifts
+  <span class="inline-gap"><input id="q3" type="text" aria-label="Question 3"></span>
+  of the Christmas tree.</p>
+  <div id="fb3" class="inline-fb"></div>
+
+  <p>4. The British open their Christmas presents on
+  <span class="inline-gap"><input id="q4" type="text" aria-label="Question 4"></span>.</p>
+  <div id="fb4" class="inline-fb"></div>
+
+  <p>5. Children leave a long sock or stocking at the
+  <span class="inline-gap"><input id="q5" type="text" aria-label="Question 5a"></span>
+  their bed on Christmas Eve, hoping that Father Christmas will bring small presents from
+  <span class="inline-gap"><input id="q6" type="text" aria-label="Question 5b"></span>.</p>
+  <div id="fb5" class="inline-fb"></div>
+  <div id="fb6" class="inline-fb"></div>
+
+  <p>6. The British family have a
+  <span class="inline-gap"><input id="q7" type="text" aria-label="Question 6"></span>
+  and Christmas pudding for the dinner on Christmas Day.</p>
+  <div id="fb7" class="inline-fb"></div>
+
+  <p>7. The Queen
+  <span class="inline-gap"><input id="q8" type="text" aria-label="Question 7a"></span>
+  her traditional Christmas message to the United Kingdom and
+  <span class="inline-gap"><input id="q9" type="text" aria-label="Question 7b"></span>
+  later in the afternoon.</p>
+  <div id="fb8" class="inline-fb"></div>
+  <div id="fb9" class="inline-fb"></div>
+
+  <p>8. On Boxing Day, people usually visit friends and relatives or
+  <span class="inline-gap"><input id="q10" type="text" aria-label="Question 8"></span>.</p>
+  <div id="fb10" class="inline-fb"></div>
+
+</div>
+<div id="scriptReview" class="script-review"><div class="script-grid"><div class="script-cell">The <span class='vocab'>Christmas season</span> begins very early in Britain. By the end of October, you may see Christmas <span class='vocab'>decorations</span> in the streets and Christmas cards and gifts in the shops.</div><div class="script-cell"><span class='vocab'>Mùa Giáng sinh</span> bắt đầu rất sớm ở Anh. Đến cuối tháng Mười, bạn có thể thấy các <span class='vocab'>đồ trang trí</span> Giáng sinh trên đường phố và thiệp cùng quà Giáng sinh trong các cửa hàng.</div><div class="script-cell">Traditionally, people start to decorate their houses a <span class='ev'>week or two</span> <span class='qtag'>(Question 1)</span> before 25th December, which is Christmas Day.</div><div class="script-cell">Theo truyền thống, mọi người bắt đầu trang trí nhà cửa <span class='vocab'>một hoặc hai tuần</span> trước ngày 25 tháng 12, tức ngày Giáng sinh.</div><div class="script-cell">There are a lot of <span class='vocab'>traditions connected with</span> Christmas. The most important one is the <span class='ev vocab'>giving of presents</span> <span class='qtag'>(Question 2)</span>.</div><div class="script-cell">Có rất nhiều <span class='vocab'>truyền thống gắn liền với</span> Giáng sinh. Hoạt động quan trọng nhất là <span class='vocab'>tặng quà</span>.</div><div class="script-cell">Family members <span class='vocab'>wrap up</span> their gifts and leave them <span class='ev'>at the bottom</span> <span class='qtag'>(Question 3)</span> of the Christmas tree to be found on <span class='ev'>Christmas morning</span> <span class='qtag'>(Question 4)</span>.</div><div class="script-cell">Các thành viên trong gia đình <span class='vocab'>gói</span> quà và để chúng <span class='vocab'>ở phía dưới</span> cây thông Noel để được tìm thấy vào <span class='vocab'>sáng Giáng sinh</span>.</div><div class="script-cell">Children leave a long sock or <span class='vocab'>stocking</span> at the <span class='ev'>end of</span> <span class='qtag'>(Question 5)</span> their bed on Christmas Eve, 24th December, hoping that Father Christmas will come down <span class='ev vocab'>the chimney</span> <span class='qtag'>(Question 5)</span> during the night and bring them small presents, fruit and nuts.</div><div class="script-cell">Trẻ em để một chiếc tất dài hoặc <span class='vocab'>tất Giáng sinh</span> ở <span class='vocab'>cuối</span> giường vào đêm Giáng sinh, ngày 24 tháng 12, với hy vọng Ông già Noel sẽ đi xuống qua <span class='vocab'>ống khói</span> trong đêm và mang cho chúng những món quà nhỏ, trái cây và các loại hạt.</div><div class="script-cell">They are not usually <span class='vocab'>disappointed</span>.</div><div class="script-cell">Chúng thường không <span class='vocab'>thất vọng</span>.</div><div class="script-cell">Sometimes on Christmas Day, the family will sit down for a <span class='ev vocab'>big turkey dinner</span> <span class='qtag'>(Question 6)</span> and Christmas pudding.</div><div class="script-cell">Đôi khi vào ngày Giáng sinh, cả gia đình sẽ ngồi ăn một <span class='vocab'>bữa tối lớn với gà tây</span> và bánh pudding Giáng sinh.</div><div class="script-cell">Later in the afternoon, they may watch the Queen on television as she <span class='ev vocab'>delivers</span> <span class='qtag'>(Question 7)</span> her traditional Christmas message to the United Kingdom and <span class='ev vocab'>the Commonwealth</span> <span class='qtag'>(Question 7)</span>.</div><div class="script-cell">Vào cuối buổi chiều, họ có thể xem Nữ hoàng trên truyền hình khi bà <span class='vocab'>gửi / đọc</span> thông điệp Giáng sinh truyền thống tới Vương quốc Anh và <span class='vocab'>Khối Thịnh vượng chung</span>.</div><div class="script-cell">If they have room for even more food, they may enjoy a piece of Christmas cake or eat a hot <span class='vocab'>mince pie</span>.</div><div class="script-cell">Nếu vẫn còn bụng để ăn thêm, họ có thể thưởng thức một miếng bánh Giáng sinh hoặc ăn một chiếc <span class='vocab'>bánh mince pie nóng</span>.</div><div class="script-cell">26th December is also a <span class='vocab'>public holiday</span>, Boxing Day, and this is the time to visit friends and relatives or <span class='ev vocab'>watch football</span> <span class='qtag'>(Question 8)</span>.</div><div class="script-cell">Ngày 26 tháng 12 cũng là một <span class='vocab'>ngày nghỉ lễ</span>, gọi là Boxing Day, và đây là dịp để thăm bạn bè, họ hàng hoặc <span class='vocab'>xem bóng đá</span>.</div></div></div></section>
+<section class="card"><div class="actions"><button class="check" onclick="checkAnswers()">CHECK ANSWERS</button><button class="reset" onclick="resetExercise()">RESET</button></div><div id="summary" class="summary"></div></section>
+<section class="card"><button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button></section>
+<iframe name="sink" style="display:none"></iframe>
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";let checked=false,score=0,submissionLocked=false;
+function norm(s){return String(s||'').trim().toLowerCase().replace(/[.,!?'"’]/g,'').replace(/\s+/g,' ').replace(/[–—]/g,'-');}
+function validateStudent(){if(!document.getElementById('studentName').value.trim()||!document.getElementById('studentClass').value){alert('Please enter Student name and select Class first.');return false;}return true;}
+function fb(i,ok,c){const e=document.getElementById('fb'+i);if(!e)return;e.className='feedback show '+(ok?'good':'bad');e.innerHTML=ok?'✓ Correct':`✗ Incorrect — Correct answer: <b>${c}</b>`;}
+function finish(){const sr=document.getElementById('scriptReview');if(sr)sr.classList.add('show');checked=true;const s=document.getElementById('summary');s.className='summary show';s.textContent=`Score: ${score}/10`;submissionLocked=false;submitResult();}
+
+const trackingKeys=["week or two", "giving of presents", "at the bottom", "Christmas morning", "end of", "the chimney", "big turkey dinner", "delivers", "the Commonwealth", "watch football"];
+function buildTrackingAnswers(){
+  const out=[];
+  for(let i=1;i<=10;i++) {
+    const raw=(document.getElementById('q'+i)?.value||'').trim();
+    const key=trackingKeys[i-1];
+    const ok=norm(raw)===norm(key);
+    out.push({question:i,answer:raw,correctAnswer:key,isCorrect:ok});
+  }
+  return out;
+}
+
+
+
+function sendResultToTeacher(payload){
+  const status=document.getElementById("submitStatus");
+
+  try{
+    const oldForm=document.getElementById("resultSenderForm");
+    if(oldForm) oldForm.remove();
+
+    let iframe=document.getElementById("resultSenderFrame");
+    if(!iframe){
+      iframe=document.createElement("iframe");
+      iframe.id="resultSenderFrame";
+      iframe.name="resultSenderFrame";
+      iframe.style.display="none";
+      document.body.appendChild(iframe);
+    }
+
+    const form=document.createElement("form");
+    form.id="resultSenderForm";
+    form.method="POST";
+    form.action=RESULT_ENDPOINT;
+    form.target="resultSenderFrame";
+    form.style.display="none";
+
+    const input=document.createElement("input");
+    input.type="hidden";
+    input.name="payload";
+    input.value=JSON.stringify(payload);
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+
+    status.className="status show";
+    status.textContent="✓ Result submitted to WEB RESULTS";
+
+    setTimeout(()=>{
+      if(form.parentNode) form.remove();
+    },3000);
+
+  }catch(err){
+    status.className="status show";
+    status.textContent="Could not submit result to WEB RESULTS.";
+    console.error("Result submission error:",err);
+  }
+}
+
+function submitResult(){
+  if(!checked || submissionLocked || !validateStudent()) return;
+  const detail = buildTrackingAnswers();
+  const payload = {
+    timestamp:new Date().toISOString(),
+    studentName:document.getElementById("studentName").value.trim(),
+    className:document.getElementById("studentClass").value,
+    courseName:"PRE-IELTS",
+    skillName:"Listening",
+    testName:"Survival English Exercise 5",
+    score:score,
+    total:10,
+    correct:score,
+    incorrect:10-score,
+    correctRate:10 ? Math.round(score*10000/10)/100 : 0,
+    answers:detail
+  };
+  sendResultToTeacher(payload);
+  submissionLocked=true;
+  const b=document.getElementById("submitBtn");
+  if(b){
+    b.disabled=true;
+    b.textContent="Submitted ✓";
+  }
+}
+
+const keys=["week or two", "giving of presents", "at the bottom", "Christmas morning", "end of", "the chimney", "big turkey dinner", "delivers", "the Commonwealth", "watch football"];function checkAnswers(){if(!validateStudent())return;score=0;keys.forEach((k,i)=>{const ok=norm(document.getElementById('q'+(i+1)).value)===norm(k);if(ok)score++;fb(i+1,ok,k);});finish();}function resetExercise(){document.querySelectorAll('input[type=text]').forEach(x=>x.value='');document.querySelectorAll('input[type=checkbox],input[type=radio]').forEach(x=>x.checked=false);document.querySelectorAll('.feedback').forEach(x=>x.className='feedback');document.getElementById('summary').className='summary';const sr=document.getElementById('scriptReview');if(sr)sr.classList.remove('show');checked=false;score=0;submissionLocked=false;document.getElementById('submitBtn').disabled=true;document.getElementById('submitBtn').textContent='SUBMIT RESULT';}
+</script></main></body></html>
