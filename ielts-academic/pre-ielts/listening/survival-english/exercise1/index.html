@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Survival English – Exercise 1</title><style>
+:root{--navy:#0B1F4D;--red:#D71920;--bg:#F5F6F8;--line:#D9DEE8;--blue:#EEF4FF;--redlight:#FFF0F1;--vocab:#FFF1B8;--evidence:#DCEBFF}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111;line-height:1.55}
+header{background:#fff;border-bottom:3px solid var(--red);padding:18px 20px}
+.brand{text-align:center}.brand img{width:min(560px,82vw);height:auto}
+main{max-width:1120px;margin:30px auto;padding:0 20px 70px}
+.hero,.card,.qcard{background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:22px}
+h1,h2,h3{color:var(--navy);margin-top:0}
+.back{display:inline-block;margin-bottom:16px;color:var(--navy);font-weight:700;text-decoration:none}
+.audio-wrap{background:#F4F7FC;border:1px solid var(--line);border-radius:14px;padding:14px;margin:16px 0}
+audio{width:100%;margin-top:8px}
+.student-info{display:grid;grid-template-columns:1fr 220px;gap:14px}
+.student-info input,.student-info select,input[type=text]{width:100%;padding:11px 12px;border:1px solid #bcc8c3;border-radius:9px;font-size:16px;background:#fff}
+.row{display:grid;grid-template-columns:minmax(260px,1fr) minmax(160px,280px);gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+.row .feedback{grid-column:1/-1}
+.choice{display:block;border:1px solid var(--line);border-radius:10px;padding:11px;cursor:pointer;background:#fff;margin:7px 0}
+.choice:has(input:checked){border:2px solid var(--navy);background:var(--blue)}
+.feedback{display:none;margin-top:8px;padding:9px 11px;border-radius:9px;font-weight:700}
+.feedback.show{display:block}.feedback.good{background:var(--blue);color:#173A7A}.feedback.bad{background:var(--redlight);color:var(--red)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}
+.check{background:var(--navy);color:#fff}.reset{background:#E9EDF5;color:var(--navy)}.submit{background:var(--red);color:#fff}.submit:disabled{opacity:.45}
+.summary,.status{display:none;margin-top:14px;padding:11px 13px;border-radius:9px;font-weight:700}
+.summary.show,.status.show{display:block}.summary{background:#F0F3F8;color:var(--navy)}.status{background:var(--blue);color:var(--navy)}
+.script-review{display:none;margin-top:20px}.script-review.show{display:block}
+.script-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.script-cell{padding:12px 14px;border-bottom:1px solid var(--line)}
+.script-cell:nth-child(odd){border-right:1px solid var(--line)}
+.vocab{background:var(--vocab);font-weight:700;padding:0 2px}
+.ev{background:var(--evidence);font-weight:800;padding:0 2px;border-bottom:2px solid #173A7A}
+.qtag{color:#173A7A;font-weight:800;white-space:nowrap}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid var(--line);padding:10px;text-align:left}
+th{background:var(--navy);color:#fff}
+.center{text-align:center}
+.money-field{display:flex;align-items:center;gap:6px}.money-symbol{font-weight:800;color:var(--navy)}
+@media(max-width:760px){.student-info,.row,.script-grid{grid-template-columns:1fr}.script-cell:nth-child(odd){border-right:0}.script-cell{border-bottom:1px solid var(--line)}}
+</style></head><body>
+<header><div class="brand"><img src="../../../../../images/logo_banner.png" alt="Anh ngữ Ms. Kim"></div></header>
+<main><a class="back" href="../">← Back to Survival English</a>
+<section class="hero"><h1>Survival English – Exercise 1</h1></section>
+<section class="card"><h2>Student information</h2><div class="student-info">
+<div><label>Student name</label><input id="studentName" type="text"></div>
+<div><label>Class</label><select id="studentClass"><option value="">Select class</option><option>PRE-IELTS</option><option>Class 8</option><option>Class 9</option><option>Other</option></select></div>
+</div><div id="submitStatus" class="status"></div></section>
+<section class="card"><div class="audio-wrap"><b>Audio</b><audio controls preload="metadata"><source src="audio/audio.mp3" type="audio/mpeg"></audio></div>
+<p><b>Listen to the conversation and fill in the missing information in the notes below.</b></p>
+<div class="qcard">
+<div class="row"><label>1. Ellen has got a</label><input id="q1" type="text"><div id="fb1" class="feedback"></div></div>
+<div class="row"><label>2. Her nose is</label><input id="q2" type="text"><div id="fb2" class="feedback"></div></div>
+<div class="row"><label>3. She should take some</label><input id="q3" type="text"><div id="fb3" class="feedback"></div></div>
+<div class="row"><label>4. It’s a good idea for her to drink lots of</label><input id="q4" type="text"><div id="fb4" class="feedback"></div></div>
+<div class="row"><label>5. She’d better see a doctor first, and then go</label><input id="q5" type="text"><div id="fb5" class="feedback"></div></div>
+<div class="row"><label>6. It’s helpful to cook</label><input id="q6" type="text"><div id="fb6" class="feedback"></div></div>
+<div class="row"><label>7. …and drink a</label><input id="q7" type="text"><div id="fb7" class="feedback"></div></div>
+</div><div id="scriptReview" class="script-review"><div class="script-grid"><div class="script-cell">Tom: Hi, Ellen. What’s the matter with you?</div><div class="script-cell">Tom: Chào Ellen. Bạn bị làm sao vậy?</div><div class="script-cell">Ellen: I think I’ve got a terrible <span class='ev vocab'>cold</span> <span class='qtag'>(Question 1)</span>. My nose is <span class='ev vocab'>stuffed up</span> <span class='qtag'>(Question 2)</span> and I’ve got a <span class='vocab'>sore throat</span>.</div><div class="script-cell">Ellen: Mình nghĩ mình bị <span class='vocab'>cảm lạnh nặng</span>. Mũi mình bị <span class='vocab'>nghẹt</span> và mình bị <span class='vocab'>đau họng</span>.</div><div class="script-cell">Tom: Oh, that’s too bad. You should be at home in bed. It’s really important to <span class='vocab'>get a good rest</span>.</div><div class="script-cell">Tom: Ôi, tệ thật. Bạn nên ở nhà nằm nghỉ. Việc <span class='vocab'>nghỉ ngơi đầy đủ</span> rất quan trọng.</div><div class="script-cell">Ellen: Yeah, you’re right.</div><div class="script-cell">Ellen: Ừ, bạn nói đúng.</div><div class="script-cell">Tom: And have you taken anything for it?</div><div class="script-cell">Tom: Bạn đã uống hay dùng gì để chữa chưa?</div><div class="script-cell">Ellen: No, I haven’t.</div><div class="script-cell">Ellen: Chưa, mình chưa dùng gì cả.</div><div class="script-cell">Tom: Well, you should take some <span class='ev vocab'>vitamin C</span> <span class='qtag'>(Question 3)</span> and it’s also a good idea to drink lots of <span class='ev vocab'>liquids</span> <span class='qtag'>(Question 4)</span>.</div><div class="script-cell">Tom: Bạn nên bổ sung <span class='vocab'>vitamin C</span>, và uống nhiều <span class='vocab'>chất lỏng / nước</span> cũng là một ý hay.</div><div class="script-cell">Ellen: That’s a good suggestion. I’ve a bottle of vitamin C at home.</div><div class="script-cell">Ellen: Đó là một lời khuyên hay. Mình có một lọ vitamin C ở nhà.</div><div class="script-cell">Tom: Have you seen a doctor?</div><div class="script-cell">Tom: Bạn đã đi khám bác sĩ chưa?</div><div class="script-cell">Ellen: Not yet.</div><div class="script-cell">Ellen: Chưa.</div><div class="script-cell">Tom: Well, you’d better <span class='vocab'>see a doctor</span> first, and then go <span class='ev vocab'>back home</span> <span class='qtag'>(Question 5)</span> to rest.</div><div class="script-cell">Tom: Bạn nên <span class='vocab'>đi khám bác sĩ</span> trước, sau đó <span class='vocab'>về nhà</span> nghỉ ngơi.</div><div class="script-cell">Ellen: Yeah, I’ll do it right now.</div><div class="script-cell">Ellen: Ừ, mình sẽ làm ngay bây giờ.</div><div class="script-cell">Tom: Ellen, it’s also helpful to cook <span class='ev vocab'>chicken soup</span> <span class='qtag'>(Question 6)</span> with some <span class='vocab'>garlic</span> in it, and drink a <span class='ev vocab'>cup</span> <span class='qtag'>(Question 7)</span> every half an hour. It really works.</div><div class="script-cell">Tom: Ellen, nấu <span class='vocab'>súp gà</span> với một ít <span class='vocab'>tỏi</span> cũng rất hữu ích, và cứ nửa tiếng uống một <span class='vocab'>cốc</span>. Cách này thực sự có tác dụng.</div><div class="script-cell">Ellen: Oh, chicken stock for a cold? OK, I’ll try it. Thanks.</div><div class="script-cell">Ellen: Ồ, nước súp gà để chữa cảm lạnh à? Được, mình sẽ thử. Cảm ơn nhé.</div><div class="script-cell">Tom: I hope you <span class='vocab'>recover soon</span>.</div><div class="script-cell">Tom: Mình hy vọng bạn <span class='vocab'>sớm hồi phục</span>.</div></div></div></section>
+<section class="card"><div class="actions"><button class="check" onclick="checkAnswers()">CHECK ANSWERS</button><button class="reset" onclick="resetExercise()">RESET</button></div><div id="summary" class="summary"></div></section>
+<section class="card"><button id="submitBtn" class="submit" onclick="submitResult()" disabled>SUBMIT RESULT</button></section>
+<iframe name="sink" style="display:none"></iframe>
+<script>
+const RESULT_ENDPOINT="https://script.google.com/macros/s/AKfycbxNZI7NGT6KW-5L9rIrjXQHZJLxLuAeXzTICfrSPQFAIpy5pQ7Ce1s78b5wNRKre3XH/exec";let checked=false,score=0,submissionLocked=false;
+function norm(s){return String(s||'').trim().toLowerCase().replace(/[.,!?'"’]/g,'').replace(/\s+/g,' ').replace(/[–—]/g,'-');}
+function validateStudent(){if(!document.getElementById('studentName').value.trim()||!document.getElementById('studentClass').value){alert('Please enter Student name and select Class first.');return false;}return true;}
+function fb(i,ok,c){const e=document.getElementById('fb'+i);if(!e)return;e.className='feedback show '+(ok?'good':'bad');e.innerHTML=ok?'✓ Correct':`✗ Incorrect — Correct answer: <b>${c}</b>`;}
+function finish(){const sr=document.getElementById('scriptReview');if(sr)sr.classList.add('show');checked=true;document.getElementById('submitBtn').disabled=false;const s=document.getElementById('summary');s.className='summary show';s.textContent=`Score: ${score}/7`;}
+
+const trackingKeys=["cold", "stuffed up", "vitamin C", "liquids", "back home", "chicken soup", "cup"];
+function buildTrackingAnswers(){
+  const out=[];
+  for(let i=1;i<=7;i++) {
+    const raw=(document.getElementById('q'+i)?.value||'').trim();
+    const key=trackingKeys[i-1];
+    const ok=norm(raw)===norm(key);
+    out.push({question:i,answer:raw,correctAnswer:key,isCorrect:ok});
+  }
+  return out;
+}
+
+function submitResult(){if(!checked||submissionLocked||!validateStudent())return;const payload={activityType:'listening',studentName:document.getElementById('studentName').value.trim(),className:document.getElementById('studentClass').value,courseName:'PRE-IELTS',skillName:'Listening',testName:'Survival English Exercise 1',score,total:7,correct:score,incorrect:7-score,answers:buildTrackingAnswers(),correctRate:Math.round(score*10000/7)/100};let f=document.createElement('form');f.method='POST';f.action=RESULT_ENDPOINT;f.target='sink';f.style.display='none';let inp=document.createElement('input');inp.type='hidden';inp.name='payload';inp.value=JSON.stringify(payload);f.appendChild(inp);document.body.appendChild(f);f.submit();submissionLocked=true;let b=document.getElementById('submitBtn');b.disabled=true;b.textContent='Submitted ✓';let st=document.getElementById('submitStatus');st.className='status show';st.textContent='✓ Result submitted';setTimeout(()=>f.remove(),2500);}
+const keys=["cold", "stuffed up", "vitamin C", "liquids", "back home", "chicken soup", "cup"];function checkAnswers(){if(!validateStudent())return;score=0;keys.forEach((k,i)=>{const ok=norm(document.getElementById('q'+(i+1)).value)===norm(k);if(ok)score++;fb(i+1,ok,k);});finish();}function resetExercise(){document.querySelectorAll('input[type=text]').forEach(x=>x.value='');document.querySelectorAll('input[type=checkbox],input[type=radio]').forEach(x=>x.checked=false);document.querySelectorAll('.feedback').forEach(x=>x.className='feedback');document.getElementById('summary').className='summary';const sr=document.getElementById('scriptReview');if(sr)sr.classList.remove('show');checked=false;score=0;submissionLocked=false;document.getElementById('submitBtn').disabled=true;document.getElementById('submitBtn').textContent='SUBMIT RESULT';}
+</script></main></body></html>
