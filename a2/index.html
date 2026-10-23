@@ -1,8 +1,56 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A2</title><style>
-:root{--navy:#0B1F4D;--bg:#F5F6F8}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111}main{max-width:1200px;margin:20px auto;padding:0 18px}.hero,.test-card{background:#fff;border-radius:20px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:26px}h1,h2{color:var(--navy)}.button{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:14px 26px;border-radius:12px;font-weight:800}.test-card p{font-size:18px}
-</style></head><body><main>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A2</title>
+<style>
+:root{--navy:#0B1F4D;--bg:#F5F6F8;--muted:#666;--disabled:#E7EAF0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#111}
+main{max-width:1200px;margin:20px auto;padding:0 18px}
+.hero,.test-card{background:#fff;border-radius:20px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,.06);border-top:4px solid var(--navy);margin-bottom:26px}
+h1,h2{color:var(--navy);margin-top:0}
+.test-card p{font-size:18px}
+.button{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:14px 26px;border-radius:12px;font-weight:800}
+.button.disabled{background:var(--disabled);color:#777;pointer-events:none;cursor:not-allowed}
+.status{margin-top:14px;font-style:italic;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
 <section class="hero"><h1>A2</h1><p>Choose a test below.</p></section>
-<section class="test-card"><h2>Test 1</h2><p>25 questions · 5 parts · Full audio · Detailed explanations · Result tracking.</p><a class="button" href="test1/">Test 1</a></section>
-<section class="test-card"><h2>Test 2</h2><p>25 questions · 5 parts · Full audio · Detailed explanations · Result tracking.</p><a class="button" href="test2/">Test 2</a></section>
-<section class="test-card"><h2>Test 3</h2><p>25 questions · 5 parts · Full audio · Vietnamese script explanation · Result tracking.</p><a class="button" href="test3/">Test 3</a></section>
-</main></body></html>
+<div id="tests"></div>
+</main>
+<script>
+const container=document.getElementById('tests');
+for(let i=1;i<=20;i++){
+  const card=document.createElement('section');
+  card.className='test-card';
+  card.innerHTML=`
+    <h2>Test ${i}</h2>
+    <p>25 questions · 5 parts · Full audio · Detailed explanations · Result tracking.</p>
+    <a class="button disabled" id="btn${i}" href="test${i}/">Test ${i}</a>
+    <div class="status" id="status${i}">Checking availability...</div>`;
+  container.appendChild(card);
+}
+
+async function checkTest(i){
+  const btn=document.getElementById('btn'+i);
+  const status=document.getElementById('status'+i);
+  try{
+    const res=await fetch(`test${i}/index.html`,{method:'HEAD',cache:'no-store'});
+    if(res.ok){
+      btn.classList.remove('disabled');
+      status.textContent='Available';
+    }else{
+      status.textContent='Coming soon';
+    }
+  }catch(e){
+    status.textContent='Coming soon';
+  }
+}
+for(let i=1;i<=20;i++) checkTest(i);
+</script>
+</body>
+</html>
