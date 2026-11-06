@@ -34,7 +34,7 @@ h1,h2{color:var(--navy)}.back{display:inline-block;margin-bottom:16px;color:var(
 <article class="course-card"><h2>Exercise 4</h2><p>Checking in at a hotel</p><a class="button" href="exercise4/" aria-label="Open Exercise 4">Exercise 4</a></article>
 <article class="course-card"><h2>Exercise 5</h2><p>Christmas traditions in Britain</p><a class="button" href="exercise5/" aria-label="Open Exercise 5">Exercise 5</a></article>
 <article class="course-card"><h2>Exercise 6</h2><p>Stonehenge</p><a class="button" href="exercise6/" aria-label="Open Exercise 6">Exercise 6</a></article>
-<article class="course-card"><h2>Exercise 7</h2><p>Coming soon</p><a class="button" href="exercise7/" aria-label="Open Exercise 7">Exercise 7</a></article>
+<article class="course-card"><h2>Exercise 7</h2><p>American Families</p><a class="button" href="exercise7/" aria-label="Open Exercise 7">Exercise 7</a></article>
 <article class="course-card"><h2>Exercise 8</h2><p>Coming soon</p><a class="button" href="exercise8/" aria-label="Open Exercise 8">Exercise 8</a></article>
 <article class="course-card"><h2>Exercise 9</h2><p>Coming soon</p><a class="button" href="exercise9/" aria-label="Open Exercise 9">Exercise 9</a></article>
 <article class="course-card"><h2>Exercise 10</h2><p>Coming soon</p><a class="button" href="exercise10/" aria-label="Open Exercise 10">Exercise 10</a></article>
@@ -45,5 +45,31 @@ h1,h2{color:var(--navy)}.back{display:inline-block;margin-bottom:16px;color:var(
 <article class="course-card"><h2>Exercise 15</h2><p>Coming soon</p><a class="button" href="exercise15/" aria-label="Open Exercise 15">Exercise 15</a></article>
 </section>
 </main>
+<script>
+// Automatically update pending exercise cards when their lesson pages are published.
+// All URLs are relative to survival-english/, so the outer PRE-IELTS page is unaffected.
+(async function(){
+  const cards = document.querySelectorAll('.course-card');
+  await Promise.all(Array.from(cards).map(async (card) => {
+    const description = card.querySelector('p');
+    const link = card.querySelector('a.button');
+    if (!description || !link || description.textContent.trim() !== 'Coming soon') return;
+    try {
+      const response = await fetch(link.getAttribute('href') + 'index.html', {cache:'no-store'});
+      if (!response.ok) return;
+      const html = await response.text();
+      const page = new DOMParser().parseFromString(html, 'text/html');
+      const heading = (page.querySelector('h1')?.textContent || '').trim();
+      if (/coming soon/i.test(heading) || /coming soon/i.test((page.body?.textContent || '').slice(0,400))) return;
+      const subtitle = (page.querySelector('.subhead')?.textContent || '').trim();
+      let topic = subtitle.split('·')[0].trim();
+      if (!topic) topic = 'Available';
+      description.textContent = topic;
+    } catch (error) {
+      // Missing lesson or temporary network issue: keep Coming soon.
+    }
+  }));
+})();
+</script>
 </body>
 </html>
