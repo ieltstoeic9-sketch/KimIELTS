@@ -53,6 +53,64 @@ button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:
 .evidence-mark{font-weight:800;background:#EEF4FF;border-bottom:2px solid #173A7A;padding:0 2px}
 .evidence-label{font-weight:800;color:#173A7A;white-space:nowrap}
 @media(max-width:760px){.image-grid{grid-template-columns:1fr}.gap-row{grid-template-columns:1fr}.student-info{grid-template-columns:1fr}}
+
+
+/* KimIELTS B1 — Cambridge-style sticky audio matching A2 Test 6.
+   Controls are scoped and never change test questions/results. */
+.kim-player-root{position:sticky!important;top:8px!important;z-index:1000!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;background:#F3F6FC!important;border:1px solid #D4DDEB!important;border-top:4px solid #0B1F4D!important;border-radius:16px!important;padding:11px 17px!important;margin:14px 0 18px!important;box-shadow:0 7px 22px rgba(11,31,77,.13)!important;overflow:visible!important}
+.kim-player-root audio{display:none!important}
+.kim-player-root .kim-audio-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 5px!important}
+.kim-player-root .kim-audio-title{font:bold 15px/1.3 Arial,sans-serif!important;color:#0B1F4D!important;margin:0!important}
+.kim-player-root .kim-cambridge-controls{display:flex;align-items:center;justify-content:center;gap:20px;margin:4px 0 5px}
+.kim-player-root button.kim-skip,.kim-player-root button.kim-toggle{box-sizing:border-box!important;display:inline-flex!important;flex-direction:column;align-items:center;justify-content:center;gap:0;cursor:pointer;flex:0 0 auto;border-radius:50%!important;margin:0!important;padding:0!important;font-family:Arial,sans-serif!important;line-height:1!important;transition:background-color .15s,border-color .15s,transform .15s;box-shadow:none!important;min-width:0!important;min-height:0!important}
+.kim-player-root button:focus-visible{outline:3px solid #587EBC!important;outline-offset:3px}
+.kim-player-root button:active{transform:scale(.96)}
+.kim-player-root button.kim-skip{width:48px!important;height:48px!important;border:1px solid #BFCDE0!important;background:white!important;color:#173A7A!important}
+.kim-player-root button.kim-skip:hover{background:#E8EFFA!important;border-color:#173A7A!important}
+.kim-player-root button.kim-skip svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.kim-player-root button.kim-skip span{font:700 10px Arial,sans-serif!important;color:#173A7A!important;margin-top:-1px}
+.kim-player-root button.kim-toggle{width:56px!important;height:56px!important;border:0!important;background:#0B1F4D!important;color:white!important}
+.kim-player-root button.kim-toggle:hover{background:#173A7A!important}
+.kim-player-root button.kim-toggle svg{width:24px;height:24px;fill:currentColor;stroke:none}
+.kim-player-root .kim-cambridge-progress{display:flex;align-items:center;gap:9px;width:100%;max-width:100%;min-width:0}
+.kim-player-root .kim-cambridge-time{color:#435570;font:500 12px Arial,sans-serif!important;font-variant-numeric:tabular-nums;min-width:36px;text-align:center}
+.kim-player-root input.kim-seek,.kim-player-root input.kim-volume{-webkit-appearance:none;appearance:none;background:transparent;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;cursor:pointer;outline-offset:4px;min-width:0;box-shadow:none!important}
+.kim-player-root input.kim-seek{flex:1!important;width:100%!important;height:19px!important}
+.kim-player-root input.kim-volume{width:100px!important;height:19px!important}
+.kim-player-root input.kim-seek::-webkit-slider-runnable-track,.kim-player-root input.kim-volume::-webkit-slider-runnable-track{height:5px;border-radius:9px;background:linear-gradient(to right,#173A7A 0%,#173A7A var(--fill,0%),#CBD6E5 var(--fill,0%),#CBD6E5 100%)}
+.kim-player-root input.kim-seek::-moz-range-track,.kim-player-root input.kim-volume::-moz-range-track{height:5px;border-radius:9px;background:#CBD6E5}
+.kim-player-root input.kim-seek::-moz-range-progress,.kim-player-root input.kim-volume::-moz-range-progress{height:5px;border-radius:9px;background:#173A7A}
+.kim-player-root input.kim-seek::-webkit-slider-thumb,.kim-player-root input.kim-volume::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;margin-top:-4.5px;border-radius:50%;background:#173A7A;border:2px solid white;box-shadow:0 0 0 1px #173A7A}
+.kim-player-root input.kim-seek::-moz-range-thumb,.kim-player-root input.kim-volume::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#173A7A;border:2px solid white}
+.kim-player-root .kim-cambridge-footer{display:flex;align-items:center;justify-content:flex-end;margin-top:0}
+.kim-player-root .kim-cambridge-volume{display:flex;align-items:center;gap:7px;color:#173A7A}
+.kim-player-root .kim-cambridge-volume svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.kim-player-root .kim-cambridge-error{font:12px Arial,sans-serif;color:#D71920;margin-top:2px}
+/* Older B1 Tests 1–2 contain four separate recordings: switch recording via these tabs. */
+.kim-player-root .kim-audio-parts{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px!important}
+.kim-player-root button.kim-part{font:700 12px Arial,sans-serif!important;border:1px solid #BFCDE0!important;border-radius:8px!important;background:#fff!important;color:#173A7A!important;padding:7px 11px!important;cursor:pointer!important;min-width:0!important;box-shadow:none!important}
+.kim-player-root button.kim-part[aria-pressed=true]{background:#0B1F4D!important;color:#fff!important;border-color:#0B1F4D!important}
+.kim-old-audio-slot{display:none!important}
+/* Existing cards in 3–9 and external wrapper in 10–13 remain aligned. */
+.audio-panel:has(.kim-player-root){max-width:100%!important}
+.audio-panel:has(.kim-player-root) .audio-wrap{max-width:1400px!important;width:100%!important;box-sizing:border-box!important}
+.kim-player-root .kim-native-label{display:none!important}
+@media(max-width:650px){
+.kim-player-root{top:0!important;padding:6px 10px!important;margin:8px 0 11px!important;border-radius:10px!important}
+.kim-player-root .kim-cambridge-controls{gap:18px;margin:2px 0 3px}
+.kim-player-root button.kim-skip{width:41px!important;height:41px!important}
+.kim-player-root button.kim-skip svg{width:18px}
+.kim-player-root button.kim-toggle{width:48px!important;height:48px!important}
+.kim-player-root button.kim-toggle svg{width:22px}
+.kim-player-root .kim-cambridge-time{font-size:11px!important;min-width:32px}
+.kim-player-root input.kim-volume{width:80px!important}
+.kim-player-root .kim-audio-title{font-size:13px!important}
+}
+
+
+/* KimIELTS Grade placeholder: visible in closed control, not in dropdown */
+select#studentClass:invalid{color:#929BAA!important;font-weight:400!important}
+select#studentClass option{color:#172639!important;font-weight:400!important}
 </style>
 </head>
 <body>
@@ -62,7 +120,7 @@ button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:
 <a class="back" href="../">← Back to B1</a>
 
 <section class="hero">
-<h1>B1 – Listening Test 1</h1>
+<h1>Test 1</h1>
 <p>Complete all four parts, check your answers, then submit your result.</p>
 </section>
 
@@ -70,16 +128,14 @@ button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:
 <h2>Student information</h2>
 <div class="student-info">
 <div><label for="studentName">Student name</label><input id="studentName" type="text" placeholder="Enter full name"></div>
-<div><label for="studentClass">Class</label>
-<select id="studentClass">
-<option value="">Select class</option>
-<option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>B1</option><option>Other</option>
-</select>
+<div><label for="studentClass">Grade</label>
+<select id="studentClass" required><option value="" disabled selected hidden>Select Grade</option><option value="Grade 6">Grade 6</option><option value="Grade 7">Grade 7</option><option value="Grade 8">Grade 8</option><option value="Grade 9">Grade 9</option><option value="Grade 10">Grade 10</option><option value="Grade 11">Grade 11</option><option value="Grade 12">Grade 12</option><option value="IELTS">IELTS</option><option value="Other">Other</option></select>
 </div>
 </div>
 <div id="submitStatus" class="status"></div>
 </section>
 
+<section class="kim-player-root" aria-label="Full B1 Test 1 audio player"><audio preload="metadata" src="audio.mp3" aria-label="Full listening audio"></audio></section>
 <section class="card">
 <h2>Part 1 – Questions 1–7</h2>
 <div class="part1-instructions">
@@ -87,7 +143,7 @@ button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:
 <p>For each question there are three pictures and a short recording.</p>
 <p>For each question, choose the correct answer <b>A, B or C</b>.</p>
 </div>
-<div class="audio-wrap"><b>Part 1 audio</b><audio controls preload="metadata"><source src="audio/part1.mp3" type="audio/mpeg"></audio></div>
+
 </section>
 
 
@@ -222,7 +278,7 @@ button{border:0;border-radius:10px;padding:13px 20px;font-size:15px;font-weight:
 <h2>Part 2 – Questions 8–13</h2>
 <p>You will hear an interview with a singer called Nick Parker who plays in a band called Krispy with his sister Mel.</p>
 <p><b>For each question, choose the correct answer A, B or C.</b></p>
-<div class="audio-wrap"><b>Part 2 audio</b><audio controls preload="metadata"><source src="audio/part2.mp3" type="audio/mpeg"></audio></div>
+
 </section>
 
 
@@ -289,7 +345,7 @@ Nick: Everything we've recorded has done well. Three singles have gone to number
 <h2>Part 3 – Questions 14–19</h2>
 <p>You will hear a man called Ben, from a young people's organisation, telling a youth group about a course they can do on Saturdays.</p>
 <p><b>For each question, fill in the missing information in the numbered space.</b></p>
-<div class="audio-wrap"><b>Part 3 audio</b><audio controls preload="metadata"><source src="audio/part3.mp3" type="audio/mpeg"></audio></div>
+
 <h3>Saturday course</h3>
 
     <div class="gap-row">
@@ -351,7 +407,7 @@ Now, any questions...?
 <h2>Part 4 – Questions 20–25</h2>
 <p>Look at the six sentences for this part. You will hear a boy called Thomas and a girl called Ruby talking about a poster for their school sports day.</p>
 <p>Decide if each sentence is correct or incorrect. If it is correct, choose <b>A for YES</b>. If it is not correct, choose <b>B for NO</b>.</p>
-<div class="audio-wrap"><b>Part 4 audio</b><audio controls preload="metadata"><source src="audio/part4.mp3" type="audio/mpeg"></audio></div>
+
 </section>
 
 
@@ -612,6 +668,91 @@ function resetTest(){
   const btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='SUBMIT RESULT';
   window.scrollTo({top:0,behavior:'smooth'});
 }
+</script>
+
+<script id="kim-b1-cambridge-player">
+
+/* KimIELTS B1 audio player — matches A2 Test 6. */
+(function(){'use strict';
+  const make=(tag,cls)=>{const el=document.createElement(tag);if(cls)el.className=cls;return el;};
+  const timeText=(value)=>{if(!Number.isFinite(value)||value<0)return '00:00';const n=Math.floor(value);return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');};
+  const rewindSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.4 6.1"/><path d="M3 4v7h7"/></svg>';
+  const forwardSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11a9 9 0 1 0-2.4 6.1"/><path d="M21 4v7h-7"/></svg>';
+  const playSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+  const pauseSvg='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
+  function init(){
+    if(document.querySelector('[data-kim-audio-initialized]'))return;
+    const audios=Array.from(document.querySelectorAll('audio'));
+    if(!audios.length)return;
+    const multi=audios.length>1;
+    let panel,audio,heading='Listening Audio';
+    if(multi){
+      // Tests 1–2: each of four parts has its own audio. Preserve all source URLs.
+      const sources=audios.map(a=>a.currentSrc||a.getAttribute('src')||a.querySelector('source')?.getAttribute('src')||'');
+      audios.forEach(a=>{a.pause();a.removeAttribute('controls');const slot=a.closest('.audio-wrap');if(slot)slot.classList.add('kim-old-audio-slot');});
+      const main=document.querySelector('main')||document.body;
+      panel=make('section','kim-player-root');
+      panel.setAttribute('aria-label','B1 listening audio player');
+      audio=make('audio');audio.preload='metadata';audio.src=sources[0];audio.setAttribute('aria-label','Listening audio for selected part');
+      panel.appendChild(audio);
+      const insertion=main.querySelector('.student-info')?.closest('.card')||main.querySelector('.hero');
+      if(insertion)insertion.insertAdjacentElement('afterend',panel);else main.prepend(panel);
+      const partTabs=make('div','kim-audio-parts');partTabs.setAttribute('role','group');partTabs.setAttribute('aria-label','Choose listening part');
+      sources.forEach((source,i)=>{
+        const btn=make('button','kim-part');btn.type='button';btn.textContent='Part '+(i+1);btn.setAttribute('aria-pressed',String(i===0));btn.addEventListener('click',()=>{
+          if(btn.getAttribute('aria-pressed')==='true')return;
+          audio.pause();audio.src=source;audio.load();
+          partTabs.querySelectorAll('.kim-part').forEach(other=>other.setAttribute('aria-pressed',String(other===btn)));
+          const err=panel.querySelector('.kim-cambridge-error');if(err)err.textContent='';
+        });partTabs.appendChild(btn);
+      });
+      panel._kimPartTabs=partTabs;
+      heading='Listening Audio · Select Part';
+    }else{
+      audio=audios[0];
+      const part=audio.closest('.sticky-audio-panel,.audio-box,.panel,.audio-wrap,.audio-panel')||audio.parentElement;
+      // Tests 3–9: `.panel` is a sibling of question sections, so sticky remains active.
+      // Tests 10–13: external `.audio-panel` already sticky; retain original width wrapper.
+      panel=part;
+      if(!panel)return;
+      const audioTitle=panel.querySelector('h2,.audio-title,b');
+      if(audioTitle){heading=audioTitle.textContent.trim()||heading;audioTitle.classList.add('kim-native-label');}
+      panel.classList.add('kim-player-root');
+      audio.removeAttribute('controls');audio.preload='metadata';audio.setAttribute('aria-label','Full test listening audio');
+      const note=panel.querySelector('.note');if(note)note.style.display='none';
+    }
+    panel.dataset.kimAudioInitialized='true';
+    panel.classList.add('kim-player-root');
+    const header=make('div','kim-audio-heading');
+    const title=make('strong','kim-audio-title');title.textContent=heading;
+    header.appendChild(title);
+    // Keep existing audio node; only augment visual controls.
+    panel.insertBefore(header,audio);
+    if(multi)panel.appendChild(panel._kimPartTabs);
+    const row=make('div','kim-cambridge-controls');
+    function skip(back){const b=make('button','kim-skip');b.type='button';b.title=back?'Rewind 10 seconds':'Forward 10 seconds';b.setAttribute('aria-label',b.title);b.innerHTML=(back?rewindSvg:forwardSvg)+'<span>10s</span>';
+      b.addEventListener('click',()=>{const d=audio.duration;let target=audio.currentTime+(back?-10:10);if(Number.isFinite(d))target=Math.min(d,target);target=Math.max(0,target);try{audio.currentTime=target;}catch(err){}});return b;}
+    const toggle=make('button','kim-toggle');toggle.type='button';toggle.title='Play audio';toggle.setAttribute('aria-label','Play audio');toggle.innerHTML=playSvg;
+    row.append(skip(true),toggle,skip(false));panel.appendChild(row);
+    const progress=make('div','kim-cambridge-progress');
+    const current=make('span','kim-cambridge-time'),total=make('span','kim-cambridge-time');current.textContent='00:00';total.textContent='00:00';
+    const seek=make('input','kim-seek');seek.type='range';seek.min='0';seek.max='1000';seek.step='1';seek.value='0';seek.setAttribute('aria-label','Seek audio timeline');
+    progress.append(current,seek,total);panel.appendChild(progress);
+    const footer=make('div','kim-cambridge-footer'),volWrap=make('label','kim-cambridge-volume');
+    volWrap.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM17 9a5 5 0 0 1 0 6M19 6a9 9 0 0 1 0 12"/></svg>';
+    const volume=make('input','kim-volume');volume.type='range';volume.min='0';volume.max='100';volume.step='1';volume.value=String(Math.round(audio.volume*100));volume.setAttribute('aria-label','Audio volume');volWrap.appendChild(volume);footer.appendChild(volWrap);panel.appendChild(footer);
+    const err=make('div','kim-cambridge-error');err.setAttribute('role','status');panel.appendChild(err);
+    function sync(){const duration=Number.isFinite(audio.duration)?audio.duration:0;current.textContent=timeText(audio.currentTime);total.textContent=timeText(duration);seek.value=duration?String(Math.round(audio.currentTime/duration*1000)):'0';seek.style.setProperty('--fill',((Number(seek.value)/10)||0)+'%');toggle.innerHTML=audio.paused?playSvg:pauseSvg;toggle.title=audio.paused?'Play audio':'Pause audio';toggle.setAttribute('aria-label',toggle.title);}
+    toggle.addEventListener('click',()=>{if(audio.paused){const play=audio.play();if(play&&play.catch)play.catch(()=>{err.textContent='Audio could not play. Check the MP3 file.';sync();});}else audio.pause();});
+    seek.addEventListener('input',()=>{const d=audio.duration;if(Number.isFinite(d)&&d>0){try{audio.currentTime=d*Number(seek.value)/1000;}catch(err){}}sync();});
+    volume.addEventListener('input',()=>{audio.volume=Number(volume.value)/100;volume.style.setProperty('--fill',volume.value+'%');});volume.style.setProperty('--fill',volume.value+'%');
+    ['loadedmetadata','durationchange','timeupdate','play','pause','ended','seeked','emptied'].forEach(event=>audio.addEventListener(event,sync));
+    audio.addEventListener('error',()=>{err.textContent='Audio could not load. Please check the MP3 path.';});
+    sync();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+
 </script>
 </body>
 </html>
