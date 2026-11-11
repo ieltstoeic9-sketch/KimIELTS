@@ -11,9 +11,10 @@
 :root{--green:#0B1F4D;--green2:#173A7A;--bg:#F5F6F8;--card:#FFFFFF;--line:#dde4e0;--ink:#17212b;--muted:#68737d;--good:#173A7A;--bad:#D71920;--blue:#EEF4FF;--amber:#FFFFFF7e6}
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
-header{background:white;border-bottom:1px solid #e4e8e6;padding:22px;text-align:center}
-header h1{margin:0;color:var(--green);font-size:28px}
-header p{margin:5px 0 0;color:var(--muted)}
+header.brand-header{background:white;border-bottom:2px solid #D71920;padding:16px 12px;text-align:center}
+.brand-logo{display:block;width:min(620px, calc(100vw - 48px));max-width:100%;height:auto;margin:0 auto;object-fit:contain}
+
+@media(max-width:680px){header.brand-header{padding:12px 10px}.brand-logo{width:min(560px, calc(100vw - 24px));max-width:100%}}
 main{max-width:980px;margin:28px auto;padding:0 18px 80px}
 .card{background:var(--card);border-radius:18px;padding:24px;margin-bottom:24px;box-shadow:0 8px 26px rgba(0,0,0,.06)}
 h2{color:var(--green);margin-top:0} h3{margin:0 0 13px}
@@ -272,10 +273,11 @@ footer {
 .kim-cambridge-error{font:12px Arial,sans-serif;color:#D71920;margin-top:2px}
 @media(max-width:650px){.kim-sticky-audio{top:0!important;padding:6px 10px!important;margin:8px 0 11px!important;border-radius:10px!important}.kim-cambridge-controls{gap:18px;margin:2px 0 3px}.kim-skip{width:41px!important;height:41px!important}.kim-skip svg{width:18px;height:18px}.kim-toggle{width:48px!important;height:48px!important}.kim-toggle svg{width:22px;height:22px}.kim-cambridge-time{font-size:11px!important;min-width:32px}.kim-cambridge-volume input[type=range]{width:80px}.kim-audio-title{font-size:13px!important}}
 
+
 </style>
 </head>
 <body>
-<header><h1>Anh ngữ Ms. Kim — KET 1 Listening Test 1</h1><p>25 questions · 5 parts</p></header>
+<header class="brand-header"><img class="brand-logo" src="logo-banner.png" alt="Anh ngữ Ms. Kim — Key to IELTS Mastery"></header>
 <main>
 <div class="card">
   <h2>Listening Test 1</h2>
